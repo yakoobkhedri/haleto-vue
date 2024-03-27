@@ -44,8 +44,8 @@
              <path d="M25.2637 40.9554L35.8504 34.8432C36.3379 34.5617 36.5044 33.9387 36.2232 33.4517L24.979 39.9435L25.2637 40.9554Z" fill="#6CB771"/>
              </svg>
           </a>
-          <input type="submit" value="تایید" class="rounded-4 w-174 h-48 bg-second text-white border-0 fw-bold flex-grow-1 flex-sm-grow-0">
-          <div class="d-flex align-items-center gap-3 px-3 border-blue h-48 rounded-4 bg-white flex-grow-1 flex-sm-grow-0">
+          <input type="submit" value="تایید" class="rounded-3 w-174 h-48 bg-second text-white border-0 fw-bold flex-grow-1 flex-sm-grow-0">
+          <div class="d-flex align-items-center gap-3 px-3 border-blue h-48 rounded-3 bg-white flex-grow-1 flex-sm-grow-0">
            <input class="w-100 border-0 bg-transparent h-100 outline-none">
            <svg class="flex-shrink-0" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
              <path d="M5.51703 8L11.6966 13.4214C12.0739 13.7525 12.6382 13.7525 13.0156 13.4214L19.1951 8" stroke="#39425D" stroke-linecap="round"/>
