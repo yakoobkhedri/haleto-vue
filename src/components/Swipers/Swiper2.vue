@@ -6,7 +6,7 @@
                <div class="rounded-12 py-4 overflow-hidden bg-white position-relative">
                 <span class="font-bold z-1 shadow fs-12 bg-orange-transparent text-orange d-flex align-items-center justify-content-center w-70 rounded-l-4 h-28 position-absolute top-0 end-0 mt-2">30%-</span>
                  <div class="position-relative mx-5">
-                  <img alt="img" :src="require('../assets/img/book16 3.png')" class="d-block mx-auto shadow w-100">
+                  <img alt="img" :src="require('../../assets/img/book16 3.png')" class="d-block mx-auto shadow w-100">
                   <div class="d-flex align-items-center justify-content-center cursor-pointer w-40 h-40 rounded-circle border position-absolute bottom-0 start-0 bg-white">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_187_220)">
@@ -36,7 +36,7 @@
                <div class="rounded-12 py-4 overflow-hidden bg-white position-relative">
                 <span class="font-bold z-1 shadow fs-12 bg-orange-transparent text-orange d-flex align-items-center justify-content-center w-70 rounded-l-4 h-28 position-absolute top-0 end-0 mt-2">30%-</span>
                  <div class="position-relative mx-5">
-                  <img alt="img" :src="require('../assets/img/book3 4.png')" class="d-block mx-auto shadow w-100">
+                  <img alt="img" :src="require('../../assets/img/book3 4.png')" class="d-block mx-auto shadow w-100">
                   <div class="d-flex align-items-center justify-content-center cursor-pointer w-40 h-40 rounded-circle border position-absolute bottom-0 start-0 bg-white">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_187_220)">
@@ -66,7 +66,7 @@
                <div class="rounded-12 py-4 overflow-hidden bg-white position-relative">
                 <span class="font-bold z-1 shadow fs-12 bg-orange-transparent text-orange d-flex align-items-center justify-content-center w-70 rounded-l-4 h-28 position-absolute top-0 end-0 mt-2">30%-</span>
                  <div class="position-relative mx-5">
-                  <img alt="img" :src="require('../assets/img/book3 4(1).png')" class="d-block mx-auto shadow w-100">
+                  <img alt="img" :src="require('../../assets/img/book3 4(1).png')" class="d-block mx-auto shadow w-100">
                   <div class="d-flex align-items-center justify-content-center cursor-pointer w-40 h-40 rounded-circle border position-absolute bottom-0 start-0 bg-white">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_187_220)">
@@ -96,7 +96,7 @@
               <div class="rounded-12 py-4 overflow-hidden bg-white position-relative">
                <span class="font-bold z-1 shadow fs-12 bg-orange-transparent text-orange d-flex align-items-center justify-content-center w-70 rounded-l-4 h-28 position-absolute top-0 end-0 mt-2">30%-</span>
                 <div class="position-relative mx-5">
-                 <img alt="img" :src="require('../assets/img/book3 4.png')" class="d-block mx-auto shadow w-100">
+                 <img alt="img" :src="require('../../assets/img/book3 4.png')" class="d-block mx-auto shadow w-100">
                  <div class="d-flex align-items-center justify-content-center cursor-pointer w-40 h-40 rounded-circle border position-absolute bottom-0 start-0 bg-white">
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0_187_220)">

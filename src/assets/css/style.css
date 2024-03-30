@@ -94,6 +94,10 @@ a {
     max-width: 581px;
     width: 100%;
  }
+ .max-w-790{
+    max-width: 790px;
+    width: 100%;
+ }
  .max-w-1170{
     max-width: 1170px;
     width: 100%;
@@ -141,6 +145,9 @@ a {
 }
 .w-117 {
     width: 117px;
+}
+.w-130 {
+    width: 130px;
 }
 .w-146 {
     width: 146px;

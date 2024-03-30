@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router.js'
+import router from '../src/router/router'
 import AosVue from "aos-vue";
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'

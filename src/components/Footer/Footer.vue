@@ -29,8 +29,8 @@
       </filter>
       </defs>
     </svg>
-    <img alt="shape" :src="require('../assets/img/Footer UI.png')" class="position-absolute mx-auto w-100 end-0 start-0 -z-0 top-0 img-fluid">
-    <img alt="shape" :src="require('../assets/img/Group 78.png')" class="max-w-1170 mx-auto h-253 d-none d-sm-block rounded-20 rounded-tl-129 position-absolute end-0 start-0 mt-5 img-fluid">
+    <img alt="shape" :src="require('../../assets/img/Footer UI.png')" class="position-absolute mx-auto w-100 end-0 start-0 -z-0 top-0 img-fluid">
+    <img alt="shape" :src="require('../../assets/img/Group 78.png')" class="max-w-1170 mx-auto h-253 d-none d-sm-block rounded-20 rounded-tl-129 position-absolute end-0 start-0 mt-5 img-fluid">
     <!--  -->
     <div class="container position-relative z-1 my-5 py-5">
       <div class="mt-5 pt-5">

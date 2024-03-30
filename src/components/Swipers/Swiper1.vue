@@ -4,7 +4,7 @@
       <div class="swiper-slide">
         <img
           alt="app"
-          :src="require('../assets/img/iPhone 11 Pro.png')"
+          :src="require('../../assets/img/iPhone 11 Pro.png')"
           class="img-fluid d-block mx-auto w-224"
           data-aos="flip-up"
         />
@@ -12,7 +12,7 @@
       <div class="swiper-slide">
         <img
           alt="app"
-          :src="require('../assets/img/iPhone 11 Pro.png')"
+          :src="require('../../assets/img/iPhone 11 Pro.png')"
           class="img-fluid d-block mx-auto w-224"
           data-aos="flip-up"
         />
@@ -20,7 +20,7 @@
       <div class="swiper-slide">
         <img
           alt="app"
-          :src="require('../assets/img/iPhone 11 Pro.png')"
+          :src="require('../../assets/img/iPhone 11 Pro.png')"
           class="img-fluid d-block mx-auto w-224"
           data-aos="flip-up"
         />
@@ -28,7 +28,7 @@
       <div class="swiper-slide">
         <img
           alt="app"
-          :src="require('../assets/img/iPhone 11 Pro.png')"
+          :src="require('../../assets/img/iPhone 11 Pro.png')"
           class="img-fluid d-block mx-auto w-224"
           data-aos="flip-up"
         />

@@ -256,7 +256,7 @@
 </template>
 
 <script>
-import Swiper2 from "../components/Swiper2.vue";
+import Swiper2 from "../components/Swipers/Swiper2.vue";
 
 export default {
   components: { Swiper2 },

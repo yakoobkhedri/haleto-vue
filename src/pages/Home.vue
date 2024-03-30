@@ -663,7 +663,7 @@
 </template>
 
 <script>
-import Swiper1 from "../components/Swiper1.vue";
+import Swiper1 from "../components/Swipers/Swiper1.vue";
 
 export default {
   components: { Swiper1 },
