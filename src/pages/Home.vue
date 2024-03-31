@@ -1,4 +1,7 @@
 <template>
+
+  <Header />
+
   <main>
 
     <aos-vue>
@@ -11,8 +14,8 @@
               <h3 class="mt-4">اتاق مشاوره آنلاین روانشناسی</h3>
               <router-link to="/request"
                 class="mx-auto d-flex align-items-center justify-content-center w-174 h-48 text-white fw-bold bg-main rounded-3 mt-5"
-                >درخواست مشاوره</router-link>
-              >
+              >درخواست مشاوره</router-link>
+              
               <div class="container mt-5 pt-4">
                 <form
                   class="p-4 position-relative -top-xs-40 rounded-8 bg-gray flex-wrap d-flex align-items-center w-100 justify-content-between gap-4"
@@ -660,13 +663,18 @@
     </aos-vue>
     
   </main>
+
+  <Footer />
+  
 </template>
 
 <script>
+import Header from "../components/Header/Header.vue";
+import Footer from "../components/Footer/Footer.vue";
 import Swiper1 from "../components/Swipers/Swiper1.vue";
 
 export default {
-  components: { Swiper1 },
+  components: { Header,Footer, Swiper1 },
   name: "Home-component",
 };
 </script>

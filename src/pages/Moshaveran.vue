@@ -1,4 +1,7 @@
 <template>
+
+<Header-2 />
+
   <main>
     <aos-vue>
       <section class="py-5 my-5">
@@ -1313,10 +1316,17 @@
       </section>
     </aos-vue>
   </main>
+
+  <Footer />
+
 </template>
 
 <script>
+import Header2 from '@/components/Header/Header2.vue';
+import Footer from "@/components/Footer/Footer.vue";
+
 export default {
+  components: { Header2,Footer },
   name: "Moshaveran-component",
 };
 </script>
