@@ -7,6 +7,7 @@ import Login from '../pages/Login.vue';
 import Otp from '../pages/Otp.vue';
 import SignUp from '../pages/SignUp.vue';
 import Moshaveran from '../pages/Moshaveran.vue';
+import Wallet from '../pages/Wallet.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -17,6 +18,7 @@ const routes=[
     {name:'otp',path:'/otp',component:Otp},
     {name:'signUp',path:'/signUp',component:SignUp},
     {name:'moshaveran',path:'/moshaveran',component:Moshaveran},
+    {name:'wallet',path:'/wallet',component:Wallet},
 ];
 
 const router=createRouter({
