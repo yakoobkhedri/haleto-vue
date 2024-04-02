@@ -513,7 +513,7 @@
 <script>
 import Header2 from '@/components/Header/Header2.vue';
 import Footer from "@/components/Footer/Footer.vue";
-import Swiper2 from "../components/Swipers/Swiper2.vue";
+import Swiper2 from "@/components/Swipers/Swiper2.vue";
 
 export default {
   components: { Header2,Footer,Swiper2 },

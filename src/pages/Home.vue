@@ -669,9 +669,9 @@
 </template>
 
 <script>
-import Header from "../components/Header/Header.vue";
-import Footer from "../components/Footer/Footer.vue";
-import Swiper1 from "../components/Swipers/Swiper1.vue";
+import Header from "@/components/Header/Header.vue";
+import Footer from "@/components/Footer/Footer.vue";
+import Swiper1 from "@/components/Swipers/Swiper1.vue";
 
 export default {
   components: { Header,Footer, Swiper1 },

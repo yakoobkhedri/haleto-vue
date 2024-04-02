@@ -90,6 +90,10 @@ a {
     max-width: 340px;
     width: 100%;
  }
+ .max-w-339{
+    max-width: 399px;
+    width: 100%;
+ }
  .max-w-408{
     max-width: 408px;
     width: 100%;
@@ -114,6 +118,9 @@ a {
 .border-main{
     border: 1px solid #6CB771;
 }
+.border-top-main-8{
+    border-top: 8px solid #6CB771;
+}
 .border-second{
     border: 1px solid #F0AC3A;
 }
@@ -122,6 +129,12 @@ a {
 }
 .border-blue{
     border: 1px solid #2D4059;
+}
+.border-top-blue-8{
+    border-top: 8px solid #0A6AA5;
+}
+.border-top-blue2-8{
+    border-top: 8px solid #2791FE;
 }
 .border-dashed-2{
     border: 2px dashed #C4C4C4;
@@ -262,6 +275,12 @@ a {
 .text-second {
     color: #5956E8;
 }
+.text-blue2{
+    color: #0A6AA5;
+}
+.text-blue3{
+    color: #2791FE;
+}
 .text-orange{
     color: #FA923D;
 }
@@ -274,8 +293,6 @@ a {
 .text-danger2{
     color: #c30000;
 }
-/* box shadow */
-
 /* font size */
 .fs-10{
     font-size: 10px;
@@ -362,6 +379,12 @@ a {
 .bg-blue{
     background-color: #4772e2;
 }
+.bg-blue2{
+    background-color: #0A6AA5;
+}
+.bg-blue3{
+    background-color: #2791FE;
+}
 .bg-orange-transparent{
     background-color: #FDDBC9;
 }
@@ -390,6 +413,9 @@ a {
 /* top */
 .-top-14{
     top: -14px;
+}
+.-top-60{
+    top: -60px;
 }
 .top-117{
     top: 117px;
@@ -550,11 +576,20 @@ header a:hover,header ul a.active,footer ul a:hover{
 .list-hover:hover div,.list-hover.active div{
   opacity: 1;
 }
-.list-hover svg path{
+.list-hover:hover p,.list-hover.active p, .list-hover-3 ul a:hover{
+    color: #6CB771!important;
+  }
+.list-hover svg path,.list-hover-2 svg path,.list-hover-3 svg path,.list-hover-3 svg,.list-hover p{
     transition: all .4s;
   }
 .list-hover:hover svg path,.list-hover.active svg path{
     stroke: #6CB771;
+  }
+  .list-hover-2:hover svg path,.list-hover-2.active svg path{
+    fill: #6CB771;
+  }
+  .list-hover-3:hover svg:last-child path,.list-hover-3.active svg:last-child path{
+    fill: #6CB771;
   }
   .hidden-scroll::-webkit-scrollbar {
     width: 4px;
@@ -660,6 +695,9 @@ header a:hover,header ul a.active,footer ul a:hover{
     }
     .h-md-auto{
         height: auto;
+    }
+    .w-md-100{
+        width: 100%;
     }
 }
 @media only screen and (max-width:576px) {

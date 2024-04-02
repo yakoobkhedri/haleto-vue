@@ -8,6 +8,8 @@ import Otp from '../pages/Otp.vue';
 import SignUp from '../pages/SignUp.vue';
 import Moshaveran from '../pages/Moshaveran.vue';
 import Wallet from '../pages/Wallet.vue';
+import Session from '../pages/Session.vue';
+import Tests from '../pages/Tests.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -19,6 +21,8 @@ const routes=[
     {name:'signUp',path:'/signUp',component:SignUp},
     {name:'moshaveran',path:'/moshaveran',component:Moshaveran},
     {name:'wallet',path:'/wallet',component:Wallet},
+    {name:'session',path:'/session',component:Session},
+    {name:'tests',path:'/tests',component:Tests},
 ];
 
 const router=createRouter({
