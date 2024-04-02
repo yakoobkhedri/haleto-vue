@@ -93,7 +93,12 @@
         </form>
       </div>
       <div class="mt-5 position-relative">
-         
+         <div class="px-4">
+           <div class="position-relative"> 
+            <!-- bg -->
+            <img alt="img" :src="require('@/assets/img/IMG.PNG')">
+           </div>
+         </div>
       </div>
     </div>
   </div>
