@@ -11,6 +11,7 @@ import Wallet from '../pages/Wallet.vue';
 import Session from '../pages/Session.vue';
 import Session2 from '../pages/Session2.vue';
 import Tests from '../pages/Tests.vue';
+import UserInfo from '../pages/UserInfo.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -25,6 +26,7 @@ const routes=[
     {name:'session',path:'/session',component:Session},
     {name:'session2',path:'/session2',component:Session2},
     {name:'tests',path:'/tests',component:Tests},
+    {name:'userInfo',path:'/userInfo',component:UserInfo},
 ];
 
 const router=createRouter({

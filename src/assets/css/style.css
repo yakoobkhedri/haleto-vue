@@ -255,6 +255,9 @@ a {
 .h-205{
     height: 205px;
 }
+.h-230{
+    height: 230px;
+}
 .h-253{
     height: 253px;
 }
@@ -376,8 +379,14 @@ a {
 .bg-main4{
     background-color: #d2e7d3;
 }
+.bg-main5{
+    background-color: #d7ecd8;
+}
 .bg-second {
     background: #F0AC3A;
+}
+.bg-second2{
+    background-color: #fbecd1;
 }
 .bg-blue{
     background-color: #4772e2;
@@ -721,6 +730,9 @@ header a:hover,header ul a.active,footer ul a:hover{
  }
  .w-sm-auto{
      width: auto;
+ }
+ .h-sm-150{
+    height: 150px;
  }
  .h-sm-auto{
     height: auto;
