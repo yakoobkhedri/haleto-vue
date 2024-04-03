@@ -9,6 +9,7 @@ import SignUp from '../pages/SignUp.vue';
 import Moshaveran from '../pages/Moshaveran.vue';
 import Wallet from '../pages/Wallet.vue';
 import Session from '../pages/Session.vue';
+import Session2 from '../pages/Session2.vue';
 import Tests from '../pages/Tests.vue';
 
 const routes=[
@@ -22,6 +23,7 @@ const routes=[
     {name:'moshaveran',path:'/moshaveran',component:Moshaveran},
     {name:'wallet',path:'/wallet',component:Wallet},
     {name:'session',path:'/session',component:Session},
+    {name:'session2',path:'/session2',component:Session2},
     {name:'tests',path:'/tests',component:Tests},
 ];
 

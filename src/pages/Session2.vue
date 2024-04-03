@@ -93,70 +93,7 @@
         </form>
       </div>
       <div class="mt-5 position-relative">
-         <div class="px-4">
-           <div class="position-relative h-253 h-sm-auto pb-4 px-4"> 
-            <!-- overlay -->
-            <div class="greenOverlay position-absolute w-100 h-100 top-0 end-0 bottom-0 start-0 rounded-10 z-2"></div>
-            <!-- bg -->
-            <div class="position-absolute end-0 start-0 top-0 bottom-0 h-100">
-              <img alt="img" :src="require('../assets/img/image 53.png')" class="w-100 h-100 rounded-10">
-            </div>
-            <!--  -->
-            <h5 class="text-center font-bold text-white fs-18 position-relative lh-lg pt-5 z-2">آزمون‌های روان‌شناسی<br> خودارزیابی وضعیت سلامت روان شما</h5>
-            <p class="text-center text-white fs-14 lh-lg position-relative mt-2 z-2">انجام یک تست سلامت روانی یکی از سریع‌ترین و ساده‌ترین راه‌ها برای <br> دانستن وضعیت سلامت روحی و روانی است</p>
-          </div>
-          <!--  -->
-          <div class="row fs-14 text-center fw-bold row-cols-2 row-cols-lg-4 row-cols-xl-5 mx-0 g-4 mt-3"> 
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/stress 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">اخطلال اظطرابی</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/workdload 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست افسردگی</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/stress relief 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست وسواس</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/consult 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تستADHD</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/relax 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست شخصیت شناسی نئو</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/emotion.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست اختلال عملکرد جنسی</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/academic.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست آمادگی برای مهاجرت</p>
-             </div>
-           </div>
-           <div class="col"> 
-             <div class="rounded-10 shadow-sm bg-white py-4"> 
-              <img alt="img" :src="require('../assets/img/kumustahan 1.png')" class="img-fluid w-70 h-70 d-block mx-auto">
-              <p class="mb-0 mt-4">تست افسردگی پس از زایمان</p>
-             </div>
-           </div>
-          </div>
-         </div>
+        
       </div>
     </div>
   </div>

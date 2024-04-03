@@ -252,6 +252,9 @@ a {
 .h-191{
     height: 191px;
 }
+.h-205{
+    height: 205px;
+}
 .h-253{
     height: 253px;
 }
@@ -405,6 +408,9 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.greenOverlay{
+    background-color: #658F68BA;
 }
 /* transition */
 .transition {
