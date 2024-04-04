@@ -12,6 +12,7 @@ import Session from '../pages/Session.vue';
 import Session2 from '../pages/Session2.vue';
 import Tests from '../pages/Tests.vue';
 import UserInfo from '../pages/UserInfo.vue';
+import OfficeSetting from '../pages/OfficeSetting.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -27,6 +28,7 @@ const routes=[
     {name:'session2',path:'/session2',component:Session2},
     {name:'tests',path:'/tests',component:Tests},
     {name:'userInfo',path:'/userInfo',component:UserInfo},
+    {name:'officeSetting',path:'/officeSetting',component:OfficeSetting},
 ];
 
 const router=createRouter({
