@@ -63,11 +63,11 @@
         </a>
       </div>
       <div class="mt-4 px-4 position-relative">
-        <div class="d-flex align-items-center h-58 bg-gray3">
+        <div class="d-flex align-items-center h-58 h-sm-110 bg-gray3 steps position-relative ml-29 ml-sm-none">
           <div
-            class="flex-grow-1 d-flex align-items-center gap-4 h-100 px-3 font-bold text-secondary"
+            class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
           >
-            <svg
+            <svg class="flex-shrink-0"
               width="41"
               height="41"
               viewBox="0 0 41 41"
@@ -90,9 +90,9 @@
             <p class="mb-0">اطلاعات پروفایل</p>
           </div>
           <div
-            class="flex-grow-1 d-flex align-items-center gap-4 h-100 px-3 font-bold text-secondary"
+            class="flex-grow-1 active position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
           >
-            <svg
+            <svg class="flex-shrink-0"
               width="41"
               height="40"
               viewBox="0 0 41 40"
@@ -116,9 +116,9 @@
             <p class="mb-0">تنظیمات مطب</p>
           </div>
           <div
-            class="flex-grow-1 d-flex align-items-center gap-4 h-100 px-3 font-bold text-secondary"
+            class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
           >
-            <svg
+            <svg class="flex-shrink-0"
               width="41"
               height="40"
               viewBox="0 0 41 40"
@@ -145,7 +145,7 @@
         <div class="mt-5 pt-4">
           <div class="mb-5"> 
             <h6 class="font-bold mb-3">بیمه سلامت</h6>
-            <form class="d-flex align-items-center justify-content-between gap-3">
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
               <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
                 placeholder="نام کاربری"
@@ -170,12 +170,12 @@
                   />
                 </svg>
               </div>
-              <input type="submit" value="بررسی" class="bg-main h-48 w-271 d-block flex-shrink-0 me-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
             </form>
           </div>
           <div class="mb-5"> 
             <h6 class="font-bold mb-3">بیمه تامین اجتماعی</h6>
-            <form class="d-flex align-items-center justify-content-between gap-3">
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
               <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
                 placeholder="نام کاربری"
@@ -200,12 +200,12 @@
                   />
                 </svg>
               </div>
-              <input type="submit" value="بررسی" class="bg-main h-48 w-271 d-block flex-shrink-0 me-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
             </form>
           </div>
           <div class="mb-5"> 
             <h6 class="font-bold mb-3">بیمه خدمات درمانی</h6>
-            <form class="d-flex align-items-center justify-content-between gap-3">
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
               <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
                 placeholder="نام کاربری"
@@ -230,7 +230,7 @@
                   />
                 </svg>
               </div>
-              <input type="submit" value="بررسی" class="bg-main h-48 w-271 d-block flex-shrink-0 me-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
             </form>
           </div>
         </div>

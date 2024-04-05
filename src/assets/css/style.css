@@ -496,6 +496,9 @@ a {
 .-ml-18{
     margin-left: -18px;
 }
+.ml-29{
+    margin-left: 29px;
+}
 .mt-166{
     margin-top: 166px;
 }
@@ -661,6 +664,54 @@ header a:hover,header ul a.active,footer ul a:hover{
     box-shadow: none;
     border-color: #6cb771!important;
   }
+  /* steps */
+  .steps > div{
+    width: 33%;
+  }
+  .steps > div.active{
+    background-color: #75BF7A;
+    color: white!important;
+  }
+  .steps::after{
+    content: '';
+    position: absolute;
+    left: -18px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 18px 30px 0;
+    border-color: transparent #e6e6e7 transparent transparent;
+    transform: rotate(0deg);
+  }
+  .steps > div.active::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 18px 30px 0;
+    border-color: transparent #e6e6e7 transparent transparent;
+    transform: rotate(0deg);
+  }
+  .steps > div.active::after{
+        content: '';
+        position: absolute;
+        left: -17px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 30px 18px 30px 0;
+        border-color: transparent #75BF7A transparent transparent;
+        transform: rotate(0deg);
+        z-index: 9;
+  }
+  .steps > div.active svg,.steps > div.active rect{
+    stroke: white;
+  }
+  .steps > div.active svg path{
+    fill: white;
+  }
 /* banner */
 #banner{
     height: 740px;
@@ -708,6 +759,9 @@ header a:hover,header ul a.active,footer ul a:hover{
     .w-lg-100{
         width: 100%!important;
     }
+    .w-lg-120{
+        width: 120px!important;
+    }
     .h-lg-auto{
         height: auto;
     }
@@ -728,6 +782,9 @@ header a:hover,header ul a.active,footer ul a:hover{
     }
     .fill-lg-white{
         fill: white;
+    }
+    .fs-lg-14{
+        font-size: 14px;
     }
 }
 
@@ -762,6 +819,9 @@ header a:hover,header ul a.active,footer ul a:hover{
  .w-sm-auto{
      width: auto;
  }
+ .h-sm-110{
+    height: 110px;
+ }
  .h-sm-150{
     height: 150px;
  }
@@ -774,6 +834,12 @@ header a:hover,header ul a.active,footer ul a:hover{
  .fs-sm-14{
     font-size: 14px;
  }
+  .steps > div.active::after, .steps > div.active::before,.steps::after {
+        display: none;
+  }
+  .ml-sm-none{
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width:400px) {
