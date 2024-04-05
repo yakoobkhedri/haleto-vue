@@ -175,6 +175,9 @@ a {
 .w-70 {
     width: 70px;
 }
+.w-80 {
+    width: 80px;
+}
 .w-117 {
     width: 117px;
 }
@@ -257,8 +260,14 @@ a {
 .h-70{
     height: 70px;
 }
+.h-80{
+    height: 80px;
+}
 .h-100vh{
     height: 100vh;
+}
+.h-177{
+    height: 177px;
 }
 .h-191{
     height: 191px;

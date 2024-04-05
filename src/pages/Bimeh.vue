@@ -144,53 +144,93 @@
         </div>
         <div class="mt-5 pt-4">
           <div class="mb-5"> 
-            <form class="gx-5 gy-3 row mx-0">
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
-                <input
+            <h6 class="font-bold mb-3">بیمه سلامت</h6>
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
+              <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                placeholder="عنوان مطب"
+                placeholder="نام کاربری"
               />
-              </div>
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
+              <div
+                class="bg-white w-100 d-flex align-items-center gap-3 h-48 px-3 rounded-1 border"
+              >
                 <input
+                  class="bg-white w-100 h-100 px-1 rounded-1 outline-none border-0"
+                  placeholder="رمز عبور"
+                />
+                <svg class="cursor-pointer"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4997 17.3204C15.1618 17.3204 15.7666 17.2461 16.3182 17.1177L15.0883 15.8507C14.8972 15.8658 14.7033 15.8781 14.4997 15.8781C10.754 15.8781 9.30297 13.1046 8.95158 12.2725C9.21544 11.6659 9.5718 11.1066 10.0072 10.616L9.02858 9.60789C7.952 10.81 7.54391 12.0208 7.53621 12.0446C7.48793 12.1927 7.48793 12.353 7.53621 12.5011C7.55091 12.5487 9.15668 17.3204 14.4997 17.3204ZM14.4997 7.22456C13.2138 7.22456 12.1575 7.51012 11.2769 7.93198L8.69469 5.27246L7.70491 6.29214L20.3046 19.2725L21.2944 18.2528L18.9711 15.8594C20.8009 14.4524 21.454 12.5313 21.4638 12.5011C21.5121 12.353 21.5121 12.1927 21.4638 12.0446C21.4484 11.9963 19.8426 7.22456 14.4997 7.22456ZM17.98 14.8382L16.384 13.1941C16.517 12.9128 16.5996 12.6035 16.5996 12.2725C16.5996 11.0891 15.6483 10.1091 14.4997 10.1091C14.1784 10.1091 13.8781 10.1942 13.6058 10.3319L12.3402 9.0281C13.0349 8.78249 13.7652 8.66032 14.4997 8.66682C18.2453 8.66682 19.6963 11.4403 20.0477 12.2725C19.8363 12.7715 19.2315 13.9613 17.98 14.8382Z"
+                    fill="#8A8A8A"
+                  />
+                </svg>
+              </div>
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
+            </form>
+          </div>
+          <div class="mb-5"> 
+            <h6 class="font-bold mb-3">بیمه تامین اجتماعی</h6>
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
+              <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                placeholder="شماره تماس"
+                placeholder="نام کاربری"
               />
-              </div>
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
-              <select class="bg-white w-100 h-48 px-3 rounded-1 border">
-                <option>کشور</option>
-                <option>ایران</option>
-                <option>عراق</option>
-              </select>
-              </div>
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
-                <select class="bg-white w-100 h-48 px-3 rounded-1 border">
-                  <option>شهر</option>
-                  <option>تهران</option>
-                  <option>قم</option>
-                </select>
-              </div>
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
-                <select class="bg-white w-100 h-48 px-3 rounded-1 border">
-                  <option>استان</option>
-                  <option>تهران</option>
-                  <option>قم</option>
-                </select>
-              </div>
-              <div class="px-0 px-md-2 px-xl-4 col-xl-4 col-md-6"> 
+              <div
+                class="bg-white w-100 d-flex align-items-center gap-3 h-48 px-3 rounded-1 border"
+              >
                 <input
+                  class="bg-white w-100 h-100 px-1 rounded-1 outline-none border-0"
+                  placeholder="رمز عبور"
+                />
+                <svg class="cursor-pointer"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4997 17.3204C15.1618 17.3204 15.7666 17.2461 16.3182 17.1177L15.0883 15.8507C14.8972 15.8658 14.7033 15.8781 14.4997 15.8781C10.754 15.8781 9.30297 13.1046 8.95158 12.2725C9.21544 11.6659 9.5718 11.1066 10.0072 10.616L9.02858 9.60789C7.952 10.81 7.54391 12.0208 7.53621 12.0446C7.48793 12.1927 7.48793 12.353 7.53621 12.5011C7.55091 12.5487 9.15668 17.3204 14.4997 17.3204ZM14.4997 7.22456C13.2138 7.22456 12.1575 7.51012 11.2769 7.93198L8.69469 5.27246L7.70491 6.29214L20.3046 19.2725L21.2944 18.2528L18.9711 15.8594C20.8009 14.4524 21.454 12.5313 21.4638 12.5011C21.5121 12.353 21.5121 12.1927 21.4638 12.0446C21.4484 11.9963 19.8426 7.22456 14.4997 7.22456ZM17.98 14.8382L16.384 13.1941C16.517 12.9128 16.5996 12.6035 16.5996 12.2725C16.5996 11.0891 15.6483 10.1091 14.4997 10.1091C14.1784 10.1091 13.8781 10.1942 13.6058 10.3319L12.3402 9.0281C13.0349 8.78249 13.7652 8.66032 14.4997 8.66682C18.2453 8.66682 19.6963 11.4403 20.0477 12.2725C19.8363 12.7715 19.2315 13.9613 17.98 14.8382Z"
+                    fill="#8A8A8A"
+                  />
+                </svg>
+              </div>
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
+            </form>
+          </div>
+          <div class="mb-5"> 
+            <h6 class="font-bold mb-3">بیمه خدمات درمانی</h6>
+            <form class="flex-column flex-sm-row d-flex align-items-center justify-content-between gap-xl-3 gap-2">
+              <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                placeholder="آدرس"
+                placeholder="نام کاربری"
               />
+              <div
+                class="bg-white w-100 d-flex align-items-center gap-3 h-48 px-3 rounded-1 border"
+              >
+                <input
+                  class="bg-white w-100 h-100 px-1 rounded-1 outline-none border-0"
+                  placeholder="رمز عبور"
+                />
+                <svg class="cursor-pointer"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4997 17.3204C15.1618 17.3204 15.7666 17.2461 16.3182 17.1177L15.0883 15.8507C14.8972 15.8658 14.7033 15.8781 14.4997 15.8781C10.754 15.8781 9.30297 13.1046 8.95158 12.2725C9.21544 11.6659 9.5718 11.1066 10.0072 10.616L9.02858 9.60789C7.952 10.81 7.54391 12.0208 7.53621 12.0446C7.48793 12.1927 7.48793 12.353 7.53621 12.5011C7.55091 12.5487 9.15668 17.3204 14.4997 17.3204ZM14.4997 7.22456C13.2138 7.22456 12.1575 7.51012 11.2769 7.93198L8.69469 5.27246L7.70491 6.29214L20.3046 19.2725L21.2944 18.2528L18.9711 15.8594C20.8009 14.4524 21.454 12.5313 21.4638 12.5011C21.5121 12.353 21.5121 12.1927 21.4638 12.0446C21.4484 11.9963 19.8426 7.22456 14.4997 7.22456ZM17.98 14.8382L16.384 13.1941C16.517 12.9128 16.5996 12.6035 16.5996 12.2725C16.5996 11.0891 15.6483 10.1091 14.4997 10.1091C14.1784 10.1091 13.8781 10.1942 13.6058 10.3319L12.3402 9.0281C13.0349 8.78249 13.7652 8.66032 14.4997 8.66682C18.2453 8.66682 19.6963 11.4403 20.0477 12.2725C19.8363 12.7715 19.2315 13.9613 17.98 14.8382Z"
+                    fill="#8A8A8A"
+                  />
+                </svg>
               </div>
-              <div class="px-0 px-md-2 px-xl-4 col-12"> 
-                <iframe class="rounded-12 overflow-hidden w-100"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207344.0754342176!2d51.51246591933516!3d35.707740217686975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00491ff3dcd9%3A0xf0b3697c567024bc!2z2KrZh9ix2KfZhtiMINin2LPYqtin2YYg2KrZh9ix2KfZhtiMINin24zYsdin2YY!5e0!3m2!1sfa!2s!4v1708858730182!5m2!1sfa!2s"
-          height="415" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <input type="submit" value="بررسی آدرس" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 mt-4 mx-auto border-0 rounded-8 text-center text-white fw-bold fs-14">
-              </div>
+              <input type="submit" value="بررسی" class="bg-main h-48 w-271 w-lg-120 d-block flex-shrink-0 me-xl-5 border-0 rounded-8 text-center text-white fw-bold fs-14">
             </form>
           </div>
         </div>
