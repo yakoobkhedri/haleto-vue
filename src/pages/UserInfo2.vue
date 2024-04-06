@@ -58,7 +58,101 @@
         </div>
       </div>
       <div class="mt-4 px-sm-4 px-3 position-relative">
-        
+        <div
+          class="bg-white rounded-1 d-flex align-items-center gap-5 fw-bold px-3 py-2 mb-2"
+        >
+          <div class="d-flex align-items-center gap-1">
+            <p class="mb-0 text-muted fw-light">نام و نام خانوادگی:</p>
+            <p class="mb-0">مهسا امیری</p>
+          </div>
+          <div class="d-flex align-items-center gap-1">
+            <p class="mb-0 text-muted fw-light">شماره پرونده:</p>
+            <p class="mb-0">123432</p>
+          </div>
+          <div class="d-flex align-items-center gap-1">
+            <p class="mb-0 text-muted fw-light">تاریخ مراجعه:</p>
+            <p class="mb-0">1402/09/12</p>
+          </div>
+          <div class="d-flex align-items-center gap-1">
+            <p class="mb-0 text-muted fw-light">ساعت مراجعه:</p>
+            <p class="mb-0">18:10 عصر</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-1 fw-bold p-3 mb-2">
+          <p class="text-main font-bold">تاریخچه بیماری/مشکل فعلي</p>
+          <div class="d-flex align-items-center gap-5 fw-bold">
+            <div class="d-flex align-items-center gap-1">
+              <p class="mb-0 text-muted fw-light">زمان شروع بیماری:</p>
+              <p class="mb-0">4 ماه قبل</p>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <p class="mb-0 text-muted fw-light">نحوه شروع بیماری:</p>
+              <p class="mb-0">قبول نشدن در کنکور</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-1 fw-bold p-3 mb-2">
+          <p class="text-main font-bold">علایم شروع بیماری</p>
+          <p class="mb-0 text-muted fw-light">
+            فعالیت بیش از حد-پر حرفی-اختلال در تمرکز- حرف زدن با خود-کمبود انرژی
+            - احساس گناه
+          </p>
+        </div>
+        <div class="bg-white rounded-1 fw-bold p-3 mb-2">
+          <p class="text-main font-bold">تاریخچه تکاملی</p>
+          <p class="mb-0 text-muted fw-light">
+            فعالیت بیش از حد-پر حرفی-اختلال در تمرکز- حرف زدن با خود-کمبود انرژی
+            - احساس گناه
+          </p>
+        </div>
+        <div
+          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex align-items-center gap-5"
+        >
+          <p class="mb-0 text-main font-bold">سابقه مصرف سیگار،مواد، الکل</p>
+          <div class="d-flex align-items-center gap-2">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.359375"
+                y="0.136475"
+                width="24"
+                height="24"
+                rx="4"
+                fill="#75BF7A"
+              />
+            </svg>
+            <p class="mb-0 fs-14 text-muted">خیر</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex align-items-center gap-5"
+        >
+          <p class="mb-0 text-main font-bold">سابقه بیماری جسمی</p>
+          <div class="d-flex align-items-center gap-2">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.359375"
+                y="0.136475"
+                width="24"
+                height="24"
+                rx="4"
+                fill="#75BF7A"
+              />
+            </svg>
+            <p class="mb-0 fs-14 text-muted">خیر</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
