@@ -62,7 +62,7 @@
           پنل کاربری
         </a>
       </div>
-      <div class="mt-4 px-4 position-relative">
+      <div class="mt-4 px-sm-4 px-3 position-relative">
         <div class="d-flex align-items-center h-58 h-sm-110 bg-gray3 steps position-relative ml-29 ml-sm-none">
           <div
             class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
@@ -145,28 +145,122 @@
         <div class="mt-4 pt-2">
           <div class="mb-5"> 
             <form class="gx-5 gy-3 row mx-0">
-              <div class="px-0 px-md-2 px-xl-4 col-12"> 
-                <div class="d-flex align-items-center gap-4"> 
+              <div class="px-0 px-md-2 px-xl-4 col-12 mb-4"> 
+                <div class="d-flex flex-column flex-sm-row align-items-center gap-4"> 
                  <img alt="img" :src="require('../assets/img/Bitmap.png')" class="w-80 h-80 d-block rounded-3">
                  <a class="fs-14 fw-bold text-secondary border bg-white rounded-8 py-3 px-5">تغییر عکس پروفایل</a>
                  <a class="fs-14 fw-bold text-secondary border bg-white rounded-8 py-3 px-5">حذف عکس پروفایل</a>
                 </div>
               </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">نام</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="امیر">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">نام خانوادگی</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="احمدی">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">شماره موبایل</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="09128765431">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">کد ملی</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="2840172429">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">جنسیت</label>
+                <select class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block"> 
+                  <option>مرد</option>
+                  <option>زن</option>
+                </select>
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">تاریخ تولد</label>
+                <input type="date" class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block outline-none">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">ایمیل</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="amirahmadi@gmail.com">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">میزان سابقه مشاوره</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="میزان سابقه مشاوره">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">مقطع تحصیلی</label>
+                <select class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block"> 
+                  <option>لیسانس</option>
+                  <option>دکترا</option>
+                </select>
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">گرایش تحصیلی</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="دندانپزشکی">
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">کشور</label>
+                <select class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block"> 
+                  <option>ایران</option>
+                  <option>عراق</option>
+                </select>
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">شهر</label>
+                <select class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block"> 
+                  <option>تهران</option>
+                  <option>قم</option>
+                </select>
+               </div>
+              </div>
+              <div class="col-lg-4 col-md-6"> 
+               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold">حوزه تخصصی</label>
+                <input class="bg-transparent w-100 outline-none border-0 fs-12 fw-bold mb-1 d-block" placeholder="پزشکی">
+               </div>
+              </div>
               <div class="col-12 mt-5"> 
                <h6 class="font-bold mb-4">امنیت و تغییر رمز عبور</h6>
-               <div class="row gx-5 mx-0 fs-14 fw-bold"> 
-                <div class="col-lg-4 pe-lg-0"> 
+               <div class="row gx-5 gy-3 gy-lg-0 mx-0 fs-14 fw-bold"> 
+                <div class="col-lg-4 pe-0 ps-0 ps-lg-3"> 
                   <div class="bg-white w-100 d-flex align-items-center gap-3 h-48 px-3 rounded-1 border mb-3"><input class="bg-white w-100 h-100 px-1 rounded-1 outline-none border-0" placeholder="رمز عبور"><svg class="cursor-pointer" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4997 17.3204C15.1618 17.3204 15.7666 17.2461 16.3182 17.1177L15.0883 15.8507C14.8972 15.8658 14.7033 15.8781 14.4997 15.8781C10.754 15.8781 9.30297 13.1046 8.95158 12.2725C9.21544 11.6659 9.5718 11.1066 10.0072 10.616L9.02858 9.60789C7.952 10.81 7.54391 12.0208 7.53621 12.0446C7.48793 12.1927 7.48793 12.353 7.53621 12.5011C7.55091 12.5487 9.15668 17.3204 14.4997 17.3204ZM14.4997 7.22456C13.2138 7.22456 12.1575 7.51012 11.2769 7.93198L8.69469 5.27246L7.70491 6.29214L20.3046 19.2725L21.2944 18.2528L18.9711 15.8594C20.8009 14.4524 21.454 12.5313 21.4638 12.5011C21.5121 12.353 21.5121 12.1927 21.4638 12.0446C21.4484 11.9963 19.8426 7.22456 14.4997 7.22456ZM17.98 14.8382L16.384 13.1941C16.517 12.9128 16.5996 12.6035 16.5996 12.2725C16.5996 11.0891 15.6483 10.1091 14.4997 10.1091C14.1784 10.1091 13.8781 10.1942 13.6058 10.3319L12.3402 9.0281C13.0349 8.78249 13.7652 8.66032 14.4997 8.66682C18.2453 8.66682 19.6963 11.4403 20.0477 12.2725C19.8363 12.7715 19.2315 13.9613 17.98 14.8382Z" fill="#8A8A8A"></path></svg></div>
                   <input class="bg-white w-100 h-48 px-3 rounded-1 outline-none border mb-3" placeholder="تکرار رمز عبور">
                   <a class="bg-white w-100 h-48 px-3 rounded-1 border d-flex align-items-center justify-content-center text-secondary">افزودن اثر انگشت</a>
                 </div>
-                <div class="col-lg-8 text-center"> 
+                <div class="col-lg-8 ps-0 pe-0 pe-lg-3 text-center"> 
                   <div class="bg-white w-100 h-177 p-3 rounded-1 border"> 
                    <p>اثر انگشت خود را ثبت کنید</p>
+                   <img alt="img" :src="require('../assets/img/image 68.png')" class="d-block mx-auto my-3">
                    <p class="text-main">شما یک اثر انگشت تعریف شده دارید</p>
                   </div>
                 </div>
                </div>
+              </div>
+              <div class="col-12 mt-5"> 
+                <a class="bg-main me-auto h-48 w-271 w-lg-120 d-flex align-items-center justify-content-center flex-shrink-0 border-0 rounded-8 text-center text-white fw-bold fs-14">مرحله بعد</a>
               </div>
             </form>
           </div>
