@@ -243,7 +243,7 @@
 import Aside from "@/components/Aside/Aside.vue";
 export default {
   components: { Aside },
-  name: "Wallet-component",
+  name: "Session2-component",
 };
 </script>
 
