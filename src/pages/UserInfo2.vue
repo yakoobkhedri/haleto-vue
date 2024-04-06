@@ -153,6 +153,331 @@
             <p class="mb-0 fs-14 text-muted">خیر</p>
           </div>
         </div>
+        <div class="bg-white p-3 d-flex justify-content-between gap-3 mb-3">
+          <div>
+            <p class="fw-bold fs-18">نسخه الکترونیکی بیمار</p>
+            <div class="d-flex flex-wrap align-items-center gap-5 fw-bold">
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">نام دارو:</p>
+                <p class="mb-0">yrtew</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">دستور مصرف:</p>
+                <p class="mb-0">هر روز 1 عدد</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">میزان مصرف:</p>
+                <p class="mb-0">1 ماه</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">شیوه مصرف:</p>
+                <p class="mb-0">خوراکی</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">تاریخ موثر:</p>
+                <p class="mb-0">1402/09/12</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">مقدار مصرف:</p>
+                <p class="mb-0">3</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="d-flex align-items-center justify-content-center gap-5">
+              <img
+                alt="img"
+                :src="require('../assets/img/Frame 1597883972.png')"
+                class="img-fluid"
+              />
+            </div>
+            <a
+              class="bg-second mx-auto text-white fw-bold fs-14 rounded-8 mt-4 d-flex align-items-center justify-content-center w-202 h-48"
+              >ایجاد نسخه جدید</a
+            >
+          </div>
+        </div>
+        <div class="bg-white p-3 d-flex justify-content-between gap-3 mb-3">
+          <div>
+            <p class="fw-bold fs-18">گزارشات جلسات</p>
+            <div class="d-flex flex-wrap align-items-center gap-5 fw-bold">
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">نام دارو:</p>
+                <p class="mb-0">yrtew</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">دستور مصرف:</p>
+                <p class="mb-0">هر روز 1 عدد</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">میزان مصرف:</p>
+                <p class="mb-0">1 ماه</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">شیوه مصرف:</p>
+                <p class="mb-0">خوراکی</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">تاریخ موثر:</p>
+                <p class="mb-0">1402/09/12</p>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <p class="mb-0 text-muted fw-light">مقدار مصرف:</p>
+                <p class="mb-0">3</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="d-flex align-items-center justify-content-center gap-5">
+              <img
+                alt="img"
+                :src="require('../assets/img/Frame 1597883972.png')"
+                class="img-fluid opacity-0"
+              />
+            </div>
+            <a
+              class="bg-second mx-auto text-white fw-bold fs-14 rounded-8 mt-4 d-flex align-items-center justify-content-center w-202 h-48"
+              >ایجاد گزارش جدید</a
+            >
+          </div>
+        </div>
+        <div class="bg-white p-3 pb-5">
+          <p class="fw-bold fs-18">فعالیت های بیمار</p>
+          <textarea
+            rows="5"
+            class="rounded-1 border-dashed-2 fs-14 w-100 p-3 outline-none"
+            placeholder="لطفا فعالیت های مرتبط با بیمار نوشته شود"
+          ></textarea>
+          <div
+            class="mt-5 d-flex align-items-center justify-content-center gap-5 fs-14 fw-bold text-muted"
+          >
+            <p class="mb-0">نیاز به ارجاع بیمار وجود دارد؟</p>
+            <label class="cursor-pointer d-flex align-items-center gap-2"
+              ><input
+                type="checkbox"
+                class="form-check-input form-select-lg bg-transparent cursor-pointer"
+              />
+              <p class="mb-0 mt-1">ارجاع بیمار</p></label
+            >
+          </div>
+          <form
+            class="border mt-4 max-w-581 h-48 mx-auto d-flex align-items-center gap-2 rounded-8 ps-4 pe-3 py-2 bg-white"
+          >
+            <svg
+              class="cursor-pointer"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 21C7.25329 21 3 16.7467 3 11.5C3 6.25329 7.25329 2 12.5 2C17.7467 2 22 6.25329 22 11.5C22 16.7467 17.7467 21 12.5 21Z"
+                stroke="#717171"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 22L4 20"
+                stroke="#717171"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input class="outline-none w-100 h-100 border-0 bg-transparent" />
+          </form>
+          <div class="row g-4 mx-0 mt-4">
+            <div class="col-lg-4">
+              <div class="border rounded-1 overflow-hidden">
+                <p
+                  class="mb-0 bg-main text-white text-center py-2 fs-14 fw-bold"
+                >
+                  روانپزشک
+                </p>
+                <div class="p-3">
+                  <select
+                    class="bg-transparent rounded-1 w-100 border p-2 fs-12 fw-bold"
+                  >
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                  </select>
+                  <div class="mt-3">
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="border rounded-1 overflow-hidden">
+                <p
+                  class="mb-0 bg-main text-white text-center py-2 fs-14 fw-bold"
+                >
+                  روانشناس
+                </p>
+                <div class="p-3">
+                  <select
+                    class="bg-transparent rounded-1 w-100 border p-2 fs-12 fw-bold"
+                  >
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                  </select>
+                  <div class="mt-3">
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="border rounded-1 overflow-hidden">
+                <p
+                  class="mb-0 bg-main text-white text-center py-2 fs-14 fw-bold"
+                >
+                  گفتار درمان
+                </p>
+                <div class="p-3">
+                  <select
+                    class="bg-transparent rounded-1 w-100 border p-2 fs-12 fw-bold"
+                  >
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                    <option>تحصص</option>
+                  </select>
+                  <div class="mt-3">
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                    <label
+                      class="d-flex align-items-center gap-2 cursor-pointer mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                      />
+                      <img
+                        alt="img"
+                        :src="require('../assets/img/image 66.png')"
+                        class="img-fluid w-30 h-30 rounded-circle d-block"
+                      />
+                      <p class="mb-0 fs-12 text-muted">دکتر ثنا محمدی</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="bg-main me-auto h-48 w-271 w-lg-120 d-flex align-items-center justify-content-center flex-shrink-0 border-0 rounded-8 text-center text-white fw-bold fs-14 mt-5 ms-3">تایید ارجاع</a>
+        </div>
       </div>
     </div>
   </div>
