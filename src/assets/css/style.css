@@ -275,6 +275,9 @@ a {
 .h-100vh{
     height: 100vh;
 }
+.h-145{
+    height: 145px;
+}
 .h-177{
     height: 177px;
 }
@@ -804,6 +807,12 @@ header a:hover,header ul a.active,footer ul a:hover{
     .fs-lg-14{
         font-size: 14px;
     }
+    .fs-lg-12{
+        font-size: 12px;
+    }
+    .fs-lg-10{
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -851,6 +860,9 @@ header a:hover,header ul a.active,footer ul a:hover{
  }
  .fs-sm-14{
     font-size: 14px;
+ }
+ .fs-sm-12{
+    font-size: 12px;
  }
   .steps > div.active::after, .steps > div.active::before,.steps::after {
         display: none;

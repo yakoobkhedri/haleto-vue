@@ -62,7 +62,7 @@
           پنل کاربری
         </a>
       </div>
-      <div class="mt-4 px-4 position-relative">
+      <div class="mt-4 px-sm-4 px-3 position-relative">
         <div
           class="d-flex align-items-center h-58 h-sm-110 bg-gray3 steps position-relative ml-29 ml-sm-none"
         >
@@ -152,11 +152,11 @@
             <img
               alt="img"
               :src="require('../assets/img/Uber Jump (2).png')"
-              class="img-fluid w-100 d-block rounded-10"
+              class="img-fluid w-100 d-block rounded-10 h-145"
             />
           </div>
           <div class="row gx-5 gy-3 mx-0 mt-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -190,7 +190,7 @@
                 <p class="mb-0 fs-32">102</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -224,7 +224,7 @@
                 <p class="mb-0 fs-32">102</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -258,7 +258,7 @@
                 <p class="mb-0 fs-32">233</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -294,7 +294,7 @@
                 <p class="mb-0 fs-32">10</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -330,7 +330,7 @@
                 <p class="mb-0 fs-32">20</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -364,7 +364,7 @@
                 <p class="mb-0"><span class="fs-32">12</span> روز دیگر</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-main3 px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -400,7 +400,7 @@
                 <p class="mb-0 fs-32 text-main">20</p>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-second2 px-4 py-3 d-flex align-items-center justify-content-between gap-3"
               >
@@ -436,9 +436,124 @@
             </div>
           </div>
           <!--  -->
-          <div class="px-4">
+          <div class="px-sm-4">
             <div class="bg-white rounded-10 mt-4 shadow">
               <div class="fw-bold text-center py-3">لیست نوبت های امروز</div>
+              <div class="table-responsive">
+                <table class="table text-center">
+                  <thead class="table-light fs-lg-12 font-bold">
+                    <tr>
+                      <th scope="col"><p class="my-2">نام</p></th>
+                      <th scope="col">
+                        <p class="my-2">
+                          نام خانوادگی
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="my-2">
+                        شماره بیمه
+                      </p>
+                      </th>
+                      <th scope="col"><p class="my-2">نوبت</p></th>
+                      <th scope="col">
+                        <p class="my-2"> 
+                          نوع مشاوره
+                        </p>
+                      </th>
+                      <th scope="col"><p class="my-2">عملیات</p></th>
+                    </tr>
+                  </thead>
+                  <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                    <tr>
+                      <td><p class="my-3 text-muted">امیر</p></td>
+                      <td><p class="my-3 text-muted">مرادی</p></td>
+                      <td><p class="my-3 text-muted">548664</p></td>
+                      <td><p class="my-3 text-muted">آنلاین</p></td>
+                      <td>
+                        <p class="my-3 text-muted">
+                          زوج درمانی
+                        </p>
+                      </td>
+                      <td>
+                        <a class="btn btn-outline-success my-3 fs-lg-10">مشاهده نسخه الکترونیکی</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><p class="my-3 text-muted">امیر</p></td>
+                      <td><p class="my-3 text-muted">مرادی</p></td>
+                      <td><p class="my-3 text-muted">548664</p></td>
+                      <td><p class="my-3 text-muted">آنلاین</p></td>
+                      <td>
+                        <p class="my-3 text-muted">
+                          زوج درمانی
+                        </p>
+                      </td>
+                      <td>
+                        <a class="btn btn-outline-success my-3 fs-lg-10">مشاهده نسخه الکترونیکی</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="bg-white rounded-10 mt-4 shadow">
+              <div class="fw-bold text-center py-3">آمار تمامی نوبت ها</div>
+              <div class="table-responsive">
+                <table class="table text-center">
+                  <thead class="table-light fs-lg-12 font-bold">
+                    <tr>
+                      <th scope="col"><p class="my-2">تاریخ</p></th>
+                      <th scope="col">
+                        <p class="my-2">
+                         نام و نام خانوادگی
+                        </p>
+                      </th>
+                      <th scope="col">
+                        <p class="my-2">
+                        شماره بیمه
+                      </p>
+                      </th>
+                      <th scope="col"><p class="my-2">نوبت</p></th>
+                      <th scope="col">
+                        <p class="my-2"> 
+                          نوع مشاوره
+                        </p>
+                      </th>
+                      <th scope="col"><p class="my-2">عملیات</p></th>
+                    </tr>
+                  </thead>
+                  <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                    <tr>
+                      <td><p class="my-3 text-muted">1402/09/08</p></td>
+                      <td><p class="my-3 text-muted">امیر مرادی</p></td>
+                      <td><p class="my-3 text-muted">548664</p></td>
+                      <td><p class="my-3 text-muted">آنلاین</p></td>
+                      <td>
+                        <p class="my-3 text-muted">
+                          زوج درمانی
+                        </p>
+                      </td>
+                      <td>
+                        <a class="btn btn-outline-success my-3 fs-lg-10">مشاهده نسخه الکترونیکی</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><p class="my-3 text-muted">1402/09/08</p></td>
+                      <td><p class="my-3 text-muted">امیر مرادی</p></td>
+                      <td><p class="my-3 text-muted">548664</p></td>
+                      <td><p class="my-3 text-muted">آنلاین</p></td>
+                      <td>
+                        <p class="my-3 text-muted">
+                          زوج درمانی
+                        </p>
+                      </td>
+                      <td>
+                        <a class="btn btn-outline-success my-3 fs-lg-10">مشاهده نسخه الکترونیکی</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
