@@ -818,7 +818,7 @@ header a:hover,header ul a.active,footer ul a:hover{
         height: auto;
     }
     .w-md-100{
-        width: 100%;
+        width: 100%!important;
     }
 }
 @media only screen and (max-width:576px) {

@@ -59,7 +59,7 @@
       </div>
       <div class="mt-4 px-sm-4 px-3 position-relative">
         <div
-          class="bg-white rounded-1 d-flex align-items-center gap-5 fw-bold px-3 py-2 mb-2"
+          class="bg-white rounded-1 d-flex flex-wrap align-items-center gap-xl-5 gap-4 fw-bold px-3 py-2 mb-2"
         >
           <div class="d-flex align-items-center gap-1">
             <p class="mb-0 text-muted fw-light">نام و نام خانوادگی:</p>
@@ -80,7 +80,7 @@
         </div>
         <div class="bg-white rounded-1 fw-bold p-3 mb-2">
           <p class="text-main font-bold">تاریخچه بیماری/مشکل فعلي</p>
-          <div class="d-flex align-items-center gap-5 fw-bold">
+          <div class="d-flex align-items-center flex-wrap gap-4 gap-xl-5 fw-bold">
             <div class="d-flex align-items-center gap-1">
               <p class="mb-0 text-muted fw-light">زمان شروع بیماری:</p>
               <p class="mb-0">4 ماه قبل</p>
@@ -106,7 +106,7 @@
           </p>
         </div>
         <div
-          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex align-items-center gap-5"
+          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex flex-wrap align-items-center gap-sm-5 gap-3"
         >
           <p class="mb-0 text-main font-bold">سابقه مصرف سیگار،مواد، الکل</p>
           <div class="d-flex align-items-center gap-2">
@@ -130,7 +130,7 @@
           </div>
         </div>
         <div
-          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex align-items-center gap-5"
+          class="bg-white rounded-1 fw-bold p-3 mb-2 d-flex flex-wrap align-items-center gap-sm-5 gap-3"
         >
           <p class="mb-0 text-main font-bold">سابقه بیماری جسمی</p>
           <div class="d-flex align-items-center gap-2">
@@ -153,7 +153,7 @@
             <p class="mb-0 fs-14 text-muted">خیر</p>
           </div>
         </div>
-        <div class="bg-white p-3 d-flex justify-content-between gap-3 mb-3">
+        <div class="bg-white p-3 d-flex flex-column flex-md-row justify-content-between gap-3 mb-3">
           <div>
             <p class="fw-bold fs-18">نسخه الکترونیکی بیمار</p>
             <div class="d-flex flex-wrap align-items-center gap-5 fw-bold">
@@ -183,12 +183,12 @@
               </div>
             </div>
           </div>
-          <div class="w-50">
+          <div class="w-50 w-md-100">
             <div class="d-flex align-items-center justify-content-center gap-5">
               <img
                 alt="img"
                 :src="require('../assets/img/Frame 1597883972.png')"
-                class="img-fluid"
+                class="img-fluid d-block mx-auto"
               />
             </div>
             <a
@@ -197,7 +197,7 @@
             >
           </div>
         </div>
-        <div class="bg-white p-3 d-flex justify-content-between gap-3 mb-3">
+        <div class="bg-white p-3 d-flex flex-column flex-md-row justify-content-between gap-3 mb-3">
           <div>
             <p class="fw-bold fs-18">گزارشات جلسات</p>
             <div class="d-flex flex-wrap align-items-center gap-5 fw-bold">
@@ -227,7 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="w-50">
+          <div class="w-50 w-md-100">
             <div class="d-flex align-items-center justify-content-center gap-5">
               <img
                 alt="img"
@@ -249,7 +249,7 @@
             placeholder="لطفا فعالیت های مرتبط با بیمار نوشته شود"
           ></textarea>
           <div
-            class="mt-5 d-flex align-items-center justify-content-center gap-5 fs-14 fw-bold text-muted"
+            class="mt-5 d-flex flex-wrap align-items-center justify-content-center gap-sm-5 gap-2 fs-14 fw-bold text-muted"
           >
             <p class="mb-0">نیاز به ارجاع بیمار وجود دارد؟</p>
             <label class="cursor-pointer d-flex align-items-center gap-2"
