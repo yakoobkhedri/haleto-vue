@@ -71,8 +71,8 @@
             ></div>
           </router-link>
         </li>
-        <li class="list-hover list-hover-3 mb-4 px-4">
-          <div class="d-flex align-items-center gap-2">
+        <li class="list-hover list-hover-3 mb-4 px-4 cursor-pointer">
+          <div class="d-flex align-items-center gap-2 accordion-btn">
             <svg
               width="24"
               height="24"
@@ -124,7 +124,7 @@
               />
             </svg>
           </div>
-          <ul class="fs-12 list-unstyled pe-0 pt-4 fw-bold">
+          <ul class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
             <li class="mb-3">
               <router-link to="/dashboard" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">درخواست جلسات</router-link>
             </li>
@@ -132,8 +132,8 @@
             <li><router-link to="/session" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">خرید پکیج های مشاوره</router-link></li>
           </ul>
         </li>
-        <li class="list-hover list-hover-3 mb-4 px-4">
-          <div class="d-flex align-items-center gap-2">
+        <li class="list-hover list-hover-3 mb-4 px-4 cursor-pointer">
+          <div class="d-flex align-items-center gap-2 accordion-btn">
             <svg
               width="24"
               height="24"
@@ -168,7 +168,7 @@
               />
             </svg>
           </div>
-          <ul class="fs-12 list-unstyled pe-0 pt-4 fw-bold">
+          <ul class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
             <li class="mb-3"><router-link to="/tests" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">تست ها</router-link></li>
           </ul>
         </li>

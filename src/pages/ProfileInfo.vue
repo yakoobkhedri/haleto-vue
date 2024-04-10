@@ -182,7 +182,7 @@
                </div>
               </div>
               <div class="col-12 mt-5"> 
-                <a class="bg-main me-auto h-48 w-271 w-lg-120 d-flex align-items-center justify-content-center flex-shrink-0 border-0 rounded-8 text-center text-white fw-bold fs-14">مرحله بعد</a>
+                <router-link to="officeSetting" class="bg-main me-auto h-48 w-271 w-lg-120 d-flex align-items-center justify-content-center flex-shrink-0 border-0 rounded-8 text-center text-white fw-bold fs-14">مرحله بعد</router-link>
               </div>
             </form>
           </div>

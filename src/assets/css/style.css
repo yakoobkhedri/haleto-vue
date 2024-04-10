@@ -710,6 +710,7 @@ header a:hover,header ul a.active,footer ul a:hover{
     border-color: transparent #e6e6e7 transparent transparent;
     transform: rotate(0deg);
   }
+  .steps > a:first-child.active::before{display: none;}
   .steps > a.active::before{
     content: '';
     position: absolute;
@@ -738,6 +739,17 @@ header a:hover,header ul a.active,footer ul a:hover{
   }
   .steps > a.active svg path{
     fill: white;
+  }
+  /* accordion */
+  .accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .4s;
+    padding-top: 0;
+  }
+  .accordion-content.active{
+    max-height: 2000px;
+    padding-top: 1.5rem;
   }
 /* banner */
 #banner{
