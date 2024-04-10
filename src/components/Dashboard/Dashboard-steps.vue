@@ -2,7 +2,7 @@
   <div
     class="d-flex align-items-center h-58 h-sm-110 bg-gray3 steps position-relative ml-29 ml-sm-none"
   >
-    <div
+    <router-link to="/profileInfo" class-active="router-link-active" exact-active-class="active"
       class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
     >
       <svg
@@ -27,9 +27,9 @@
         />
       </svg>
       <p class="mb-0">اطلاعات پروفایل</p>
-    </div>
-    <div
-      class="flex-grow-1 active position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
+    </router-link>
+    <router-link to="officeSetting" class-active="router-link-active" exact-active-class="active"
+      class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
     >
       <svg
         class="flex-shrink-0"
@@ -45,17 +45,17 @@
           width="38"
           height="38"
           rx="19"
-          stroke="white"
+          stroke="#8A8A8A"
           stroke-width="2"
         />
         <path
           d="M16.5024 15.484C17.0571 15.484 17.5851 15.6387 18.0864 15.948C18.5877 16.2467 18.9877 16.6467 19.2864 17.148C19.5957 17.6493 19.7504 18.1773 19.7504 18.732C19.7504 19.276 19.5957 19.804 19.2864 20.316C18.9771 20.8173 18.5717 21.2227 18.0704 21.532C17.5691 21.8413 17.0464 21.996 16.5024 21.996C15.9477 21.996 15.4144 21.8413 14.9024 21.532C14.4011 21.2227 13.9957 20.8173 13.6864 20.316C13.3771 19.804 13.2224 19.276 13.2224 18.732C13.2224 18.1773 13.3771 17.6493 13.6864 17.148C13.9957 16.6467 14.4011 16.2467 14.9024 15.948C15.4144 15.6387 15.9477 15.484 16.5024 15.484ZM16.5024 20.044C16.8331 20.044 17.1317 19.9107 17.3984 19.644C17.6651 19.3667 17.7984 19.0627 17.7984 18.732C17.7984 18.4013 17.6651 18.1027 17.3984 17.836C17.1317 17.5693 16.8331 17.436 16.5024 17.436C16.1611 17.436 15.8517 17.5693 15.5744 17.836C15.3077 18.1027 15.1744 18.4013 15.1744 18.732C15.1744 19.0627 15.3131 19.3667 15.5904 19.644C15.8677 19.9107 16.1717 20.044 16.5024 20.044ZM25.3183 19.004C24.9023 19.004 24.5983 18.9453 24.4063 18.828V19.388V23.5H22.3743V19.42C22.3743 18.3747 22.3209 17.4787 22.2143 16.732C22.1076 15.9853 21.8943 15.084 21.5743 14.028L23.5263 13.34L24.2463 16.124C24.3636 16.6253 24.6569 16.876 25.1263 16.876C25.3609 16.876 25.5529 16.812 25.7023 16.684C25.8623 16.5453 25.9423 16.364 25.9423 16.14C25.9423 15.8413 25.8356 15.0467 25.6223 13.756L27.6703 13.34C27.8836 14.6307 27.9903 15.6013 27.9903 16.252C27.9903 16.7853 27.8729 17.26 27.6383 17.676C27.4143 18.092 27.0996 18.4173 26.6943 18.652C26.2889 18.8867 25.8303 19.004 25.3183 19.004Z"
-          fill="white"
+          fill="#8A8A8A"
         />
       </svg>
       <p class="mb-0">تنظیمات مطب</p>
-    </div>
-    <div
+    </router-link>
+    <router-link to="/bimeh" class-active="router-link-active" exact-active-class="active"
       class="flex-grow-1 position-relative justify-content-center justify-content-sm-start text-center d-flex align-items-center flex-column flex-sm-row gap-xl-4 gap-2 fs-lg-14 h-100 px-lg-5 px-sm-4 px-2 font-bold text-secondary"
     >
       <svg
@@ -81,7 +81,7 @@
         />
       </svg>
       <p class="mb-0">بیمه</p>
-    </div>
+    </router-link>
   </div>
 </template>
 

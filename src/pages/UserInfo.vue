@@ -61,23 +61,475 @@
         <div
           class="tabs px-4 d-flex align-items-center justify-content-between text-secondary text-center font-bold bg-white h-48 max-w-673 rounded-1 mx-auto mt-4"
         >
-          <div
-            class="h-100 d-flex align-items-center justify-content-center flex-grow-1 cursor-pointer active"
+          <div :class="{ 'active': activeTab === 'editUserInfo' }" @click="activeTab='editUserInfo'"
+            class="h-100 d-flex align-items-center justify-content-center flex-grow-1 cursor-pointer"
           >
             تغییر اطلاعات کابری
           </div>
-          <div
+          <div :class="{ 'active': activeTab === 'describeForm' }" @click="activeTab='describeForm'"
             class="h-100 d-flex align-items-center justify-content-center flex-grow-1 cursor-pointer"
           >
             فرم شرح حال
           </div>
         </div>
         <div class="my-5 pb-5 max-w-885 mx-auto">
-          <form class="row g-4 mx-0 fs-12 fw-bold">
+          <form v-show="activeTab === 'editUserInfo'" class="row g-4 mx-0 fs-12 fw-bold">
             <div class="col-lg-4">
               <input
                 class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
                 placeholder="شماره پرونده"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                placeholder="تاریخ مراجعه"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                placeholder="ساعت مراجعه"
+              />
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">علت مراجعه و شکایات اصلی</label>
+              <textarea
+                rows="4"
+                class="bg-white w-100 outline-none p-3 rounded-1 border mt-3"
+                placeholder="توضیحات"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">تاریخچه بیماری/مشکل فعلي</label>
+              <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
+                <div class="col-lg-4 col-sm-6">
+                  <input
+                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                    placeholder="زمان شروع بیماری"
+                  />
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <input
+                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                    placeholder="نحوه شروع بیماری"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">علایم شروع بیماری</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">فعاليت بيش از حد</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">در صورت وجود حملات تشنج</label>
+              <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
+                <div class="col-lg-4">
+                  <input
+                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                    placeholder="تاریخ آخرین حمله"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <input
+                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                    placeholder="تعداد حملات در ماه"
+                  />
+                </div>
+              </div>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">وجود بیهوشی پس از حملات</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">بی اختیاری ادرار</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">بروز حملات در زمان و مکان خاص</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">حركت تونيك كلونيك اندام ها</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">گاز گرفتگی دهان</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">تاریخچه تکاملی</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+                <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خودزنی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">کمبود انرژی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس گناه</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس بی ارزشی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خودزنی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">کمبود انرژی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس گناه</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس بی ارزشی</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">اختلال کارکرد در حوزه های</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+                <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خودزنی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">کمبود انرژی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس گناه</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس بی ارزشی</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">علائم تشخیص ها و درمان های قبلی</label>
+              <textarea
+                rows="4"
+                class="bg-white w-100 outline-none p-3 rounded-1 border mt-3"
+                placeholder="توضیحات"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">سابقه مصرف مواد، سیگار و الکل</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+                <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">بله</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خیر</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">سابقه بیماری جسمی</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+                <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">بله</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خیر</p>
+                </label>
+               </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">تاریخچه خانوادگی</label>
+              <textarea
+                rows="4"
+                class="bg-white w-100 outline-none p-3 rounded-1 border mt-3"
+                placeholder="توضیحات"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <label class="fw-bold fs-16">عوامل احتمال ساز بیماری</label>
+              <div class="row mx-0 g-2 text-secondary mt-1"> 
+                <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خودزنی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">کمبود انرژی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس گناه</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس بی ارزشی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">خودزنی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">کمبود انرژی</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس گناه</p>
+                </label>
+               </div>
+               <div class="col-lg-3 col-sm-4 col-6"> 
+                <label class="cursor-pointer d-flex align-items-center gap-2">
+                 <input type="checkbox" class="form-check-input form-select-lg bg-transparent cursor-pointer">
+                 <p class="mb-0 mt-1">احساس بی ارزشی</p>
+                </label>
+               </div>
+              </div>
+            </div>
+          </form>
+          <form v-show="activeTab === 'describeForm'" class="row g-4 mx-0 fs-12 fw-bold">
+            <div class="col-lg-4">
+              <input
+                class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
+                placeholder="شماره فرم"
               />
             </div>
             <div class="col-lg-4">
@@ -533,9 +985,15 @@
 
 <script>
 import Aside from "@/components/Aside/Aside.vue";
+import { ref } from 'vue';
 export default {
   components: { Aside },
   name: "UserInfo-component",
+  setup(){
+    const activeTab=ref('editUserInfo');
+
+    return{activeTab}
+  }
 };
 </script>
 

@@ -692,10 +692,10 @@ header a:hover,header ul a.active,footer ul a:hover{
     border-color: #6cb771!important;
   }
   /* steps */
-  .steps > div{
+  .steps > a{
     width: 33%;
   }
-  .steps > div.active{
+  .steps > a.active{
     background-color: #75BF7A;
     color: white!important;
   }
@@ -710,7 +710,7 @@ header a:hover,header ul a.active,footer ul a:hover{
     border-color: transparent #e6e6e7 transparent transparent;
     transform: rotate(0deg);
   }
-  .steps > div.active::before{
+  .steps > a.active::before{
     content: '';
     position: absolute;
     right: 0;
@@ -721,7 +721,7 @@ header a:hover,header ul a.active,footer ul a:hover{
     border-color: transparent #e6e6e7 transparent transparent;
     transform: rotate(0deg);
   }
-  .steps > div.active::after{
+  .steps > a.active::after{
         content: '';
         position: absolute;
         left: -17px;
@@ -733,10 +733,10 @@ header a:hover,header ul a.active,footer ul a:hover{
         transform: rotate(0deg);
         z-index: 9;
   }
-  .steps > div.active svg,.steps > div.active rect{
+  .steps > a.active svg,.steps > a.active rect{
     stroke: white;
   }
-  .steps > div.active svg path{
+  .steps > a.active svg path{
     fill: white;
   }
 /* banner */
