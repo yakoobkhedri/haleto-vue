@@ -635,22 +635,22 @@ header a:hover,header ul a.active,footer ul a:hover{
   background-color: #75BF7A;
   color: white !important;
 }
-.list-hover:hover div,.list-hover.active div{
+.list-hover:hover div,.list-hover.active div,.list-hover >a.active div{
   opacity: 1;
 }
-.list-hover:hover p,.list-hover.active p, .list-hover-3 ul a:hover{
+.list-hover:hover p,.list-hover.active p,.list-hover >a.active p, .list-hover-3 ul a:hover,.list-hover-3 ul a.active{
     color: #6CB771!important;
   }
 .list-hover svg path,.list-hover-2 svg path,.list-hover-3 svg path,.list-hover-3 svg,.list-hover p{
     transition: all .4s;
   }
-.list-hover:hover svg path,.list-hover.active svg path{
+.list-hover:hover svg path,.list-hover.active svg path,.list-hover >a.active svg path{
     stroke: #6CB771;
   }
-  .list-hover-2:hover svg path,.list-hover-2.active svg path{
+  .list-hover-2:hover svg path,.list-hover-2.active svg path,.list-hover-2 >a.active svg path{
     fill: #6CB771;
   }
-  .list-hover-3:hover svg:last-child path,.list-hover-3.active svg:last-child path{
+  .list-hover-3:hover svg:last-child path,.list-hover-3.active svg:last-child path,.list-hover-3 >a.active svg:last-child path{
     fill: #6CB771;
   }
   .hidden-scroll::-webkit-scrollbar {

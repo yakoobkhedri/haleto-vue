@@ -35,8 +35,8 @@
       </div>
       </div>
       <ul class="list-unstyled pt-4 pe-0 mb-0 fs-14">
-        <li class="list-hover active mb-4 px-4">
-          <a href="dashboard.html" class="d-flex align-items-center gap-2">
+        <li class="list-hover mb-4 px-4">
+          <router-link to="/dashboard" class-active="router-link-active" exact-active-class="active" class="d-flex align-items-center gap-2">
             <svg
               width="24"
               height="24"
@@ -69,7 +69,7 @@
             <div
               class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
             ></div>
-          </a>
+          </router-link>
         </li>
         <li class="list-hover list-hover-3 mb-4 px-4">
           <div class="d-flex align-items-center gap-2">
@@ -126,10 +126,10 @@
           </div>
           <ul class="fs-12 list-unstyled pe-0 pt-4 fw-bold">
             <li class="mb-3">
-              <a class="d-block text-secondary">درخواست جلسات</a>
+              <router-link to="/dashboard" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">درخواست جلسات</router-link>
             </li>
-            <li class="mb-3"><a class="d-block text-secondary">جلسات من</a></li>
-            <li><a class="d-block text-secondary">خرید پکیج های مشاوره</a></li>
+            <li class="mb-3"><router-link to="/session2" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">جلسات من</router-link></li>
+            <li><router-link to="/session" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">خرید پکیج های مشاوره</router-link></li>
           </ul>
         </li>
         <li class="list-hover list-hover-3 mb-4 px-4">
@@ -169,11 +169,11 @@
             </svg>
           </div>
           <ul class="fs-12 list-unstyled pe-0 pt-4 fw-bold">
-            <li class="mb-3"><a class="d-block text-secondary">تست ها</a></li>
+            <li class="mb-3"><router-link to="/tests" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">تست ها</router-link></li>
           </ul>
         </li>
         <li class="list-hover mb-4 px-4">
-          <a href="profile.html" class="d-flex align-items-center gap-2">
+          <router-link to="/userInfo2" class-active="router-link-active" exact-active-class="active" class="d-flex align-items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -196,10 +196,10 @@
             <div
               class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
             ></div>
-          </a>
+          </router-link>
         </li>
         <li class="list-hover list-hover-2 mb-5 px-4">
-          <a href="profile.html" class="d-flex align-items-center gap-2">
+          <router-link to="/wallet" class-active="router-link-active" exact-active-class="active" class="d-flex align-items-center gap-2">
             <svg
               width="20"
               height="21"
@@ -218,10 +218,10 @@
             <div
               class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
             ></div>
-          </a>
+          </router-link>
         </li>
         <li class="mb-5 px-4">
-          <a href="dashboard.html" class="d-flex align-items-center gap-2">
+          <router-link to="" class-active="router-link-active" class="d-flex align-items-center gap-2">
             <svg
               width="24"
               height="24"
@@ -255,7 +255,7 @@
               </defs>
             </svg>
             <p class="mb-0 text-danger2 font-bold">خروج از حساب کاربری</p>
-          </a>
+          </router-link>
         </li>
         <div class="px-4 py-5">
           <div class="bg-main rounded-16 position-relative p-3">

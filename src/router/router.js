@@ -17,6 +17,7 @@ import Bimeh from '../pages/Bimeh.vue';
 import OfficeSetting from '../pages/OfficeSetting.vue';
 import ProfileInfo from '../pages/ProfileInfo.vue';
 import Dashboard from '../pages/Dashboard.vue';
+import Questions from '../pages/Questions.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -37,6 +38,7 @@ const routes=[
     {name:'officeSetting',path:'/officeSetting',component:OfficeSetting},
     {name:'profileInfo',path:'/profileInfo',component:ProfileInfo},
     {name:'dashboard',path:'/dashboard',component:Dashboard},
+    {name:'questions',path:'/questions',component:Questions},
 ];
 
 const router=createRouter({

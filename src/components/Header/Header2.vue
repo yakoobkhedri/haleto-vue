@@ -17,12 +17,12 @@
                 </div>
                 <ul
                     class="list-unstyled mx-auto mb-0 pe-0 d-lg-flex d-none align-items-center position-relative z-10 justify-content-center gap-xl-5 gap-4 py-3 fw-bold">
-                    <li><router-link to="/cadr" class="text-dark">پنل کادر درمان</router-link></li>
-                    <li><router-link to="/centers" class="text-dark">پنل مراکز درمانی</router-link></li>
-                    <li><router-link to="/companies" class="text-dark">پنل شرکت های بیمه</router-link></li>
-                    <li><router-link to="/organization" class="text-dark">پنل سازمانی</router-link></li>
-                    <li><router-link to="/jobs" class="text-dark">فرصت های شغلی</router-link></li>
-                    <li><router-link to="/contact" class="text-dark">تماس با ما</router-link></li>
+                    <li><router-link to="/cadr" active-class="active" class="text-dark">پنل کادر درمان</router-link></li>
+                    <li><router-link to="/centers" active-class="active" class="text-dark">پنل مراکز درمانی</router-link></li>
+                    <li><router-link to="/companies" active-class="active" class="text-dark">پنل شرکت های بیمه</router-link></li>
+                    <li><router-link to="/organization" active-class="active" class="text-dark">پنل سازمانی</router-link></li>
+                    <li><router-link to="/jobs" active-class="active" class="text-dark">فرصت های شغلی</router-link></li>
+                    <li><router-link to="/contact" active-class="active" class="text-dark">تماس با ما</router-link></li>
                 </ul>
             </div>
             <!-- mobile menu -->
