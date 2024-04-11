@@ -1,21 +1,23 @@
 <template>
-    <aside
+    <aside :class="{'active':isOpen}"
       class="bg-white max-w-250 h-100vh overflow-auto flex-shrink-0 shadow hidden-scroll transition z-10"
     >
       <!-- close icon -->
-      <svg
-        id="close-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        class="bi bi-x-circle-fill cursor-pointer text-danger d-md-none start-0 m-4 position-absolute"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"
-        />
-      </svg>
+      <div class="cursor-pointer" @click="closeMenu">
+        <svg
+          id="close-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-x-circle-fill text-danger d-md-none start-0 m-4 position-absolute"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"
+          />
+        </svg>
+      </div>
       <!--  -->
       <div class="p-4">
         <div class="text-center border-bottom pb-3">
@@ -72,7 +74,7 @@
           </router-link>
         </li>
         <li class="list-hover list-hover-3 mb-4 px-4 cursor-pointer">
-          <div class="d-flex align-items-center gap-2 accordion-btn">
+          <div @click="isActive=!isActive" class="d-flex align-items-center gap-2 accordion-btn">
             <svg
               width="24"
               height="24"
@@ -124,7 +126,7 @@
               />
             </svg>
           </div>
-          <ul class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
+          <ul :class="{ 'active': isActive}" class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
             <li class="mb-3">
               <router-link to="/dashboard" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">درخواست جلسات</router-link>
             </li>
@@ -133,7 +135,7 @@
           </ul>
         </li>
         <li class="list-hover list-hover-3 mb-4 px-4 cursor-pointer">
-          <div class="d-flex align-items-center gap-2 accordion-btn">
+          <div @click="isActive2=!isActive2" class="d-flex align-items-center gap-2 accordion-btn">
             <svg
               width="24"
               height="24"
@@ -168,7 +170,7 @@
               />
             </svg>
           </div>
-          <ul class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
+          <ul :class="{ 'active': isActive2}" class="fs-12 list-unstyled pe-0 fw-bold accordion-content">
             <li class="mb-3"><router-link to="/tests" class-active="router-link-active" exact-active-class="active" class="d-block text-secondary">تست ها</router-link></li>
           </ul>
         </li>
@@ -492,8 +494,24 @@
 </template>
 
 <script>
+import { computed, ref } from 'vue';
+import { useStore } from 'vuex';
  export default {
  name: 'Aside-component',
+
+setup(){
+  const isActive=ref(false);
+  const isActive2=ref(false);
+  const store=useStore();
+  const isOpen =computed(()=>store.state.isOpen);
+
+  function closeMenu() {
+    store.commit('closeMenu');
+  }
+
+  return{isActive,isActive2,isOpen,closeMenu}
+}
+
 }
 </script>
 
