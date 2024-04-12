@@ -281,7 +281,7 @@
               <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
                 <div class="col-lg-4">
                   <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
-                <date-picker v-model="date"></date-picker>
+                <date-picker v-model="date2"></date-picker>
               </div>
                 </div>
                 <div class="col-lg-4">
@@ -519,7 +519,7 @@
             </div>
             <div class="col-lg-4">
               <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
-                <date-picker v-model="date"></date-picker>
+                <date-picker v-model="date3"></date-picker>
               </div>
             </div>
             <div class="col-lg-4">
@@ -731,7 +731,7 @@
               <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
                 <div class="col-lg-4">
                   <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
-                <date-picker v-model="date"></date-picker>
+                <date-picker v-model="date4"></date-picker>
               </div>
                 </div>
                 <div class="col-lg-4">
@@ -977,8 +977,11 @@ export default {
   setup(){
     const activeTab=ref('editUserInfo');
     const date=ref('')
+    const date2=ref('')
+    const date3=ref('')
+    const date4=ref('')
 
-    return{activeTab,date}
+    return{activeTab,date,date2,date3,date4}
   }
 };
 </script>
