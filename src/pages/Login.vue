@@ -33,7 +33,7 @@
         </div>
         <div class="col-lg-5 position-relative bg-login h-100vh h-lg-auto">
           <!-- go back -->
-          <a href="index.html" class="position-absolute start-0 m-4">
+          <router-link to="/" class="position-absolute start-0 m-4">
             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_297_333)">
               <path class="fill-lg-white" fill-rule="evenodd" clip-rule="evenodd" d="M9.42001 0.112617L0.0500102 11.7497C-0.0099893 11.8999 -0.00998932 12.1376 0.0500101 12.2127L9.42001 23.9374C9.48001 24.0125 9.67001 24.0125 9.79001 23.9374L10.96 22.3983L3.63001 13.2263L23.71 13.2263C24.26 13.2263 24.76 12.6131 24.76 11.9124C24.76 11.2242 24.27 10.5985 23.71 10.5985L3.81001 10.5985L10.96 1.57664L9.79001 0.112617C9.67001 -0.0375398 9.48001 -0.0375398 9.42001 0.112617Z" fill="#232524"/>
@@ -44,7 +44,7 @@
               </clipPath>
               </defs>
             </svg>
-          </a>
+          </router-link>
           <!-- shape -->
           <svg class="position-absolute bottom-0 start-0 -z-0" width="159" height="172" viewBox="0 0 159 172"
             fill="none" xmlns="http://www.w3.org/2000/svg">

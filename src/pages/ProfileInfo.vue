@@ -183,15 +183,16 @@
 import Aside from "@/components/Aside/Aside.vue";
 import DashboardSteps from "@/components/Dashboard/Dashboard-steps.vue";
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
+import { ref } from "vue";
 import DatePicker from 'vue3-persian-datetime-picker';
 
 export default {
   components: { Aside,DashboardSteps, HamburgerIcon,DatePicker },
   name: "ProfileInfo-component",
-  data(){
-      return {
-        date: ''
-      }
+    setup(){
+      const date=ref('')
+
+      return{date}
     }
 };
 </script>

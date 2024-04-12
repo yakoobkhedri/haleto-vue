@@ -68,10 +68,9 @@
               />
             </div>
             <div class="col-lg-4">
-              <input
-                class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                placeholder="تاریخ مراجعه"
-              />
+              <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
+                <date-picker v-model="date"></date-picker>
+              </div>
             </div>
             <div class="col-lg-4">
               <input
@@ -281,10 +280,9 @@
               <label class="fw-bold fs-16">در صورت وجود حملات تشنج</label>
               <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
                 <div class="col-lg-4">
-                  <input
-                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                    placeholder="تاریخ آخرین حمله"
-                  />
+                  <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
+                <date-picker v-model="date"></date-picker>
+              </div>
                 </div>
                 <div class="col-lg-4">
                   <input
@@ -520,10 +518,9 @@
               />
             </div>
             <div class="col-lg-4">
-              <input
-                class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                placeholder="تاریخ مراجعه"
-              />
+              <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
+                <date-picker v-model="date"></date-picker>
+              </div>
             </div>
             <div class="col-lg-4">
               <input
@@ -733,10 +730,9 @@
               <label class="fw-bold fs-16">در صورت وجود حملات تشنج</label>
               <div class="row g-4 mx-0 fs-12 fw-bold mt-0">
                 <div class="col-lg-4">
-                  <input
-                    class="bg-white w-100 h-48 px-3 rounded-1 outline-none border"
-                    placeholder="تاریخ آخرین حمله"
-                  />
+                  <div class="bg-white w-100 h-48 px-3 rounded-1 outline-none border d-flex align-items-center">
+                <date-picker v-model="date"></date-picker>
+              </div>
                 </div>
                 <div class="col-lg-4">
                   <input
@@ -974,13 +970,15 @@
 import Aside from "@/components/Aside/Aside.vue";
 import { ref } from 'vue';
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
+import DatePicker from 'vue3-persian-datetime-picker';
 export default {
-  components: { Aside, HamburgerIcon },
+  components: { Aside, HamburgerIcon,DatePicker },
   name: "UserInfo-component",
   setup(){
     const activeTab=ref('editUserInfo');
+    const date=ref('')
 
-    return{activeTab}
+    return{activeTab,date}
   }
 };
 </script>
