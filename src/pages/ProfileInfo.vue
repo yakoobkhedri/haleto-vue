@@ -95,9 +95,9 @@
                </div>
               </div>
               <div class="col-lg-4 col-md-6"> 
-               <div class="bg-white w-100 h-48 px-3 rounded-1 border"> 
-                <label class="text-muted fs-10 fw-bold">تاریخ تولد</label>
-                <input type="date" class="bg-transparent border-0 w-100 fs-12 fw-bold mb-1 d-block outline-none">
+               <div class="bg-white w-100 h-48 rounded-1 border"> 
+                <label class="text-muted fs-10 fw-bold px-3">تاریخ تولد</label>
+                <date-picker v-model="date"></date-picker>
                </div>
               </div>
               <div class="col-lg-4 col-md-6"> 
@@ -183,9 +183,16 @@
 import Aside from "@/components/Aside/Aside.vue";
 import DashboardSteps from "@/components/Dashboard/Dashboard-steps.vue";
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
+import DatePicker from 'vue3-persian-datetime-picker';
+
 export default {
-  components: { Aside,DashboardSteps, HamburgerIcon },
+  components: { Aside,DashboardSteps, HamburgerIcon,DatePicker },
   name: "ProfileInfo-component",
+  data(){
+      return {
+        date: ''
+      }
+    }
 };
 </script>
 

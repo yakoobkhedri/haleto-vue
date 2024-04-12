@@ -691,6 +691,14 @@ header a:hover,header ul a.active,footer ul a:hover{
     box-shadow: none;
     border-color: #6cb771!important;
   }
+  /* date picker */
+  .vpd-input-group label {display: none;}
+  .vpd-input-group input:not(.vpd-is-editable) {
+    font-size: 12px;
+    border: 0;
+    height: 22px !important;
+  display: block;
+  }
   /* steps */
   .steps > a{
     width: 33%;
