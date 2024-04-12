@@ -3,7 +3,7 @@
       class="bg-white max-w-250 h-100vh overflow-auto flex-shrink-0 shadow hidden-scroll transition z-10"
     >
       <!-- close icon -->
-      <div class="cursor-pointer" @click="closeMenu">
+      <div class="cursor-pointer" @click="toggleMenu">
         <svg
           id="close-icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -503,13 +503,13 @@ setup(){
   const isActive=ref(false);
   const isActive2=ref(false);
   const store=useStore();
-  const isOpen =computed(()=>store.state.isOpen);
+  const isOpen =computed(()=>store.state.toggleMenu.isOpen);
 
-  function closeMenu() {
-    store.commit('closeMenu');
+  function toggleMenu() {
+    store.commit('toggleMenu');
   }
 
-  return{isActive,isActive2,isOpen,closeMenu}
+  return{isActive,isActive2,isOpen,toggleMenu}
 }
 
 }

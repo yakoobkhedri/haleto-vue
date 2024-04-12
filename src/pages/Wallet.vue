@@ -16,20 +16,7 @@
       >
         <div class="d-flex align-items-center gap-2 position-relative">
           <!-- hamicon -->
-          <svg
-            id="hamIcon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="currentColor"
-            class="bi bi-list d-md-none cursor-pointer flex-shrink-0"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-            />
-          </svg>
+          <hamburger-icon></hamburger-icon>
           <!--  -->
           <svg
             class="flex-shrink-0"
@@ -373,8 +360,9 @@
 
 <script>
 import Aside from '@/components/Aside/Aside.vue'
+import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
 export default {
-  components:{Aside},
+  components:{Aside, HamburgerIcon},
   name: "Wallet-component",
 };
 </script>

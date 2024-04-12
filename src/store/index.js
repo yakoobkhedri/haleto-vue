@@ -1,14 +1,10 @@
 import { createStore } from 'vuex';
+import toggleMenu from './modules/toggleMenu.js';
 
 const store = createStore({
-   state:{
-        isOpen: false,
-   },
-   mutations:{
-    closeMenu(state){
-      state.isOpen=!state.isOpen;
-    }
-   }
+  modules:{
+    toggleMenu
+  }
 });
 
 export default store;
