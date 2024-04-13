@@ -49,36 +49,6 @@
           پنل کاربری
         </a>
       </div>
-      <div class="px-4 position-relative">
-        <form
-          class="d-flex align-items-center rounded-8 bg-white h-48 mt-3 px-3 gap-2 max-w-408"
-        >
-          <svg
-            class="flex-shrink-0 cursor-pointer"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12.5 21C7.25329 21 3 16.7467 3 11.5C3 6.25329 7.25329 2 12.5 2C17.7467 2 22 6.25329 22 11.5C22 16.7467 17.7467 21 12.5 21Z"
-              stroke="#AEB6CF"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M2 22L4 20"
-              stroke="#AEB6CF"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <input class="bg-transparent border-0 flex-grow-1 outline-none" />
-        </form>
-      </div>
       <div class="mt-5 position-relative">
          <form class="row g-lg-5 g-4">
            <div class="col-xl-4 col-md-6">

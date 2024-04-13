@@ -56,10 +56,10 @@
             <img
               alt="img"
               :src="require('../assets/img/Uber Jump (2).png')"
-              class="img-fluid w-100 d-block rounded-10 h-145"
+              class="img-fluid w-100 d-block rounded-10 h-205"
             />
           </div>
-          <div class="row gx-5 gy-3 mx-0 mt-5">
+          <div class="row gx-5 gy-3 mx-0 mt-1">
             <div class="col-lg-6 px-0 px-sm-4">
               <div
                 class="rounded-10 bg-gray px-4 py-3 d-flex align-items-center justify-content-between gap-3"

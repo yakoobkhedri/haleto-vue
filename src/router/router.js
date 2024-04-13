@@ -18,6 +18,11 @@ import OfficeSetting from '../pages/OfficeSetting.vue';
 import ProfileInfo from '../pages/ProfileInfo.vue';
 import Dashboard from '../pages/Dashboard.vue';
 import Questions from '../pages/Questions.vue';
+import RequestSession from '../pages/RequestSession.vue';
+import MySessions from '../pages/MySessions.vue';
+import MyTransactions from '../pages/MyTransactions.vue';
+import Patients from '../pages/Patients.vue';
+import Reports from '../pages/Reports.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -39,6 +44,11 @@ const routes=[
     {name:'profileInfo',path:'/profileInfo',component:ProfileInfo},
     {name:'dashboard',path:'/dashboard',component:Dashboard},
     {name:'questions',path:'/questions',component:Questions},
+    {name:'requestSession',path:'/requestSession',component:RequestSession},
+    {name:'mySessions',path:'/mySessions',component:MySessions},
+    {name:'myTransactions',path:'/myTransactions',component:MyTransactions},
+    {name:'patients',path:'/patients',component:Patients},
+    {name:'reports',path:'/reports',component:Reports},
 ];
 
 const router=createRouter({

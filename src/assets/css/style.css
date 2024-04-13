@@ -172,7 +172,10 @@ a {
 .border-dashed-2 {
     border: 2px dashed #C4C4C4;
 }
-
+/* shadow */
+.shadow1{
+    box-shadow: 0px 0px 4px 0px #00000025;
+}
 /* width */
 .w-8 {
     width: 8px;
@@ -246,14 +249,15 @@ a {
     width: 191px;
 }
 
-.w-224 {
-    width: 224px;
-}
-
 .w-202 {
     width: 202px;
 }
-
+.w-224 {
+    width: 224px;
+}
+.w-262 {
+    width: 262px;
+}
 .w-271 {
     width: 271px;
 }
@@ -1054,7 +1058,9 @@ span.vpd-main{
     .w-lg-120 {
         width: 120px !important;
     }
-
+    .w-lg-130 {
+        width: 130px!important;
+    }
     .h-lg-auto {
         height: auto;
     }
@@ -1131,7 +1137,6 @@ span.vpd-main{
     .w-sm-100 {
         width: 100% !important;
     }
-
     .w-sm-auto {
         width: auto;
     }
