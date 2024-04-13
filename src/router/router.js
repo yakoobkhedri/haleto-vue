@@ -23,6 +23,8 @@ import MySessions from '../pages/MySessions.vue';
 import MyTransactions from '../pages/MyTransactions.vue';
 import Patients from '../pages/Patients.vue';
 import Reports from '../pages/Reports.vue';
+import Blog from '../pages/Blog.vue';
+import NewTicket from '../pages/NewTicket.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -49,6 +51,8 @@ const routes=[
     {name:'myTransactions',path:'/myTransactions',component:MyTransactions},
     {name:'patients',path:'/patients',component:Patients},
     {name:'reports',path:'/reports',component:Reports},
+    {name:'blog',path:'/blog',component:Blog},
+    {name:'newTicket',path:'/newTicket',component:NewTicket},
 ];
 
 const router=createRouter({

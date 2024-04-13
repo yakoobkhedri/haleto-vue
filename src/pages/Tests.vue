@@ -89,8 +89,12 @@
               <img alt="img" :src="require('../assets/img/image 53.png')" class="w-100 h-100 rounded-10">
             </div>
             <!--  -->
-            <h5 class="text-center font-bold text-white fs-18 position-relative lh-lg pt-5 z-2">آزمون‌های روان‌شناسی<br> خودارزیابی وضعیت سلامت روان شما</h5>
+            <h5 class="text-center font-bold text-white fs-18 position-relative lh-lg pt-4 z-2">آزمون‌های روان‌شناسی<br> خودارزیابی وضعیت سلامت روان شما</h5>
             <p class="text-center text-white fs-14 lh-lg position-relative mt-2 z-2">انجام یک تست سلامت روانی یکی از سریع‌ترین و ساده‌ترین راه‌ها برای <br> دانستن وضعیت سلامت روحی و روانی است</p>
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 position-relative z-2"> 
+             <a class="rounded-8 h-48 w-202 bg-white-transparent d-flex border align-items-center justify-content-center fs-14 fw-bold text-white position-relative">تست خود ارزیابی</a>
+             <a class="rounded-8 h-48 w-202 bg-white-transparent d-flex border align-items-center justify-content-center fs-14 fw-bold text-white position-relative">مشاوره با درمانگر پیشنهادی</a>
+            </div>
           </div>
           <!--  -->
           <div class="row fs-14 text-center fw-bold row-cols-2 row-cols-lg-4 row-cols-xl-5 mx-0 g-4 mt-3"> 

@@ -137,7 +137,7 @@
             <a
               class="rounded-8 bg-main text-white h-48 w-276 d-flex align-items-center justify-content-center mt-5 mx-auto font-bold">خرید</a>
             <a
-              class="rounded-8 border-main text-main h-48 w-276 d-flex align-items-center justify-content-center gap-2 mt-2 mx-auto font-bold">
+              class="rounded-8 bg-white border-main text-main h-48 w-276 d-flex align-items-center justify-content-center gap-2 mt-2 mx-auto font-bold">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M1 1H5.36364L8.28727 15.9964C8.38703 16.5121 8.66026 16.9752 9.05914 17.3049C9.45802 17.6345 9.95713 17.8097 10.4691 17.7996H21.0727C21.5847 17.8097 22.0838 17.6345 22.4827 17.3049C22.8816 16.9752 23.1548 16.5121 23.2545 15.9964L25 6.59986H6.45455M10.6 23.8C10.6 24.4627 10.0627 25 9.4 25C8.73726 25 8.2 24.4627 8.2 23.8C8.2 23.1373 8.73726 22.6 9.4 22.6C10.0627 22.6 10.6 23.1373 10.6 23.8ZM23.8 23.8C23.8 24.4627 23.2627 25 22.6 25C21.9373 25 21.4 24.4627 21.4 23.8C21.4 23.1373 21.9373 22.6 22.6 22.6C23.2627 22.6 23.8 23.1373 23.8 23.8Z"
@@ -334,8 +334,8 @@
           <div>
             <div class="d-flex align-items-start justify-content-between flex-column flex-sm-row gap-3">
               <div class="d-flex align-items-center gap-3 fs-14">
-                <p class="mb-0 text-second">پیوست</p>
-                <p class="mb-0 bg-warning text-white py-1 px-3 fw-bold rounded-4 fs-12">واحد پشتیبانی نرم افزار</p>
+                <p class="mb-0 text-second font-bold">پیوست</p>
+                <p class="mb-0 bg-main text-white py-1 px-3 fw-bold rounded-1 fs-12">واحد پشتیبانی نرم افزار</p>
               </div>
             </div>
             <div class="mt-4 me-sm-4 pe-sm-4">
