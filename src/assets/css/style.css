@@ -95,16 +95,19 @@ a {
     width: 100%;
 }
 
+.max-w-339 {
+    max-width: 399px;
+    width: 100%;
+}
 .max-w-340 {
     max-width: 340px;
     width: 100%;
 }
 
-.max-w-339 {
-    max-width: 399px;
+.max-w-378 {
+    max-width: 378px;
     width: 100%;
 }
-
 .max-w-408 {
     max-width: 408px;
     width: 100%;
@@ -553,6 +556,9 @@ a {
 }
 .bg-main6{
     background-color: #D2EAD4;
+}
+.bg-main7{
+    background-color: #F8FAFE;
 }
 .bg-second {
     background: #F0AC3A;
