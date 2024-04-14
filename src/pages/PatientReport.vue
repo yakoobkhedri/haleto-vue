@@ -51,7 +51,7 @@
       </div>
       <div class="mt-5 mb-5 pb-3 px-sm-4 px-3 position-relative">
         <div class="accordion" id="accordionExample">
-          <div class="accordion-item shadow-sm">
+          <div class="accordion-item shadow-sm mb-3">
             <h2 class="accordion-header">
               <button
                 class="accordion-button text-main font-bold"
@@ -61,7 +61,7 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-              مشخصات فردی مراجع
+                مشخصات فردی مراجع
               </button>
             </h2>
             <div
@@ -69,43 +69,400 @@
               class="accordion-collapse collapse show"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+              <div class="accordion-body p-0">
+                <div class="table-responsive">
+                  <table class="table text-center">
+                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
-          <!-- <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div> -->
+          <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button text-main font-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                مشخصات فردی مراجع
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body p-0">
+                <div class="table-responsive">
+                  <table class="table text-center">
+                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button text-main font-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+              شرح حال مراجع
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body p-0">
+                <div class="table-responsive">
+                  <table class="table text-center">
+                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button text-main font-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="true"
+                aria-controls="collapseFour"
+              >
+              تاریخچه درمان بیمار
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body p-0">
+                <div class="table-responsive">
+                  <table class="table text-center">
+                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
+                          >
+                            <img
+                              alt="img"
+                              :src="require('../assets/img/image 67.png')"
+                              class="d-block rounded-circle w-32 h-32 shadow-sm"
+                            />
+                            <p class="mb-0">دکتر امیر محمدی</p>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">
+                            فوق تخصص روانشناسی بالینی
+                          </p>
+                        </td>
+                        <td>
+                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
+                        </td>
+                        <td>
+                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
