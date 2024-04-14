@@ -28,6 +28,7 @@ import NewTicket from '../pages/NewTicket.vue';
 import MyTickets from '../pages/MyTickets.vue';
 import TicketVideo from '../pages/TicketVideo.vue';
 import Nobat from '../pages/Nobat.vue';
+import PatientReport from '../pages/PatientReport.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -59,6 +60,7 @@ const routes=[
     {name:'myTickets',path:'/myTickets',component:MyTickets},
     {name:'ticketVideo',path:'/ticketVideo',component:TicketVideo},
     {name:'nobat',path:'/nobat',component:Nobat},
+    {name:'patientReport',path:'/patientReport',component:PatientReport},
 ];
 
 const router=createRouter({

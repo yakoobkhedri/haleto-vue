@@ -1038,6 +1038,23 @@ span.vpd-main{
     max-height: 0px;
     padding-top: 0rem;
 }
+.accordion-button:focus {
+    box-shadow: none!important;
+}
+.accordion-button:not(.collapsed) {
+    color: white!important;
+    background-color: #6CB771;
+    box-shadow: none!important;
+}
+.accordion-button::after {
+   margin-right: auto!important;
+   margin-left: 0!important;
+}
+.accordion-button:not(.collapsed)::after {
+    content: url('../img/Vector.png');
+    background-image: none;
+    transform: rotate(0deg)!important;
+}
 /* pagination */
 .pagination a.active,.pagination a:hover{
     background-color: black;
