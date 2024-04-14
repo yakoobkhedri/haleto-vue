@@ -89,7 +89,7 @@
                     </svg>
                   </div>
                   <p class="mb-0 fw-bold text-secondary">
-                    تعداد نوبت های امروز
+                    تعداد جلسات رزرو
                   </p>
                 </div>
                 <p class="mb-0 fs-32 text-main">20</p>
@@ -124,7 +124,7 @@
                       />
                     </svg>
                   </div>
-                  <p class="mb-0 fw-bold text-secondary">تعداد نوبت های فردا</p>
+                  <p class="mb-0 fw-bold text-secondary">تعداد جلسات برگزار شده</p>
                 </div>
                 <p class="mb-0 fs-32 text-orange">10</p>
               </div>
@@ -133,53 +133,64 @@
           <!--  -->
           <div class="px-sm-4">
             <div class="bg-white rounded-10 mt-4 shadow">
-              <div class="fw-bold text-center py-3">لیست نوبت های امروز</div>
+              <div class="fw-bold d-flex align-items-center gap-3 p-3">
+                <div
+                    class="rounded-3 d-flex align-items-center justify-content-center bg-secondary w-44 h-44"
+                  >
+                    <svg
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.625 10.137H18.6406C18.6831 10.137 18.7238 10.1538 18.7539 10.1839C18.7839 10.2139 18.8008 10.2546 18.8008 10.2971V18.3752C18.8008 19.1015 18.5123 19.798 17.9988 20.3115C17.4852 20.825 16.7887 21.1135 16.0625 21.1135H6.4375C5.71126 21.1135 5.01477 20.825 4.50124 20.3115C3.98772 19.798 3.69922 19.1015 3.69922 18.3752V4.62524C3.69922 3.89901 3.98772 3.20251 4.50124 2.68899C5.01477 2.17546 5.71126 1.88696 6.4375 1.88696H10.3906C10.4331 1.88696 10.4738 1.90384 10.5039 1.93387C10.5339 1.96391 10.5508 2.00464 10.5508 2.04712V8.06274C10.5508 8.61286 10.7693 9.14045 11.1583 9.52944C11.5473 9.91843 12.0749 10.137 12.625 10.137ZM7.8125 17.012H14.6875C14.8729 17.012 15.0508 16.9383 15.1819 16.8072C15.3131 16.676 15.3867 16.4982 15.3867 16.3127C15.3867 16.1273 15.3131 15.9494 15.1819 15.8183C15.0508 15.6872 14.8729 15.6135 14.6875 15.6135H7.8125C7.62706 15.6135 7.44921 15.6872 7.31808 15.8183C7.18695 15.9494 7.11328 16.1273 7.11328 16.3127C7.11328 16.4982 7.18695 16.676 7.31808 16.8072C7.44921 16.9383 7.62706 17.012 7.8125 17.012ZM7.8125 13.5745H14.6875C14.8729 13.5745 15.0508 13.5008 15.1819 13.3697C15.3131 13.2385 15.3867 13.0607 15.3867 12.8752C15.3867 12.6898 15.3131 12.5119 15.1819 12.3808C15.0508 12.2497 14.8729 12.176 14.6875 12.176H7.8125C7.62706 12.176 7.44921 12.2497 7.31808 12.3808C7.18695 12.5119 7.11328 12.6898 7.11328 12.8752C7.11328 13.0607 7.18695 13.2385 7.31808 13.3697C7.44921 13.5008 7.62706 13.5745 7.8125 13.5745Z"
+                        fill="white"
+                        stroke="#F0AC3A"
+                        stroke-width="0.0234375"
+                      />
+                      <path
+                        d="M12.0758 2.43369L18.255 8.61298L12.0758 2.43369ZM12.0758 2.43369C12.0758 2.43369 12.0758 2.43368 12.0757 2.43368M12.0758 2.43369L12.0757 2.43368M12.0757 2.43368C12.0654 2.42337 12.0522 2.41636 12.0378 2.41352C12.0235 2.41068 12.0086 2.41215 11.9951 2.41774C11.9816 2.42333 11.97 2.4328 11.9618 2.44495C11.9537 2.45709 11.9493 2.47137 11.9492 2.48599V8.06374C11.9492 8.24297 12.0204 8.41486 12.1471 8.54159C12.2739 8.66832 12.4458 8.73952 12.625 8.73952H18.2027C18.2174 8.73946 18.2316 8.73507 18.2438 8.72692C18.2559 8.71876 18.2654 8.70719 18.271 8.69366C18.2766 8.68014 18.2781 8.66527 18.2752 8.65091C18.2724 8.63657 18.2654 8.62338 18.2551 8.613L12.0757 2.43368Z"
+                        fill="white"
+                        stroke="#F0AC3A"
+                        stroke-width="0.0234375"
+                      />
+                    </svg>
+                  </div>
+                <p class="mb-0">
+                  مجموع پرداختی ها
+                </p>
+              </div>
               <div class="table-responsive">
                 <table class="table text-center">
                   <thead class="table-light fs-lg-12 font-bold">
                     <tr>
-                      <th scope="col"><p class="my-2">نام</p></th>
+                      <th scope="col"><p class="my-2">تاریخ</p></th>
                       <th scope="col">
-                        <p class="my-2">نام خانوادگی</p>
+                        <p class="my-2">تعرفه</p>
                       </th>
                       <th scope="col">
-                        <p class="my-2">شماره بیمه</p>
+                        <p class="my-2">موارد</p>
                       </th>
-                      <th scope="col"><p class="my-2">نوبت</p></th>
-                      <th scope="col">
-                        <p class="my-2">نوع مشاوره</p>
-                      </th>
+                      <th scope="col"><p class="my-2">وضعیت</p></th>
                       <th scope="col"><p class="my-2">عملیات</p></th>
                     </tr>
                   </thead>
                   <tbody class="fs-14 fs-lg-10 text-muted font-bold">
                     <tr>
-                      <td><p class="my-3 text-muted">امیر</p></td>
-                      <td><p class="my-3 text-muted">مرادی</p></td>
-                      <td><p class="my-3 text-muted">548664</p></td>
-                      <td><p class="my-3 text-muted">آنلاین</p></td>
-                      <td>
-                        <p class="my-3 text-muted">زوج درمانی</p>
-                      </td>
-                      <td>
-                        <a class="btn btn-outline-success my-3 fs-lg-10"
-                          >مشاهده نسخه الکترونیکی</a
-                        >
-                      </td>
+                      <td><p class="my-3 text-muted">1402/09/12</p></td>
+                      <td><p class="my-3 text-muted">بسته 1 جلسه مشاوره</p></td>
+                      <td><p class="my-3 text-muted">عضویت در حالتوو خرید پکیج های...</p></td>
+                      <td><p class="my-3 text-muted">در مرحله پرداخت</p></td>
+                      <td><div class="my-3"><a class="text-white rounded-8 bg-second py-2 w-202 d-block mx-auto w-lg-130">مشاهده رسید</a></div></td>
                     </tr>
                     <tr>
-                      <td><p class="my-3 text-muted">امیر</p></td>
-                      <td><p class="my-3 text-muted">مرادی</p></td>
-                      <td><p class="my-3 text-muted">548664</p></td>
-                      <td><p class="my-3 text-muted">آنلاین</p></td>
-                      <td>
-                        <p class="my-3 text-muted">زوج درمانی</p>
-                      </td>
-                      <td>
-                        <a class="btn btn-outline-success my-3 fs-lg-10"
-                          >مشاهده نسخه الکترونیکی</a
-                        >
-                      </td>
+                      <td><p class="my-3 text-muted">1402/09/12</p></td>
+                      <td><p class="my-3 text-muted">بسته 1 جلسه مشاوره</p></td>
+                      <td><p class="my-3 text-muted">عضویت در حالتوو خرید پکیج های...</p></td>
+                      <td><p class="my-3 text-muted">در مرحله پرداخت</p></td>
+                      <td><div class="my-3"><a class="text-white rounded-8 bg-second py-2 w-202 d-block mx-auto w-lg-130">مشاهده رسید</a></div></td>
                     </tr>
                   </tbody>
                 </table>
