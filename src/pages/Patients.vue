@@ -175,7 +175,7 @@ import Aside from "@/components/Aside/Aside.vue";
 import HamburgerIcon from "@/components/HamburgerIcon/HamburgerIcon.vue";
 export default {
   components: { Aside, HamburgerIcon },
-  name: "MyTransactions-component",
+  name: "Patients-component",
 };
 </script>
 

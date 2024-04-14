@@ -25,6 +25,8 @@ import Patients from '../pages/Patients.vue';
 import Reports from '../pages/Reports.vue';
 import Blog from '../pages/Blog.vue';
 import NewTicket from '../pages/NewTicket.vue';
+import MyTickets from '../pages/MyTickets.vue';
+import TicketVideo from '../pages/TicketVideo.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -53,6 +55,8 @@ const routes=[
     {name:'reports',path:'/reports',component:Reports},
     {name:'blog',path:'/blog',component:Blog},
     {name:'newTicket',path:'/newTicket',component:NewTicket},
+    {name:'myTickets',path:'/myTickets',component:MyTickets},
+    {name:'ticketVideo',path:'/ticketVideo',component:TicketVideo},
 ];
 
 const router=createRouter({

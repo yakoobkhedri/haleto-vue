@@ -239,7 +239,7 @@ import Aside from "@/components/Aside/Aside.vue";
 import HamburgerIcon from "@/components/HamburgerIcon/HamburgerIcon.vue";
 export default {
   components: { Aside, HamburgerIcon },
-  name: "Tests-component",
+  name: "NewTicket-component",
 };
 </script>
 
