@@ -173,7 +173,9 @@ a {
 .border-top-blue2-8 {
     border-top: 8px solid #2791FE;
 }
-
+.border-dashed {
+    border: 2px dashed gray;
+}
 .border-dashed-2 {
     border: 2px dashed #C4C4C4;
 }
