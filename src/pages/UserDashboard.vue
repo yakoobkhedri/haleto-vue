@@ -197,9 +197,14 @@
               </div>
             </div>
             <div class="bg-white rounded-10 mt-4 shadow">
-              <div class="fw-bold text-center py-3">آمار عملکرد</div>
-              <div class="">
-                
+              <swiper-3></swiper-3>
+            </div>
+            <div class="bg-white rounded-10 mt-4 shadow p-3 flex-column flex-sm-row d-flex gap-4">
+              <img alt="img" :src="require('../assets/img/consult 1 (2).png')" class="d-block w-102 h-102 mx-auto mx-sm-0">
+              <div class="flex-grow-1"> 
+                <p class="text-main font-bold">خودارزیابی وضعیت سلامت روان شما</p>
+                <p class="text-secondary mb-4 fs-14 font-bold">انجام یک تست سلامت روانی یکی از سریع‌ترین و ساده‌ترین راه‌ها برای دانستن وضعیت سلامت روانی است</p>
+                <a class="d-flex align-items-center justify-content-center rounded-8 bg-main text-white font-bold h-48 w-200 mx-auto ms-sm-0 me-auto">شروع تست</a>
               </div>
             </div>
           </div>
@@ -212,8 +217,9 @@
 <script>
 import Aside from "@/components/Aside/Aside.vue";
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon.vue';
+import Swiper3 from '@/components/Swipers/Swiper3.vue';
 export default {
-  components: { Aside,HamburgerIcon },
+  components: { Aside,HamburgerIcon,Swiper3 },
   name: "UserDashboard-component",
 };
 </script>

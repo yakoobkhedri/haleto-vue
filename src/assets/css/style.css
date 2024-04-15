@@ -147,7 +147,9 @@ a {
 .border-main {
     border: 1px solid #6CB771;
 }
-
+.border-b-main{
+    border-bottom: 1px solid #6CB771;
+}
 .border-top-main-8 {
     border-top: 8px solid #6CB771;
 }
@@ -235,7 +237,9 @@ a {
 .w-80 {
     width: 80px;
 }
-
+.w-102 {
+    width: 102px;
+}
 .w-117 {
     width: 117px;
 }
@@ -263,7 +267,9 @@ a {
 .w-191 {
     width: 191px;
 }
-
+.w-200 {
+    width: 200px;
+}
 .w-202 {
     width: 202px;
 }
@@ -376,7 +382,9 @@ a {
 .h-100vh {
     height: 100vh;
 }
-
+.h-102 {
+    height: 102px;
+}
 .h-145 {
     height: 145px;
 }
@@ -665,7 +673,9 @@ a {
 .right-auto {
     right: auto !important;
 }
-
+.right-3 {
+    right: 3px;
+}
 .-right-12 {
     right: -12px;
 }
@@ -691,7 +701,9 @@ a {
 .left-auto {
     left: auto !important;
 }
-
+.left-3 {
+    left: 3px !important;
+}
 .-left-28 {
     left: -28px !important;
 }
@@ -765,7 +777,9 @@ a {
     color: #6cb771;
     font-weight: bold;
 }
-
+.after-white::after{
+    color: white!important;
+}
 /* input number */
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
