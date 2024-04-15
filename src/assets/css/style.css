@@ -70,6 +70,10 @@ a {
 }
 
 /* max width */
+.max-w-96 {
+    max-width: 96%;
+    width: 100%;
+}
 .max-w-250 {
     max-width: 250px;
     width: 100%;
@@ -1061,6 +1065,14 @@ span.vpd-main{
     color: white!important;
     background-color: #6CB771;
     box-shadow: none!important;
+}
+.modal .accordion-button:not(.collapsed){
+    background-color: #eef7ef;
+}
+.modal .accordion-button:not(.collapsed)::after {
+    content: url('../img/Vector\ \(2\).png');
+    background-image: none;
+    transform: rotate(180deg)!important;
 }
 .accordion-button::after {
    margin-right: auto!important;
