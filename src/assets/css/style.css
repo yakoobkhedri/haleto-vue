@@ -1257,7 +1257,9 @@ span.vpd-main{
     .fs-sm-12 {
         font-size: 12px;
     }
-
+    .fs-sm-10 {
+        font-size: 10px;
+    }
     .steps>a.active::after,
     .steps>a.active::before,
     .steps::after {

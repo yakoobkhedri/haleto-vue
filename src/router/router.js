@@ -30,6 +30,7 @@ import TicketVideo from '../pages/TicketVideo.vue';
 import Nobat from '../pages/Nobat.vue';
 import PatientReport from '../pages/PatientReport.vue';
 import UserDashboard from '../pages/UserDashboard.vue';
+import NewSession from '../pages/NewSession.vue';
 
 const routes=[
     {name:'home',path:'/',component:Home},
@@ -63,6 +64,7 @@ const routes=[
     {name:'nobat',path:'/nobat',component:Nobat},
     {name:'patientReport',path:'/patientReport',component:PatientReport},
     {name:'userDashboard',path:'/userDashboard',component:UserDashboard},
+    {name:'newSession',path:'/newSession',component:NewSession},
 ];
 
 const router=createRouter({
