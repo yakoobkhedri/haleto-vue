@@ -57,109 +57,6 @@
                 class="accordion-button text-main font-bold"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                مشخصات فردی مراجع
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body p-0">
-                <div class="table-responsive">
-                  <table class="table text-center">
-                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button text-main font-bold"
-                type="button"
-                data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
                 aria-expanded="true"
                 aria-controls="collapseTwo"
@@ -172,87 +69,66 @@
               class="accordion-collapse collapse show"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body p-0">
-                <div class="table-responsive">
-                  <table class="table text-center">
-                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="accordion-body py-4 px-2">
+                <div class="row mx-0 g-3">
+                  <div class="col-lg-4 col-sm-6">
+                    <p class="text-secondary">
+                      نام و نام خانوادگی:<span class="text-dark font-bold"
+                        >مهسا امیری</span
+                      >
+                    </p>
+                    <p class="text-secondary">
+                      تاریخ تولد:<span class="text-dark font-bold"
+                        >1375/09/12</span
+                      >
+                    </p>
+                    <p class="text-secondary">
+                      شماره پرونده:<span class="text-dark font-bold"
+                        >123456</span
+                      >
+                    </p>
+                    <p class="text-secondary mb-0">
+                      کدملی:<span class="text-dark font-bold">285439845</span>
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <p class="text-secondary">
+                      بیمه:<span class="text-dark font-bold"
+                        >تامین اجتماعی</span
+                      >
+                    </p>
+                    <p class="text-secondary">
+                      جنسیت:<span class="text-dark font-bold">زن</span>
+                    </p>
+                    <p class="text-secondary">
+                      شماره موبایل:<span class="text-dark font-bold"
+                        >09149492490</span
+                      >
+                    </p>
+                    <p class="text-secondary mb-0">
+                      ایمیل:<span class="text-dark font-bold"
+                        >yakoobkhedri@gmail.com</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <p class="text-secondary">
+                      کشور:<span class="text-dark font-bold">ایران</span>
+                    </p>
+                    <p class="text-secondary">
+                      شهر:<span class="text-dark font-bold">تهران</span>
+                    </p>
+                    <p class="text-secondary">
+                      تاریخ آخرین مراجعه:<span class="text-dark font-bold"
+                        >1402/09/21</span
+                      >
+                    </p>
+                    <p class="text-secondary mb-0">
+                      ساعت آخرین مراجعه:<span class="text-dark font-bold"
+                        >18:10 عصر</span
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -267,7 +143,7 @@
                 aria-expanded="true"
                 aria-controls="collapseThree"
               >
-              شرح حال مراجع
+                شرح حال مراجع
               </button>
             </h2>
             <div
@@ -275,87 +151,379 @@
               class="accordion-collapse collapse show"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body p-0">
-                <div class="table-responsive">
-                  <table class="table text-center">
-                    <tbody class="fs-14 fs-lg-10 text-muted font-bold">
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div
-                            class="my-1 text-muted d-flex align-items-center gap-2 pe-3"
-                          >
-                            <img
-                              alt="img"
-                              :src="require('../assets/img/image 67.png')"
-                              class="d-block rounded-circle w-32 h-32 shadow-sm"
-                            />
-                            <p class="mb-0">دکتر امیر محمدی</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">
-                            فوق تخصص روانشناسی بالینی
-                          </p>
-                        </td>
-                        <td>
-                          <p class="mt-2 text-muted">تاریخ مراجعه:1402/09/12</p>
-                        </td>
-                        <td>
-                          <a class="mt-2 d-block text-orange">مطالب بیشتر</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="accordion-body py-4 px-3 fs-sm-12">
+                <div class="row mx-0 g-3 border-bottom mb-3">
+                  <div class="col-lg-4 col-sm-6">
+                    <p class="text-secondary">
+                      تاریخچه بیماری/مشکل فعلی:<span class="text-dark font-bold"
+                        >افسردگی</span
+                      >
+                    </p>
+                    <p class="text-secondary">
+                      زمان شروع بیماری:<span class="text-dark font-bold"
+                        >4 ماه قبل</span
+                      >
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                    <p class="text-secondary">
+                      نحوه شروع بیماری:<span class="text-dark font-bold"
+                        >قبول نشدن در کنکور</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    علت مراجعه و شکایات اصلی:
+                  </p>
+                  <textarea
+                    class="border-dashed-2 bg-gray4 w-100 rounded-2 outline-none p-3"
+                  ></textarea>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    علایم شروع بیمار:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    تاریخچه تکاملی:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold mb-0">
+                    سابقه مصرف سیگار،مواد، الکل:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خیر</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold mb-0">
+                    سابقه بیماری جسمی:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خیر</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    تاریخچه مشکل فعلی:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <p class="text-secondary"> تاریخ آخرین حمله:<span class="text-dark font-bold">4 ماه قبل</span></p>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <p class="text-secondary"> تعداد حملات در ماه:<span class="text-dark font-bold">4</span></p>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    اختلال کارکرد در حوزه های:
+                  </p>
+                  <div class="row mx-0 g-4 text-secondary mt-0">
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">خودزنی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">کمبود انرژی</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس گناه</p></label
+                      >
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6">
+                      <label
+                        class="cursor-pointer d-flex align-items-center gap-2"
+                        ><input
+                          type="checkbox"
+                          class="form-check-input form-select-lg bg-transparent cursor-pointer"
+                        />
+                        <p class="mb-0 mt-1">احساس بی ارزشی</p></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    علائم تشخیص ها و درمان های قبلی:
+                  </p>
+                  <textarea
+                    class="border-dashed-2 bg-gray4 w-100 rounded-2 outline-none p-3"
+                  ></textarea>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                  <p class="text-secondary fs-14 font-bold">
+                    تاریخچه خانوادگی:
+                  </p>
+                  <textarea
+                    class="border-dashed-2 bg-gray4 w-100 rounded-2 outline-none p-3"
+                  ></textarea>
                 </div>
               </div>
             </div>
@@ -370,7 +538,7 @@
                 aria-expanded="true"
                 aria-controls="collapseFour"
               >
-              تاریخچه درمان بیمار
+                تاریخچه درمان بیمار
               </button>
             </h2>
             <div

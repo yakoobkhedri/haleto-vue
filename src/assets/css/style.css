@@ -633,7 +633,9 @@ a {
 .bg-gray3 {
     background-color: #E6E6E7;
 }
-
+.bg-gray4{
+    background-color: #F9F9F9;
+}
 .bg-stat {
     background-image: url('../img/image\ 4.png');
     background-size: cover;
@@ -952,7 +954,7 @@ footer ul a:hover {
 
 /* form */
 .form-check-input:checked {
-    background-color: #6cb771 !important;
+    background-color: #6cb77173 !important;
     border-color: #6cb771 !important;
 }
 
