@@ -40,7 +40,7 @@
     <ul class="list-unstyled pt-4 pe-0 mb-0 fs-14">
       <li class="list-hover">
         <router-link
-          to="/userDashboard"
+          to="/dashboard"
           class-active="router-link-active"
           exact-active-class="active"
           class="py-3 px-4 d-flex align-items-center gap-2"
@@ -74,6 +74,80 @@
             />
           </svg>
           <p class="mb-0 text-dark2 font-bold">داشبورد</p>
+          <div
+            class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
+          ></div>
+        </router-link>
+      </li>
+      <li class="list-hover">
+        <router-link
+          to="/nobat"
+          class-active="router-link-active"
+          exact-active-class="active"
+          class="py-3 px-4 d-flex align-items-center gap-2"
+        >
+          <svg
+            width="21"
+            height="13"
+            viewBox="0 0 21 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.4375 12.9898L8.4375 6.97976L12.4375 10.9798L20.9375 1.41977L19.5275 0.00976562L12.4375 7.97976L8.4375 3.97976L0.9375 11.4898L2.4375 12.9898Z"
+              fill="#333333"
+            />
+          </svg>
+          <p class="mb-0 text-dark2 font-bold">نوبت دهی</p>
+          <div
+            class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
+          ></div>
+        </router-link>
+      </li>
+      <li class="list-hover">
+        <router-link
+          to="/patients"
+          class-active="router-link-active"
+          exact-active-class="active"
+          class="py-3 px-4 d-flex align-items-center gap-2"
+        >
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 16.7399L22 4.66994C22 3.46994 21.02 2.57994 19.83 2.67994H19.77C17.67 2.85994 14.48 3.92994 12.7 5.04994L12.53 5.15994C12.24 5.33994 11.76 5.33994 11.47 5.15994L11.22 5.00994C9.44 3.89994 6.26 2.83994 4.16 2.66994C2.97 2.56994 2 3.46994 2 4.65994L2 16.7399C2 17.6999 2.78 18.5999 3.74 18.7199L4.03 18.7599C6.2 19.0499 9.55 20.1499 11.47 21.1999L11.51 21.2199C11.78 21.3699 12.21 21.3699 12.47 21.2199C14.39 20.1599 17.75 19.0499 19.93 18.7599L20.26 18.7199C21.22 18.5999 22 17.6999 22 16.7399Z"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5.48999L12 20.49"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7.75 8.48999H5.5"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8.5 11.49H5.5"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="mb-0 text-dark2 font-bold">لیست بیماران</p>
           <div
             class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
           ></div>
@@ -120,7 +194,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="mb-0 text-dark2 font-bold">امور جلسات</p>
+          <p class="mb-0 text-dark2 font-bold">گزارش ها</p>
           <svg
             :class="{ 'rotate-180': isActive }"
             class="me-auto"
@@ -137,17 +211,17 @@
           </svg>
         </a>
         <ul
-          :class="{ 'active': isActive }"
+          :class="{ active: isActive }"
           class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
         >
           <li class="my-3">
             <router-link
-              to="/requestSession"
+              to="/patientReport"
               class-active="router-link-active"
               exact-active-class="active"
               class="d-flex align-items-center gap-2 text-secondary"
             >
-              <p class="mb-0">درخواست جلسات</p>
+              <p class="mb-0">تاریخچه بیماران</p>
               <div
                 class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
               ></div>
@@ -155,77 +229,12 @@
           </li>
           <li class="mb-3">
             <router-link
-              to="/mySessions"
+              to="/reports"
               class-active="router-link-active"
               exact-active-class="active"
               class="d-flex align-items-center gap-2 text-secondary"
             >
-              <p class="mb-0">جلسات من</p>
-              <div
-                class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-              ></div>
-            </router-link>
-          </li>
-          <li class="mb-3">
-            <router-link
-              to="/session"
-              class-active="router-link-active"
-              exact-active-class="active"
-              class="d-flex align-items-center gap-2 text-secondary"
-            >
-              <p class="mb-0">خرید پکیج های مشاوره</p>
-              <div
-                class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-              ></div>
-            </router-link>
-          </li>
-        </ul>
-      </li>
-      <li class="list-hover list-hover-3 cursor-pointer">
-        <a
-          @click="isActive2 = !isActive2"
-          class="py-3 px-4 d-flex align-items-center gap-2 accordion-btn"
-        >
-          <svg
-            width="21"
-            height="13"
-            viewBox="0 0 21 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.43359 12.9898L8.43359 6.97976L12.4336 10.9798L20.9336 1.41977L19.5236 0.00976562L12.4336 7.97976L8.43359 3.97976L0.933594 11.4898L2.43359 12.9898Z"
-              fill="#333333"
-            />
-          </svg>
-          <p class="mb-0 text-dark2 font-bold">فعالیت ها</p>
-          <svg
-            :class="{ 'rotate-180': isActive2 }"
-            class="me-auto"
-            width="11"
-            height="8"
-            viewBox="0 0 11 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.31603 4.97656L9.44103 0.851561L10.6194 2.02989L5.31603 7.33323L0.0126955 2.0299L1.19103 0.851562L5.31603 4.97656Z"
-              fill="#383838"
-            />
-          </svg>
-        </a>
-        <ul
-          :class="{ active: isActive2 }"
-          class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
-        >
-          <li class="my-3">
-            <router-link
-              to="/tests"
-              class-active="router-link-active"
-              exact-active-class="active"
-              class="d-flex align-items-center gap-2 text-secondary"
-            >
-              <p class="mb-0">تست ها</p>
+              <p class="mb-0">بسته های مشاوره</p>
               <div
                 class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
               ></div>
@@ -278,7 +287,7 @@
           :class="{ active: isActive3 }"
           class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
         >
-        <li class="my-3">
+          <li class="my-3">
             <router-link
               to="/userInfo"
               class-active="router-link-active"
@@ -306,122 +315,7 @@
           </li>
         </ul>
       </li>
-      <li class="list-hover list-hover-3 cursor-pointer">
-        <a
-          @click="isActive4 = !isActive4"
-          class="py-3 px-4 d-flex align-items-center gap-2 accordion-btn"
-        >
-          <svg
-            width="25"
-            height="25"
-            viewBox="0 0 25 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.93359 18.5V12.5C3.93359 10.1131 4.88181 7.82387 6.56963 6.13604C8.25746 4.44821 10.5466 3.5 12.9336 3.5C15.3205 3.5 17.6097 4.44821 19.2976 6.13604C20.9854 7.82387 21.9336 10.1131 21.9336 12.5V18.5"
-              stroke="#333333"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M21.9336 19.5C21.9336 20.0304 21.7229 20.5391 21.3478 20.9142C20.9727 21.2893 20.464 21.5 19.9336 21.5H18.9336C18.4032 21.5 17.8945 21.2893 17.5194 20.9142C17.1443 20.5391 16.9336 20.0304 16.9336 19.5V16.5C16.9336 15.9696 17.1443 15.4609 17.5194 15.0858C17.8945 14.7107 18.4032 14.5 18.9336 14.5H21.9336V19.5ZM3.93359 19.5C3.93359 20.0304 4.14431 20.5391 4.51938 20.9142C4.89445 21.2893 5.40316 21.5 5.93359 21.5H6.93359C7.46403 21.5 7.97273 21.2893 8.34781 20.9142C8.72288 20.5391 8.93359 20.0304 8.93359 19.5V16.5C8.93359 15.9696 8.72288 15.4609 8.34781 15.0858C7.97273 14.7107 7.46403 14.5 6.93359 14.5H3.93359V19.5Z"
-              stroke="#333333"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="mb-0 text-dark2 font-bold">پشتیبانی</p>
-          <svg
-            :class="{ 'rotate-180': isActive4 }"
-            class="me-auto"
-            width="11"
-            height="8"
-            viewBox="0 0 11 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.31603 4.97656L9.44103 0.851561L10.6194 2.02989L5.31603 7.33323L0.0126955 2.0299L1.19103 0.851562L5.31603 4.97656Z"
-              fill="#383838"
-            />
-          </svg>
-        </a>
-        <ul
-          :class="{ 'active': isActive4 }"
-          class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
-        >
-          <li class="my-3">
-            <router-link
-              to="/newTicket"
-              class-active="router-link-active"
-              exact-active-class="active"
-              class="d-flex align-items-center gap-2 text-secondary"
-            >
-              <p class="mb-0">تیکت جدید</p>
-              <div
-                class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-              ></div>
-            </router-link>
-          </li>
-          <li class="mb-3">
-            <router-link
-              to="/myTickets"
-              class-active="router-link-active"
-              exact-active-class="active"
-              class="d-flex align-items-center gap-2 text-secondary"
-            >
-              <p class="mb-0">همه تیکت ها</p>
-              <div
-                class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-              ></div>
-            </router-link>
-          </li>
-          <li class="mb-3">
-            <router-link
-              to="/ticketVideo"
-              class-active="router-link-active"
-              exact-active-class="active"
-              class="d-flex align-items-center gap-2 text-secondary"
-            >
-              <p class="mb-0">ویدئو آموزش پلتفرم</p>
-              <div
-                class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-              ></div>
-            </router-link>
-          </li>
-        </ul>
-      </li>
-      <li class="list-hover list-hover-2 mb-5">
-        <router-link
-          to="/wallet"
-          class-active="router-link-active"
-          exact-active-class="active"
-          class="py-3 px-4 d-flex align-items-center gap-2"
-        >
-          <svg
-            width="20"
-            height="21"
-            viewBox="0 0 20 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.5007 7.58033H17.7007V7.38033V6.547C17.7007 6.27294 17.5918 6.01011 17.398 5.81632C17.2042 5.62253 16.9414 5.51366 16.6673 5.51366H3.33398C3.05993 5.51366 2.79709 5.62253 2.60331 5.81632C2.40952 6.01011 2.30065 6.27294 2.30065 6.547V7.38033V7.58033H2.50065H17.5007ZM2.50065 10.5137H2.30065V10.7137V14.8803C2.30065 15.1544 2.40952 15.4172 2.60331 15.611C2.7971 15.8048 3.05993 15.9137 3.33398 15.9137H16.6673C16.9414 15.9137 17.2042 15.8048 17.398 15.611C17.5918 15.4172 17.7007 15.1544 17.7007 14.8803V10.7137V10.5137H17.5007H2.50065ZM3.33398 4.247H16.6673C17.2773 4.247 17.8623 4.48932 18.2937 4.92065C18.725 5.35199 18.9673 5.937 18.9673 6.547V14.8803C18.9673 15.4903 18.725 16.0753 18.2937 16.5067C17.8623 16.938 17.2773 17.1803 16.6673 17.1803H3.33398C2.72399 17.1803 2.13897 16.938 1.70764 16.5067C1.27631 16.0753 1.03398 15.4903 1.03398 14.8803V6.547C1.03398 5.937 1.27631 5.35199 1.70764 4.92065C2.13897 4.48932 2.72399 4.247 3.33398 4.247Z"
-              fill="#333333"
-              stroke="white"
-              stroke-width="0.4"
-            />
-          </svg>
-          <p class="mb-0 text-dark2 font-bold">کیف پول</p>
-          <div
-            class="w-8 h-8 rounded-circle bg-main me-auto opacity-none transition"
-          ></div>
-        </router-link>
-      </li>
-      <li class="mb-5 px-4">
+      <li class="my-5 px-4">
         <router-link
           to=""
           class-active="router-link-active"
@@ -701,7 +595,7 @@
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 export default {
-  name: "Aside-component",
+  name: "Aside2-component",
 
   setup() {
     const isActive = ref(false);
@@ -715,7 +609,7 @@ export default {
       store.commit("toggleMenu");
     }
 
-    return { isActive, isActive2, isActive3,isActive4, isOpen, toggleMenu };
+    return { isActive, isActive2, isActive3, isActive4, isOpen, toggleMenu };
   },
 };
 </script>

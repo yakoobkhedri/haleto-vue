@@ -65,7 +65,7 @@
               >
                 <div class="d-flex align-items-center gap-2">
                   <div
-                    class="rounded-3 d-flex align-items-center justify-content-center bg-second w-44 h-44"
+                    class="rounded-3 d-flex align-items-center justify-content-center bg-main w-44 h-44"
                   >
                     <svg
                       width="23"

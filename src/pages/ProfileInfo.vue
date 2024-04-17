@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex">
-    <Aside />
+    <Aside2 />
     <div
       class="flex-grow-1 py-5 bg-gray2 position-relative h-100vh overflow-auto hidden-scroll"
     >
@@ -491,14 +491,14 @@
 </template>
 
 <script>
-import Aside from "@/components/Aside/Aside.vue";
+import Aside2 from "@/components/Aside/Aside2.vue";
 import DashboardSteps from "@/components/Dashboard/Dashboard-steps.vue";
 import HamburgerIcon from "@/components/HamburgerIcon/HamburgerIcon.vue";
 import { ref } from "vue";
 import DatePicker from "vue3-persian-datetime-picker";
 
 export default {
-  components: { Aside, DashboardSteps, HamburgerIcon, DatePicker },
+  components: { Aside2, DashboardSteps, HamburgerIcon, DatePicker },
   name: "ProfileInfo-component",
   setup() {
     const date = ref("");

@@ -47,10 +47,15 @@ const routes=[
     {name:'tests',path:'/tests',component:Tests},
     {name:'userInfo',path:'/userInfo',component:UserInfo},
     {name:'userInfo2',path:'/userInfo2',component:UserInfo2},
-    {name:'bimeh',path:'/bimeh',component:Bimeh},
+    {name:'nobat',path:'/nobat',component:Nobat},
     {name:'officeSetting',path:'/officeSetting',component:OfficeSetting},
     {name:'profileInfo',path:'/profileInfo',component:ProfileInfo},
-    {name:'dashboard',path:'/dashboard',component:Dashboard},
+    {name:'userDashboard',path:'/userDashboard',component:UserDashboard},
+    {name:'dashboard',path:'/dashboard',component:Dashboard,children:[
+        {name:'bimeh',path:'/bimeh',component:Bimeh},
+        
+    ]
+    },
     {name:'questions',path:'/questions',component:Questions},
     {name:'requestSession',path:'/requestSession',component:RequestSession},
     {name:'mySessions',path:'/mySessions',component:MySessions},
@@ -61,9 +66,7 @@ const routes=[
     {name:'newTicket',path:'/newTicket',component:NewTicket},
     {name:'myTickets',path:'/myTickets',component:MyTickets},
     {name:'ticketVideo',path:'/ticketVideo',component:TicketVideo},
-    {name:'nobat',path:'/nobat',component:Nobat},
     {name:'patientReport',path:'/patientReport',component:PatientReport},
-    {name:'userDashboard',path:'/userDashboard',component:UserDashboard},
     {name:'newSession',path:'/newSession',component:NewSession},
 ];
 

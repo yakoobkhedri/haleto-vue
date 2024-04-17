@@ -128,10 +128,6 @@
                   </div>
                 </div>
               </div>
-              <a
-                class="d-flex align-items-center justify-content-center mx-auto mx-lg-0 fw-bold text-white bg-main w-174 h-48 rounded-8 mt-4"
-                >رزرو وقت مشاوره</a
-              >
             </div>
           </div>
         </div>
@@ -620,6 +616,9 @@
               >
             </div>
           </div>
+          <div class="mt-5" data-aos="fade-down">
+            <swiper4></swiper4>
+          </div>
           <div class="mt-5">
             <h5 class="font-bold text-main" data-aos="fade-up">
               حوزه‌های تخصصی دکتر سمیرا فتحی
@@ -935,10 +934,10 @@
 <script>
 import Header2 from "@/components/Header/Header2.vue";
 import Footer from "@/components/Footer/Footer.vue";
-import Swiper2 from "@/components/Swipers/Swiper2.vue";
+import Swiper4 from "@/components/Swipers/Swiper4.vue";
 
 export default {
-  components: { Header2, Footer, Swiper2 },
+  components: { Header2, Footer, Swiper4 },
   name: "Cadr-component",
 };
 </script>

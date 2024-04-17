@@ -748,7 +748,6 @@ a {
 .rotate-180 {
     transform: rotate(180deg);
 }
-
 /* swiper */
 .swiper-pagination-bullet {
     width: 12px;
@@ -882,20 +881,22 @@ footer ul a:hover {
     color: white !important;
 }
 
-.list-hover:hover div,
+.list-hover:hover > a > div,
+.list-hover-3 ul li > a:hover div,
+.list-hover-3 ul li > a.active div,
 .list-hover.active div,
 .list-hover>a.active div {
     opacity: 1;
 }
 
-.list-hover:hover p,
+.list-hover:hover >a p,
 .list-hover.active p,
 .list-hover>a.active p,
 .list-hover-3 ul a:hover,
 .list-hover-3 ul a.active {
     color: #6CB771 !important;
 }
-
+.list-hover,
 .list-hover svg path,
 .list-hover-2 svg path,
 .list-hover-3 svg path,
@@ -909,7 +910,10 @@ footer ul a:hover {
 .list-hover>a.active svg path {
     stroke: #6CB771;
 }
-
+.list-hover >a:hover,.list-hover > a.active,.list-hover:hover > a +ul{
+    background-color: #f0f8f1;
+    border-right: 6px solid #6CB771;
+}
 .list-hover-2:hover svg path,
 .list-hover-2.active svg path,
 .list-hover-2>a.active svg path {
