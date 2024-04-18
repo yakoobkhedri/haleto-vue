@@ -50,12 +50,9 @@ const routes=[
     {name:'nobat',path:'/nobat',component:Nobat},
     {name:'officeSetting',path:'/officeSetting',component:OfficeSetting},
     {name:'profileInfo',path:'/profileInfo',component:ProfileInfo},
+    {name:'bimeh',path:'/bimeh',component:Bimeh},
     {name:'userDashboard',path:'/userDashboard',component:UserDashboard},
-    {name:'dashboard',path:'/dashboard',component:Dashboard,children:[
-        {name:'bimeh',path:'/bimeh',component:Bimeh},
-        
-    ]
-    },
+    {name:'dashboard',path:'/dashboard',component:Dashboard},
     {name:'questions',path:'/questions',component:Questions},
     {name:'requestSession',path:'/requestSession',component:RequestSession},
     {name:'mySessions',path:'/mySessions',component:MySessions},
