@@ -54,7 +54,7 @@
             <circle cx="-1.20454" cy="157.795" r="157.295" stroke="#232524" />
           </svg>
           <!--  -->
-          <form class="max-w-340 mx-auto my-5 py-5 position-relative">
+          <form @submit.prevent="handleSubmit" class="max-w-340 mx-auto my-5 py-5 position-relative">
             <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
               <h1 class="font-bold fs-20">
                 سلامت روان حق همه ماست
@@ -70,7 +70,7 @@
                 <path class="stroke-lg-white" d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#232524" stroke-linecap="round" stroke-linejoin="round"/>
                 <path class="stroke-lg-white" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#232524" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              <input placeholder="نام کاربری"
+              <input v-model="username" placeholder="نام کاربری"
                 class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-dark text-lg-white placeholder-lg-white">
             </div>
             <div class="mt-3">
@@ -80,7 +80,7 @@
                   <path class="stroke-lg-white" d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="#232524" stroke-linecap="round" stroke-linejoin="round"/>
                   <path class="stroke-lg-white" d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="#232524" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
-                <input type="password" placeholder="رمز عبور"
+                <input v-model="password" type="password" placeholder="رمز عبور"
                   class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-lg-white placeholder-lg-white">
                   <svg class="me-auto cursor-pointer flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="stroke-lg-white" d="M13.9997 17.0479C14.6618 17.0479 15.2666 16.9736 15.8182 16.8453L14.5883 15.5782C14.3972 15.5934 14.2033 15.6056 13.9997 15.6056C10.254 15.6056 8.80297 12.8322 8.45158 12C8.71544 11.3934 9.0718 10.8342 9.50716 10.3436L8.52858 9.33543C7.452 10.5375 7.04391 11.7483 7.03621 11.7721C6.98793 11.9202 6.98793 12.0805 7.03621 12.2286C7.05091 12.2762 8.65668 17.0479 13.9997 17.0479ZM13.9997 6.9521C12.7138 6.9521 11.6575 7.23766 10.7769 7.65952L8.19469 5L7.20491 6.01968L19.8046 19L20.7944 17.9803L18.4711 15.5869C20.3009 14.18 20.954 12.2589 20.9638 12.2286C21.0121 12.0805 21.0121 11.9202 20.9638 11.7721C20.9484 11.7238 19.3426 6.9521 13.9997 6.9521ZM17.48 14.5658L15.884 12.9216C16.017 12.6404 16.0996 12.331 16.0996 12C16.0996 10.8166 15.1483 9.83661 13.9997 9.83661C13.6784 9.83661 13.3781 9.92171 13.1058 10.0594L11.8402 8.75564C12.5349 8.51003 13.2652 8.38786 13.9997 8.39435C17.7453 8.39435 19.1963 11.1678 19.5477 12C19.3363 12.499 18.7315 13.6889 17.48 14.5658Z" fill="#8A8A8A"/>
@@ -128,9 +128,29 @@
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
   name: "Login-component",
+
+  data() {
+    return {
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    async handleSubmit() {
+      const response = await axios.post("login", {
+        username: this.username,
+        password: this.password,
+      });
+      
+      localStorage.setItem('token',response.data.token);
+      this.$router.push('/userDashboard')
+    },
+  },
+
 };
 </script>
 

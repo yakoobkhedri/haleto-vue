@@ -34,6 +34,9 @@
           />
         </div>
         <p class="text-dark2 font-bold my-2">دکتر احمدی</p>
+        <p class="text-dark2 font-bold my-2" v-if="user">hi {{ user.firstname }} {{ user.lastname }}</p>
+        <p class="mb-0" v-else></p>
+
         <p class="mb-0 fs-12 text-gray">www.drahmadi@gmail.com</p>
       </div>
     </div>
@@ -137,7 +140,7 @@
           </svg>
         </a>
         <ul
-          :class="{ 'active': isActive }"
+          :class="{ active: isActive }"
           class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
         >
           <li class="my-3">
@@ -278,7 +281,7 @@
           :class="{ active: isActive3 }"
           class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
         >
-        <li class="my-3">
+          <li class="my-3">
             <router-link
               to="/userInfo"
               class-active="router-link-active"
@@ -350,7 +353,7 @@
           </svg>
         </a>
         <ul
-          :class="{ 'active': isActive4 }"
+          :class="{ active: isActive4 }"
           class="fs-12 list-unstyled px-4 pt-0 fw-bold accordion-content"
         >
           <li class="my-3">
@@ -698,10 +701,23 @@
 </template>
 
 <script>
+// import axios from "axios";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 export default {
   name: "Aside-component",
+
+  // data(){
+  //   return{
+  //     user:null
+  //   }
+  // },
+
+  // async created(){
+  //   const response=await axios.get('user');
+
+  //   this.user=response.data;
+  // },
 
   setup() {
     const isActive = ref(false);
@@ -715,7 +731,7 @@ export default {
       store.commit("toggleMenu");
     }
 
-    return { isActive, isActive2, isActive3,isActive4, isOpen, toggleMenu };
+    return { isActive, isActive2, isActive3, isActive4, isOpen, toggleMenu };
   },
 };
 </script>
