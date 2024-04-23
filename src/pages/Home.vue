@@ -669,7 +669,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import Header from "@/components/Header/Header.vue";
 import Footer from "@/components/Footer/Footer.vue";
 import Swiper1 from "@/components/Swipers/Swiper1.vue";
@@ -677,18 +676,6 @@ import Swiper1 from "@/components/Swipers/Swiper1.vue";
 export default {
   components: { Header,Footer, Swiper1 },
   name: "Home-component",
-
-  data(){
-    return{
-      user:null
-    }
-  },
-
-  async created(){
-    const response=await axios.get('user');
-
-    this.user=response.data;
-  }
 
 
 };

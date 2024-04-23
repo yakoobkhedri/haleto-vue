@@ -105,7 +105,7 @@
             </svg>
             <!--  -->
             <form
-              @submit.prevent="validate"
+              @submit.prevent="validate2"
               class="max-w-340 mx-auto my-5 py-5 position-relative"
             >
               <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
@@ -124,7 +124,7 @@
                 خوش آمدید
               </h4>
               <div class="mt-4">
-                <div :class="{'border-success':validation.valid.username}"
+                <div
                   class="rounded-4 bg-gray-transparent h-48 border d-flex align-items-center gap-2 px-3 fs-14 fw-bold"
                 >
                   <svg
@@ -156,19 +156,12 @@
                     class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-dark text-lg-white placeholder-lg-white"
                   />
                 </div>
-                <span
-                  class="fs-12 font-bold mt-2 d-block text-success"
-                  v-if="validation.valid.username"
-                >
-                  {{ validation.valid.username }}
-                </span>
-                <span class="fs-12 font-bold mt-2 d-block text-danger" v-else>
-                  {{ validation.invalid.username }}
-                </span>
+                <small class="text-danger fs-12 font-bold" v-if="!ISUsernameValid">نام کاربری باید حداقل دارای 4 کاراکتر و حذاقل دارای یک حرف لاتین باشد</small>
+                <small class="text-success fs-12 font-bold" v-else>نام کاربری صحیح است.</small>
               </div>
               <div class="mt-3">
                 <div>
-                  <div :class="{'border-success':validation.valid.password}"
+                  <div
                     class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-2"
                   >
                     <svg
@@ -215,13 +208,8 @@
                       />
                     </svg>
                   </div>
-                  <span class="fs-12 font-bold mt-2 d-block text-success" v-if="validation.valid.password">
-                    {{ validation.valid.password }}
-                  </span>
-                  <span
-                    class="fs-12 font-bold mt-2 d-block text-danger" v-else>
-                    {{ validation.invalid.password }}
-                  </span>
+                  <small class="text-danger fs-12 font-bold" v-if="!ISPasswordValid">رمز عبور باید حداقل دارای 6 کاراکتر و حذاقل دارای یک عدد باشد</small>
+                <small class="text-success fs-12 font-bold" v-else>رمز عبور صحیح است.</small>
                 </div>
                 <a class="text-lg-white text-dark fs-14"
                   >رمز عبور خود را فراموش کرده اید؟</a
@@ -319,62 +307,23 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { computed, ref } from "vue";
+// import { useRouter } from "vue-router";
 
 export default {
-  name: "Login-component",
+  name: "Login2-component",
 
   setup() {
     const username = ref("");
     const password = ref("");
-    const validated = ref({
-      username: false,
-      password: false,
-    });
-    const validation = ref({
-      invalid: {},
-      valid: {},
-    });
-    const router = useRouter();
+    const ISUsernameValid = computed(()=>/^[a-zA-Z] + $/.test(username.value) && username.value.length >=4)
+    const ISPasswordValid = computed(()=>/^\d + $/.test(password.value) && password.value.length >=6)
+    const ISFormValid = computed(()=> ISUsernameValid.value && ISPasswordValid.value )
+  
 
-    function validate() {
-      if (!username.value) {
-        validation.value.invalid.username = "لطفا نام کاربری خود را وارد کنید.";
-        validation.value.valid.username = "";
-        validated.value.username=false;
-      } else if (username.value.length < 2) {
-        validation.value.invalid.username =
-          "نام کاربری باید حداقل 2 کاراکتر داشته باشد";
-          validation.value.valid.username = "";
-        validated.value.username=false;
-      } else if (username.value.match(/[^a-z]/i)) {
-        validation.value.invalid.username =
-          "نام کاربری فقط باید با حروف لاتین باشد.";
-          validation.value.valid.username = "";
-        validated.value.username=false;
-      } else {
-        validation.value.valid.username = "نام کاربری صحیح است.";
-        validated.value.username=true;
-      }
-      if (!password.value) {
-        validation.value.invalid.password = "لطفا رمز عبور را وارد کنید.";
-        validation.value.valid.password = "";
-         validated.value.password=false;
-      } else if (password.value.length < 8) {
-        validation.value.invalid.password =
-          "رمز عبور باید حداقل 8 کاراکتر داشته باشد";
-          validation.value.valid.password = "";
-           validated.value.password=false;
-      } else if (password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
-        validation.value.invalid.password =
-          "رمز عبور فقط باید با اعداد و حروف لاتین باشد.";
-          validation.value.valid.password = "";
-           validated.value.password=false;
-      }
-      else {
-        validation.value.valid.password = "رمز عبور قوی است.";
-        validated.value.password=true;
+    function validate2() {
+      if (ISFormValid.value) {
+         alert('ok')
       }
     }
 
@@ -382,9 +331,10 @@ export default {
     return {
       username,
       password,
-      validation,
-      validate,
-      validated,
+      ISUsernameValid,
+      ISPasswordValid,
+      ISFormValid,
+      validate2,
     };
   },
 };
