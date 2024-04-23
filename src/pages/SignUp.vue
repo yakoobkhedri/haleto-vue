@@ -136,7 +136,6 @@
             </svg>
             <!--  -->
             <form
-              @submit.prevent="handleSubmit"
               class="max-w-340 mx-auto my-5 pb-5 position-relative"
             >
               <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
@@ -212,30 +211,10 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "SignUp-component",
 
-  data() {
-    return {
-      firstname: "",
-      lastname: "",
-      phone: "",
-    };
-  },
-
-  methods: {
-    async handleSubmit() {
-      const response = await axios.post("register", {
-        firstname: this.firstname,
-        lastname: this.lastname,
-        phone: this.phone,
-      });
-      console.log(response);
-      this.$router.push('/login');
-    },
-  },
 };
 </script>
 

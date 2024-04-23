@@ -34,8 +34,6 @@
           />
         </div>
         <p class="text-dark2 font-bold my-2">دکتر احمدی</p>
-        <p class="text-dark2 font-bold my-2" v-if="user">hi {{ user.firstname }} {{ user.lastname }}</p>
-        <p class="mb-0" v-else></p>
 
         <p class="mb-0 fs-12 text-gray">www.drahmadi@gmail.com</p>
       </div>
@@ -701,23 +699,10 @@
 </template>
 
 <script>
-// import axios from "axios";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 export default {
   name: "Aside-component",
-
-  // data(){
-  //   return{
-  //     user:null
-  //   }
-  // },
-
-  // async created(){
-  //   const response=await axios.get('user');
-
-  //   this.user=response.data;
-  // },
 
   setup() {
     const isActive = ref(false);

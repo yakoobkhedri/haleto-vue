@@ -221,6 +221,7 @@ import Swiper3 from '@/components/Swipers/Swiper3.vue';
 export default {
   components: { Aside,HamburgerIcon,Swiper3 },
   name: "UserDashboard-component",
+  
 };
 </script>
 
