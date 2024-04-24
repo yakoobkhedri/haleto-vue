@@ -366,7 +366,7 @@ import { computed, ref } from "vue";
 // import { useRouter } from "vue-router";
 
 export default {
-  name: "Login2-component",
+  name: "Login-component",
 
   setup() {
     const username = ref("");

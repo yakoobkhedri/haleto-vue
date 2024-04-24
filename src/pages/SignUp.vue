@@ -135,7 +135,7 @@
               <circle cx="-1.20454" cy="157.795" r="157.295" stroke="#232524" />
             </svg>
             <!--  -->
-            <form
+            <form @submit.prevent="validate"
               class="max-w-340 mx-auto my-5 pb-5 position-relative"
             >
               <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
@@ -154,31 +154,71 @@
                 لطفا جهت ثبت نام اطلاعات خود را تکمیل کنید
               </h4>
               <div class="mt-5 text-lg-white">
-                <input
-                  v-model="firstname"
-                  class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-3 px-3"
-                  placeholder="نام"
-                />
-                <input
-                  v-model="lastname"
-                  class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-3 px-3"
-                  placeholder="نام خانوادگی"
-                />
-                <div
-                  class="d-flex h-48 align-items-stretch gap-1 rounded-4 border mb-3"
-                >
-                  <input
-                    v-model="phone"
-                    class="placeholder-lg-white outline-none bg-transparent w-100 border-0 fw-bold fs-12 px-3"
-                    placeholder="شماره موبایل"
+                <div class="mb-3"> 
+                  <input :class="{
+                      'border-success': ISFirstnameValid,
+                      'border-danger': !ISFirstnameValid,
+                    }"
+                    v-model="firstname"
+                    class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
+                    placeholder="نام"
                   />
-                  <select
-                    class="bg-transparent border-end border-0 px-3 text-lg-white placeholder-lg-white"
+                  <small
+                  class="text-danger fs-12 font-bold"
+                  v-if="!ISFirstnameValid"
+                  >نام باید فارسی و فاقد عدد و کاراکتر خاص باشد</small
+                >
+                <small class="text-success fs-12 font-bold" v-else
+                  >نام صحیح است.</small
+                >
+                </div>
+                <div class="mb-3"> 
+                  <input :class="{
+                      'border-success': ISLastnameValid,
+                      'border-danger': !ISLastnameValid,
+                    }"
+                    v-model="lastname"
+                    class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
+                    placeholder="نام خانوادگی"
+                  />
+                  <small
+                  class="text-danger fs-12 font-bold"
+                  v-if="!ISLastnameValid"
+                  >نام خانوادگی باید فارسی و فاقد عدد و کاراکتر خاص باشد</small
+                >
+                <small class="text-success fs-12 font-bold" v-else
+                  >نام خانوادگی صحیح است.</small
+                >
+                </div>
+                <div class="mb-3"> 
+                  <div
+                  :class="{
+                      'border-success': ISPhoneValid,
+                      'border-danger': !ISPhoneValid,
+                    }"
+                    class="d-flex h-48 align-items-stretch gap-1 rounded-4 border mb-1"
                   >
-                    <option>98+</option>
-                    <option>90+</option>
-                    <option>94+</option>
-                  </select>
+                    <input
+                      v-model="phone"
+                      class="placeholder-lg-white outline-none bg-transparent w-100 border-0 fw-bold fs-12 px-3"
+                      placeholder="شماره موبایل"
+                    />
+                    <select
+                      class="bg-transparent border-end border-0 px-3 text-lg-white placeholder-lg-white"
+                    >
+                      <option>98+</option>
+                      <option>90+</option>
+                      <option>94+</option>
+                    </select>
+                  </div>
+                  <small
+                  class="text-danger fs-12 font-bold"
+                  v-if="!ISPhoneValid"
+                  >شماره تلفن باید 10 رقمی باشد</small
+                >
+                <small class="text-success fs-12 font-bold" v-else
+                  >شماره تلفن صحیح است.</small
+                >
                 </div>
                 <select
                   class="h-48 text-lg-white placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-3 px-3"
@@ -210,12 +250,56 @@
   </main>
 </template>
 
+
 <script>
+import { computed, ref } from "vue";
+// import { useRouter } from "vue-router";
 
 export default {
   name: "SignUp-component",
 
+  setup() {
+    const firstname = ref("");
+    const lastname = ref("");
+    const phone = ref("");
+    const startValidation = ref(false);
+
+    const ISFirstnameValid = computed(() => {
+      return startValidation.value
+        ? /^[\u0600-\u06FF\s]+$/.test(firstname.value)
+        : false;
+    });
+    const ISLastnameValid = computed(() => {
+      return startValidation.value
+      ? /^[\u0600-\u06FF\s]+$/.test(lastname.value)
+        : false;
+    });
+    const ISPhoneValid = computed(() => {
+      return startValidation.value
+      ? /^\d{10}$/.test(phone.value)
+        : false;
+    });
+
+    function validate() {
+      startValidation.value = true;
+      if (ISFirstnameValid.value == true && ISLastnameValid.value == true) {
+        alert("hi");
+      }
+    }
+
+    return {
+      firstname,
+      lastname,
+      phone,
+      ISFirstnameValid,
+      ISLastnameValid,
+      ISPhoneValid,
+      startValidation,
+      validate,
+    };
+  },
 };
 </script>
+
 
 <style></style>
