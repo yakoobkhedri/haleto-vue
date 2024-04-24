@@ -1093,6 +1093,13 @@ span.vpd-main{
     color: white!important;
     border: none!important;
 }
+/* input validate */
+.stroke-success{
+    stroke: #198754;
+}
+.stroke-danger{
+    stroke: #dc3847;
+}
 /* banner */
 #banner {
     height: 740px;

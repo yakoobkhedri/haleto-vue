@@ -105,7 +105,7 @@
             </svg>
             <!--  -->
             <form
-              @submit.prevent="validate"
+              @submit.prevent="validate2"
               class="max-w-340 mx-auto my-5 py-5 position-relative"
             >
               <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
@@ -124,7 +124,11 @@
                 خوش آمدید
               </h4>
               <div class="mt-4">
-                <div :class="{'border-success':validation.valid.username}"
+                <div
+                  :class="{
+                    'border-success': ISUsernameValid,
+                    'border-danger': !ISUsernameValid,
+                  }"
                   class="rounded-4 bg-gray-transparent h-48 border d-flex align-items-center gap-2 px-3 fs-14 fw-bold"
                 >
                   <svg
@@ -136,6 +140,10 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
+                      :class="{
+                        'stroke-success': ISUsernameValid,
+                        'stroke-danger': !ISUsernameValid,
+                      }"
                       class="stroke-lg-white"
                       d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
                       stroke="#232524"
@@ -143,6 +151,10 @@
                       stroke-linejoin="round"
                     />
                     <path
+                      :class="{
+                        'stroke-success': ISUsernameValid,
+                        'stroke-danger': !ISUsernameValid,
+                      }"
                       class="stroke-lg-white"
                       d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
                       stroke="#232524"
@@ -156,19 +168,22 @@
                     class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-dark text-lg-white placeholder-lg-white"
                   />
                 </div>
-                <span
-                  class="fs-12 font-bold mt-2 d-block text-success"
-                  v-if="validation.valid.username"
+                <small
+                  class="text-danger fs-12 font-bold"
+                  v-if="!ISUsernameValid"
+                  >نام کاربری باید حداقل دارای 4 حرف و انگلیسی باشد</small
                 >
-                  {{ validation.valid.username }}
-                </span>
-                <span class="fs-12 font-bold mt-2 d-block text-danger" v-else>
-                  {{ validation.invalid.username }}
-                </span>
+                <small class="text-success fs-12 font-bold" v-else
+                  >نام کاربری صحیح است.</small
+                >
               </div>
               <div class="mt-3">
                 <div>
-                  <div :class="{'border-success':validation.valid.password}"
+                  <div
+                    :class="{
+                      'border-success': ISPasswordValid,
+                      'border-danger': !ISPasswordValid,
+                    }"
                     class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-2"
                   >
                     <svg
@@ -180,6 +195,10 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
+                        :class="{
+                          'stroke-success': ISPasswordValid,
+                          'stroke-danger': !ISPasswordValid,
+                        }"
                         class="stroke-lg-white"
                         d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z"
                         stroke="#232524"
@@ -187,6 +206,10 @@
                         stroke-linejoin="round"
                       />
                       <path
+                        :class="{
+                          'stroke-success': ISPasswordValid,
+                          'stroke-danger': !ISPasswordValid,
+                        }"
                         class="stroke-lg-white"
                         d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
                         stroke="#232524"
@@ -196,11 +219,13 @@
                     </svg>
                     <input
                       v-model="password"
-                      type="password"
+                      :type="passwordFieldType"
                       placeholder="رمز عبور"
                       class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-lg-white placeholder-lg-white"
                     />
                     <svg
+                      v-if="passwordFieldType == 'text'"
+                      @click="switchVisibility"
                       class="me-auto cursor-pointer flex-shrink-0"
                       width="24"
                       height="24"
@@ -214,14 +239,32 @@
                         fill="#8A8A8A"
                       />
                     </svg>
+                    <svg v-if="passwordFieldType == 'password'"
+                    @click="switchVisibility"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-eye me-auto ms-1 cursor-pointer flex-shrink-0"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" fill="#8A8A8A"
+                      />
+                      <path
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" fill="#8A8A8A"
+                      />
+                    </svg>
                   </div>
-                  <span class="fs-12 font-bold mt-2 d-block text-success" v-if="validation.valid.password">
-                    {{ validation.valid.password }}
-                  </span>
-                  <span
-                    class="fs-12 font-bold mt-2 d-block text-danger" v-else>
-                    {{ validation.invalid.password }}
-                  </span>
+                  <small
+                    class="text-danger fs-12 font-bold"
+                    v-if="!ISPasswordValid"
+                    >رمز عبور باید دارای 6 تا 15 کاراکتر که شامل حداقل یک حرف
+                    کوچک، یک حرف بزرگ، یک رقم عددی و یک کاراکتر خاص باشد</small
+                  >
+                  <small class="text-success fs-12 font-bold" v-else
+                    >رمز عبور صحیح است.</small
+                  >
                 </div>
                 <a class="text-lg-white text-dark fs-14"
                   >رمز عبور خود را فراموش کرده اید؟</a
@@ -319,72 +362,52 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { computed, ref } from "vue";
+// import { useRouter } from "vue-router";
 
 export default {
-  name: "Login-component",
+  name: "Login2-component",
 
   setup() {
     const username = ref("");
     const password = ref("");
-    const validated = ref({
-      username: false,
-      password: false,
-    });
-    const validation = ref({
-      invalid: {},
-      valid: {},
-    });
-    const router = useRouter();
+    const startValidation = ref(false);
+    const passwordFieldType = ref("password");
 
-    function validate() {
-      if (!username.value) {
-        validation.value.invalid.username = "لطفا نام کاربری خود را وارد کنید.";
-        validation.value.valid.username = "";
-        validated.value.username=false;
-      } else if (username.value.length < 2) {
-        validation.value.invalid.username =
-          "نام کاربری باید حداقل 2 کاراکتر داشته باشد";
-          validation.value.valid.username = "";
-        validated.value.username=false;
-      } else if (username.value.match(/[^a-z]/i)) {
-        validation.value.invalid.username =
-          "نام کاربری فقط باید با حروف لاتین باشد.";
-          validation.value.valid.username = "";
-        validated.value.username=false;
-      } else {
-        validation.value.valid.username = "نام کاربری صحیح است.";
-        validated.value.username=true;
-      }
-      if (!password.value) {
-        validation.value.invalid.password = "لطفا رمز عبور را وارد کنید.";
-        validation.value.valid.password = "";
-         validated.value.password=false;
-      } else if (password.value.length < 8) {
-        validation.value.invalid.password =
-          "رمز عبور باید حداقل 8 کاراکتر داشته باشد";
-          validation.value.valid.password = "";
-           validated.value.password=false;
-      } else if (password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
-        validation.value.invalid.password =
-          "رمز عبور فقط باید با اعداد و حروف لاتین باشد.";
-          validation.value.valid.password = "";
-           validated.value.password=false;
-      }
-      else {
-        validation.value.valid.password = "رمز عبور قوی است.";
-        validated.value.password=true;
+    const ISUsernameValid = computed(() => {
+      return startValidation.value
+        ? /^[a-zA-Z-]+$/.test(username.value) && username.value.length >= 4
+        : false;
+    });
+    const ISPasswordValid = computed(() => {
+      return startValidation.value
+        ? /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/.test(
+            password.value
+          )
+        : false;
+    });
+
+    function validate2() {
+      startValidation.value = true;
+      if (ISUsernameValid.value == true && ISPasswordValid.value == true) {
+        alert("hi");
       }
     }
 
-     
+    function switchVisibility() {
+      passwordFieldType.value =
+        passwordFieldType.value === "password" ? "text" : "password";
+    }
+
     return {
       username,
       password,
-      validation,
-      validate,
-      validated,
+      passwordFieldType,
+      ISUsernameValid,
+      ISPasswordValid,
+      startValidation,
+      validate2,
+      switchVisibility,
     };
   },
 };
