@@ -241,6 +241,9 @@ a {
 .w-80 {
     width: 80px;
 }
+.w-90{
+    width: 90px;
+}
 .w-102 {
     width: 102px;
 }
@@ -1235,7 +1238,9 @@ span.vpd-main{
     .-right-sm-13 {
         right: -13px !important;
     }
-
+    .w-sm-120{
+        width: 120px;
+    }
     .w-sm-100 {
         width: 100% !important;
     }

@@ -106,7 +106,7 @@
             <!--  -->
             <form
               @submit.prevent="validate2"
-              class="max-w-340 mx-auto my-5 py-5 position-relative"
+              class="max-w-340 mx-auto my-5 pb-5 position-relative"
             >
               <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
                 <h1 class="font-bold fs-20">سلامت روان حق همه ماست</h1>
@@ -129,7 +129,7 @@
                     'border-success': ISUsernameValid,
                     'border-danger': !ISUsernameValid,
                   }"
-                  class="rounded-4 bg-gray-transparent h-48 border d-flex align-items-center gap-2 px-3 fs-14 fw-bold"
+                  class="rounded-4 bg-gray-transparent h-48 border d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1"
                 >
                   <svg
                     class="flex-shrink-0"
@@ -184,7 +184,7 @@
                       'border-success': ISPasswordValid,
                       'border-danger': !ISPasswordValid,
                     }"
-                    class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-2"
+                    class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1"
                   >
                     <svg
                       class="flex-shrink-0"
@@ -266,80 +266,92 @@
                     >رمز عبور صحیح است.</small
                   >
                 </div>
-                <a class="text-lg-white text-dark fs-14"
+                <a class="text-lg-white text-dark fs-14 mt-2 d-block"
                   >رمز عبور خود را فراموش کرده اید؟</a
                 >
               </div>
-              <div
-                class="d-flex align-items-center gap-3 mt-3 position-relative"
-              >
+              <div class="mt-3"> 
                 <div
-                  class="rounded-4 overflow-hidden bg-gray-transparent flex-shrink-0 w-100 h-48 border d-flex align-items-center gap-2 fs-14 fw-bold"
+                  class="d-flex align-items-center gap-1 mb-1 position-relative"
                 >
-                  <input
-                    type="password"
-                    placeholder="کد امنیتی"
-                    class="w-100 bg-transparent px-3 outline-none border-0 flex-grow-1 text-lg-white placeholder-lg-whitee"
-                  />
                   <div
-                    class="h-100 bg-main flex-shrink-0 flex-grow-1 d-flex align-items-center justify-content-center gap-3 fw-bold text-white border-end text-center px-3"
+                  :class="{
+                    'border-success': ISCaptchaValid,
+                    'border-danger': !ISCaptchaValid,
+                  }"
+                    class="rounded-4 overflow-hidden bg-gray-transparent flex-shrink-0 w-100 h-48 border d-flex align-items-center gap-2 fs-14 fw-bold"
                   >
-                    55930
-                    <svg
-                      class="cursor-pointer flex-shrink-0 d-sm-none"
-                      width="28"
-                      height="32"
-                      viewBox="0 0 28 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <input v-model="userInput"
+                      placeholder="کد امنیتی"
+                      class="w-100 bg-transparent px-3 outline-none border-0 flex-grow-1 text-lg-white placeholder-lg-whitee"
+                    />
+                    <div   :class="{
+                    'bg-main': ISCaptchaValid,
+                    'bg-danger': !ISCaptchaValid,
+                  }"
+                      class="h-100 bg-main w-90 w-sm-120 flex-shrink-0 flex-grow-1 d-flex align-items-center justify-content-center gap-3 fw-bold text-white border-end text-center"
                     >
-                      <path
-                        class="stroke-lg-white"
-                        d="M24.2391 13.3748L21.6723 14.0665C21.0736 12.2561 19.8539 10.6056 18.0624 9.56549C14.1685 7.30467 9.18761 8.6483 6.94116 12.5612L6.69221 12.9948L7.12462 13.2459L8.66607 14.1408L6.56617 14.6718L6.55869 14.6737L6.55127 14.6758L4.2972 15.3209C4.1949 15.3475 4.05814 15.3303 3.92625 15.2537C3.79312 15.1764 3.7096 15.0646 3.6821 14.9614L3.06499 12.6453L2.5082 10.5556L4.02339 11.4353L4.4558 11.6864L4.70474 11.2528C7.65392 6.11587 14.2147 4.31387 19.3618 7.30228C21.782 8.70748 23.4391 10.908 24.2391 13.3748Z"
-                        fill="#6CB771"
-                        stroke="#F9F9F9"
-                      />
-                      <path
-                        class="stroke-lg-white"
-                        d="M3.76091 18.6252L6.32769 17.9335C6.92642 19.7439 8.14609 21.3944 9.93756 22.4345C13.8315 24.6953 18.8124 23.3517 21.0588 19.4388L21.3078 19.0052L20.8754 18.7541L19.3339 17.8592L21.4338 17.3282L21.4413 17.3263L21.4487 17.3242L23.7028 16.6791C23.8051 16.6525 23.9419 16.6697 24.0737 16.7463C24.2069 16.8236 24.2904 16.9354 24.3179 17.0386L24.935 19.3547L25.4918 21.4444L23.9766 20.5647L23.5442 20.3136L23.2953 20.7472C20.3461 25.8841 13.7853 27.6861 8.63821 24.6977C6.21797 23.2925 4.56087 21.092 3.76091 18.6252Z"
-                        fill="#6CB771"
-                        stroke="#F9F9F9"
-                      />
-                    </svg>
+                      {{ captchaCode }}
+                      <svg @click="generateNewCaptcha"
+                        class="cursor-pointer flex-shrink-0 d-sm-none"
+                        width="28"
+                        height="32"
+                        viewBox="0 0 28 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="stroke-lg-white"
+                          d="M24.2391 13.3748L21.6723 14.0665C21.0736 12.2561 19.8539 10.6056 18.0624 9.56549C14.1685 7.30467 9.18761 8.6483 6.94116 12.5612L6.69221 12.9948L7.12462 13.2459L8.66607 14.1408L6.56617 14.6718L6.55869 14.6737L6.55127 14.6758L4.2972 15.3209C4.1949 15.3475 4.05814 15.3303 3.92625 15.2537C3.79312 15.1764 3.7096 15.0646 3.6821 14.9614L3.06499 12.6453L2.5082 10.5556L4.02339 11.4353L4.4558 11.6864L4.70474 11.2528C7.65392 6.11587 14.2147 4.31387 19.3618 7.30228C21.782 8.70748 23.4391 10.908 24.2391 13.3748Z"
+                          fill="#6CB771"
+                          stroke="#F9F9F9"
+                        />
+                        <path
+                          class="stroke-lg-white"
+                          d="M3.76091 18.6252L6.32769 17.9335C6.92642 19.7439 8.14609 21.3944 9.93756 22.4345C13.8315 24.6953 18.8124 23.3517 21.0588 19.4388L21.3078 19.0052L20.8754 18.7541L19.3339 17.8592L21.4338 17.3282L21.4413 17.3263L21.4487 17.3242L23.7028 16.6791C23.8051 16.6525 23.9419 16.6697 24.0737 16.7463C24.2069 16.8236 24.2904 16.9354 24.3179 17.0386L24.935 19.3547L25.4918 21.4444L23.9766 20.5647L23.5442 20.3136L23.2953 20.7472C20.3461 25.8841 13.7853 27.6861 8.63821 24.6977C6.21797 23.2925 4.56087 21.092 3.76091 18.6252Z"
+                          fill="#6CB771"
+                          stroke="#F9F9F9"
+                        />
+                      </svg>
+                    </div>
                   </div>
+                  <svg @click="generateNewCaptcha"
+                    class="cursor-pointer flex-shrink-0 d-none d-sm-block"
+                    width="28"
+                    height="32"
+                    viewBox="0 0 28 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      class="stroke-lg-white"
+                      d="M24.2391 13.3748L21.6723 14.0665C21.0736 12.2561 19.8539 10.6056 18.0624 9.56549C14.1685 7.30467 9.18761 8.6483 6.94116 12.5612L6.69221 12.9948L7.12462 13.2459L8.66607 14.1408L6.56617 14.6718L6.55869 14.6737L6.55127 14.6758L4.2972 15.3209C4.1949 15.3475 4.05814 15.3303 3.92625 15.2537C3.79312 15.1764 3.7096 15.0646 3.6821 14.9614L3.06499 12.6453L2.5082 10.5556L4.02339 11.4353L4.4558 11.6864L4.70474 11.2528C7.65392 6.11587 14.2147 4.31387 19.3618 7.30228C21.782 8.70748 23.4391 10.908 24.2391 13.3748Z"
+                      fill="#6CB771"
+                      stroke="#F9F9F9"
+                    />
+                    <path
+                      class="stroke-lg-white"
+                      d="M3.76091 18.6252L6.32769 17.9335C6.92642 19.7439 8.14609 21.3944 9.93756 22.4345C13.8315 24.6953 18.8124 23.3517 21.0588 19.4388L21.3078 19.0052L20.8754 18.7541L19.3339 17.8592L21.4338 17.3282L21.4413 17.3263L21.4487 17.3242L23.7028 16.6791C23.8051 16.6525 23.9419 16.6697 24.0737 16.7463C24.2069 16.8236 24.2904 16.9354 24.3179 17.0386L24.935 19.3547L25.4918 21.4444L23.9766 20.5647L23.5442 20.3136L23.2953 20.7472C20.3461 25.8841 13.7853 27.6861 8.63821 24.6977C6.21797 23.2925 4.56087 21.092 3.76091 18.6252Z"
+                      fill="#6CB771"
+                      stroke="#F9F9F9"
+                    />
+                  </svg>
                 </div>
-                <svg
-                  class="cursor-pointer flex-shrink-0 d-none d-sm-block"
-                  width="28"
-                  height="32"
-                  viewBox="0 0 28 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    class="stroke-lg-white"
-                    d="M24.2391 13.3748L21.6723 14.0665C21.0736 12.2561 19.8539 10.6056 18.0624 9.56549C14.1685 7.30467 9.18761 8.6483 6.94116 12.5612L6.69221 12.9948L7.12462 13.2459L8.66607 14.1408L6.56617 14.6718L6.55869 14.6737L6.55127 14.6758L4.2972 15.3209C4.1949 15.3475 4.05814 15.3303 3.92625 15.2537C3.79312 15.1764 3.7096 15.0646 3.6821 14.9614L3.06499 12.6453L2.5082 10.5556L4.02339 11.4353L4.4558 11.6864L4.70474 11.2528C7.65392 6.11587 14.2147 4.31387 19.3618 7.30228C21.782 8.70748 23.4391 10.908 24.2391 13.3748Z"
-                    fill="#6CB771"
-                    stroke="#F9F9F9"
-                  />
-                  <path
-                    class="stroke-lg-white"
-                    d="M3.76091 18.6252L6.32769 17.9335C6.92642 19.7439 8.14609 21.3944 9.93756 22.4345C13.8315 24.6953 18.8124 23.3517 21.0588 19.4388L21.3078 19.0052L20.8754 18.7541L19.3339 17.8592L21.4338 17.3282L21.4413 17.3263L21.4487 17.3242L23.7028 16.6791C23.8051 16.6525 23.9419 16.6697 24.0737 16.7463C24.2069 16.8236 24.2904 16.9354 24.3179 17.0386L24.935 19.3547L25.4918 21.4444L23.9766 20.5647L23.5442 20.3136L23.2953 20.7472C20.3461 25.8841 13.7853 27.6861 8.63821 24.6977C6.21797 23.2925 4.56087 21.092 3.76091 18.6252Z"
-                    fill="#6CB771"
-                    stroke="#F9F9F9"
-                  />
-                </svg>
+                <small
+                    class="text-danger fs-12 font-bold"
+                    v-if="!ISCaptchaValid"
+                    >کد وارد شده شما باید با کد کپچا برابر باشد</small
+                  >
+                  <small class="text-success fs-12 font-bold" v-else
+                    >کد وارد شده صحیح است.</small
+                  >
               </div>
               <input
                 type="submit"
                 value="ورود"
                 class="bg-main rounded-4 text-white fw-bold w-100 h-48 mt-4 border-0 mb-2"
               />
-              <input
-                type="submit"
-                value="ورود و ثبت نام با شماره تلفن"
-                class="bg-black rounded-4 text-white fw-bold w-100 h-48 mt-4 border-0 mb-2"
-              />
+              <router-link to="/signUp" class="bg-black d-flex align-items-center justify-content-center rounded-4 text-white fw-bold w-100 h-48 mt-4 border-0 mb-2">ثبت نام</router-link>
               <p class="fw-bold text-lg-white text-center mb-2">یا</p>
               <a
                 class="rounded-4 h-48 border border-dark border-lg-white d-flex align-items-center justify-content-center gap-3 px-3 fs-14 fw-bold mb-2"
@@ -373,6 +385,8 @@ export default {
     const password = ref("");
     const startValidation = ref(false);
     const passwordFieldType = ref("password");
+    const captchaCode= ref(generateCaptchaCode());
+    const userInput =ref("");
 
     const ISUsernameValid = computed(() => {
       return startValidation.value
@@ -387,9 +401,24 @@ export default {
         : false;
     });
 
+    const ISCaptchaValid = computed(() => {
+        return startValidation.value ? userInput.value.toUpperCase()===captchaCode.value : false
+    })
+
+    function generateCaptchaCode() {
+      return Math.random().toString(36).substring(2,8).toUpperCase();
+    }
+   
+    function generateNewCaptcha() {
+      captchaCode.value=generateCaptchaCode();
+      userInput.value='';
+      startValidation.value=false;
+    }
+
+
     function validate2() {
       startValidation.value = true;
-      if (ISUsernameValid.value == true && ISPasswordValid.value == true) {
+      if (ISUsernameValid.value == true && ISPasswordValid.value == true && ISCaptchaValid.value == true) {
         alert("hi");
       }
     }
@@ -408,6 +437,10 @@ export default {
       startValidation,
       validate2,
       switchVisibility,
+      captchaCode,
+      userInput,
+      ISCaptchaValid,
+      generateNewCaptcha
     };
   },
 };
