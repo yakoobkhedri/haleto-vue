@@ -374,6 +374,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import { computed, ref } from "vue";
 // import { useRouter } from "vue-router";
 
@@ -381,6 +382,7 @@ export default {
   name: "Login-component",
 
   setup() {
+    
     const username = ref("");
     const password = ref("");
     const startValidation = ref(false);
@@ -393,6 +395,7 @@ export default {
         ? /^[a-zA-Z-]+$/.test(username.value) && username.value.length >= 4
         : false;
     });
+    
     const ISPasswordValid = computed(() => {
       return startValidation.value
         ? /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/.test(
@@ -414,12 +417,15 @@ export default {
       userInput.value='';
       startValidation.value=false;
     }
-
-
-    function validate2() {
+    
+    async function validate2() {
       startValidation.value = true;
       if (ISUsernameValid.value == true && ISPasswordValid.value == true && ISCaptchaValid.value == true) {
-        alert("hi");
+        const response = await axios.post('login',{
+          username: username.value,
+          password: password.value
+        });
+        localStorage.setItem('token',response.data.token)
       }
     }
 
