@@ -374,15 +374,18 @@
 </template>
 
 <script>
+import { useStore } from "vuex";
 import axios from "axios";
 import { computed, ref } from "vue";
-// import { useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 
 export default {
   name: "Login-component",
 
   setup() {
     
+    const router = useRouter();
+    const store = useStore();
     const username = ref("");
     const password = ref("");
     const startValidation = ref(false);
@@ -425,7 +428,10 @@ export default {
           username: username.value,
           password: password.value
         });
-        localStorage.setItem('token',response.data.token)
+        localStorage.setItem('token',response.data.token);
+        store.dispatch('user',response.data.user);
+        router.push('/');
+
       }
     }
 

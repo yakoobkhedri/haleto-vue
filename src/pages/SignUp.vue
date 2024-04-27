@@ -257,14 +257,16 @@
 
 
 <script>
+import axios from "axios";
 import Swal from "sweetalert2";
 import { computed, reactive, ref } from "vue";
-// import { useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 
 export default {
   name: "SignUp-component",
 
   setup() {
+    const router = useRouter();
     const startValidation = ref(false);
     const formData = reactive({
       firstname: "",
@@ -287,19 +289,27 @@ export default {
       return startValidation.value ? /^\d{10}$/.test(formData.phone) : false;
     });
 
-    function validate() {
+    async function validate() {
       startValidation.value = true;
       if (
         ISFirstnameValid.value == true &&
         ISLastnameValid.value == true &&
         ISPhoneValid.value
       ) {
+        const response = await axios.post('register',{
+          firstname: formData.firstname,
+          lastname : formData.lastname,
+          phone : formData.phone,
+          country : formData.country
+        })
+        console.log(response)
         Swal.fire({
           title: "تبریک",
           text: "ثبت نام شما با موفقیت انجام شد",
           icon: "success",
           confirmButtonText: "بستن",
         });
+        router.push('/');
       }
     }
 

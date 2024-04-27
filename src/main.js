@@ -3,7 +3,8 @@ import App from './App.vue';
 import router from '../src/router/router';
 import AosVue from "aos-vue";
 import store from './store/index.js';
-import Vue3PersianDatetimePicker from 'vue3-persian-datetime-picker'
+import Vue3PersianDatetimePicker from 'vue3-persian-datetime-picker';
+// import './axios'
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
