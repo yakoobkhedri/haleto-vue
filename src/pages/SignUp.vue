@@ -158,13 +158,14 @@ export default {
     ]);
     const loginDetails = loginStore()
     function signUpUser() {
+
       if (formData.value.firstname || formData.value.lastname || formData.value.phone || formData.value.country || isAcceptRuls.value) {
 
         ISFirstnameValid.value = /^[\u0600-\u06FF\s]+$/.test(formData.value.firstname)
         ISLastnameValid.value = /^[\u0600-\u06FF\s]+$/.test(formData.value.lastname)
         ISPhoneValid.value =  /^\d{10}$/.test(formData.value.phone)
         startValidation.value = true;
-
+        
         loginDetails.sendUserNumber(formData.value)
           .then(() => {
             Swal.fire({
