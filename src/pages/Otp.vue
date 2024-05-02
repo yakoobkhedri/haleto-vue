@@ -65,12 +65,21 @@
                 class="d-block mx-auto">
             <h4 class="font-bold fs-20 text-center mt-3 text-lg-white">verification</h4>
             <h5 class="fs-18 mt-4 text-center font-bold text-lg-white">لطفا کدی که به شماره موبایل شما ارسال شده است را وارد نمایید</h5>
+<<<<<<< HEAD
             <div dir="ltr" ref="inputDiv" class="mt-5 d-flex align-items-center justify-content-center gap-3">
              <input @input="focusNextInput($event, 1)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
              <input @input="focusNextInput($event, 2)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
              <input @input="focusNextInput($event, 3)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
              <input @input="focusNextInput($event, 4)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
              <input @input="focusNextInput($event, 5)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+=======
+            <div class="mt-5 d-flex align-items-center justify-content-center gap-3">
+             <input v-model="formDataCode.fifth" inputId="fifth" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input v-model="formDataCode.forth" inputId="forth" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input v-model="formDataCode.third" inputId="third" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input v-model="formDataCode.secend" inputId="secend" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input v-model="formDataCode.first" inputId="first" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
             </div>
             <input type="submit" value="تایید"
             class="bg-main rounded-4 text-white fw-bold w-100 h-48 mt-4 border-0 mb-2">
@@ -97,6 +106,7 @@ export default {
   setup() {
     const router = useRouter();
     const startValidation = ref(false);
+<<<<<<< HEAD
     const formDataCode = ref([]);
 
     const inputDiv = ref(null)
@@ -133,13 +143,50 @@ export default {
         console.log('empty')
       }
     }
+=======
+    const formDataCode = ref({
+      first: "",
+      secend: "",
+      third: "",
+      forth: "",
+      fifth: ""
+    });
+
+    const loginDetails = loginStore()
+    
+    function checkCode() {
+      if ( formDataCode.value.first || formDataCode.value.secend || formDataCode.value.third || formDataCode.value.forth || formDataCode.value.fifth ) {
+        
+        let finalCode = Number(formDataCode.value.first +''+ formDataCode.value.secend +''+ formDataCode.value.third +''+ formDataCode.value.forth +''+   formDataCode.value.fifth)
+        loginDetails.sendUserCode(finalCode)
+        .then(()=>{
+          Swal.fire({
+            title: "تبریک",
+            text: "ثبت نام شما با موفقیت انجام شد",
+            icon: "success",
+            confirmButtonText: "بستن",
+          });
+          router.push({ path: "/SignUpPassword" });
+
+
+        }).catch(()=>{
+          console.log('error')
+        })
+      }else{
+        console.log('empty')
+      }
+  }
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
 
     return {
       formDataCode,
       startValidation,
       checkCode,
+<<<<<<< HEAD
       focusNextInput,
       inputDiv
+=======
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     };
   },
 };

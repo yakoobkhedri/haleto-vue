@@ -75,17 +75,26 @@
               </h4>
               <div class="mt-5 text-lg-white">
                 <div class="mb-3">
+<<<<<<< HEAD
                   <input :class="[!ISFirstnameValid ? 'border-danger' : 'border-secondary']" v-model="formData.firstname"
+=======
+                  <input
+                    v-model="formData.firstname"
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
                     placeholder="نام" />
                   <small class="text-danger fs-12 font-bold" v-if="!ISFirstnameValid">نام باید فارسی و فاقد
                     عدد و کاراکتر خاص باشد</small>
                 </div>
                 <div class="mb-3">
+<<<<<<< HEAD
                   <input :class="{
                     'border-secondary': ISLastnameValid,
                     'border-danger': !ISLastnameValid,
                   }" v-model="formData.lastname"
+=======
+                  <input v-model="formData.lastname"
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     class="h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
                     placeholder="نام خانوادگی" />
                   <small class="text-danger fs-12 font-bold" v-if="!ISLastnameValid">نام خانوادگی باید فارسی و فاقد عدد
@@ -93,20 +102,25 @@
                     باشد</small>
                 </div>
                 <div class="mb-3">
+<<<<<<< HEAD
                   <div :class="{
                     'border-secondary': ISPhoneValid,
                     'border-danger': !ISPhoneValid,
                   }" class="d-flex h-48 align-items-stretch gap-1 rounded-4 border mb-1">
+=======
+                  <div class="d-flex h-48 align-items-stretch gap-1 rounded-4 border mb-1">
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     <input type="number" min="0" v-model="formData.phone"
                       class="placeholder-lg-white outline-none bg-transparent w-100 border-0 fw-bold fs-12 px-3"
                       placeholder="شماره موبایل" />
                     <select class="bg-transparent border-end border-0 px-3 text-lg-white placeholder-lg-white">
                       <option>98+</option>
-                      <option>90+</option>
+                      <option>96+</option>
                       <option>94+</option>
                     </select>
                   </div>
                   <small class="text-danger fs-12 font-bold" v-if="!ISPhoneValid">شماره تلفن باید 10 رقمی باشد</small>
+<<<<<<< HEAD
                 </div>
 
 
@@ -117,6 +131,15 @@
                     :options="countryTypeOptions" optionLabel="name" placeholder="کشور" />
                 </div>
 
+=======
+                </div>
+                <div class="w-full flex items-center justify-between mb-3">
+                  <simpleDropdown
+                    class="text-lg-white placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-3 px-3"
+                    v-model="countrySelectValue" @change="formData.country = $event.value.name"
+                    :options="countryTypeOptions" optionLabel="name" placeholder="کشور" />
+                </div>
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                 <label class="d-flex align-items-center gap-2 cursor-pointer">
                   <input type="checkbox" class="form-check-input cursor-pointer" v-model="isAcceptRuls" />
                   <p class="mb-0 mt-1 text-main fs-14 fw-bold">
@@ -136,7 +159,10 @@
 
 
 <script>
+<<<<<<< HEAD
 // import axios from "axios";
+=======
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
 import Swal from "sweetalert2";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
@@ -149,14 +175,30 @@ export default {
 
   setup() {
     const router = useRouter();
+<<<<<<< HEAD
     const isAcceptRuls = ref(false)
+=======
+    const startValidation = ref(false);
+    const isAcceptRuls = ref(false)
+    const ISFirstnameValid = ref(true)
+    const ISLastnameValid = ref(true)
+    const ISPhoneValid = ref(true)
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     const formData = ref({
       firstname: "",
       lastname: "",
       phone: "",
       country: "",
     });
+    const countrySelectValue = ref()
+    const countryTypeOptions = ref([
+      { name: 'ایران', code: 'Iran' },
+      { name: 'عراق', code: 'Iraq' },
+    ]);
+    const loginDetails = loginStore()
+    function signUpUser() {
 
+<<<<<<< HEAD
     const countrySelectValue = ref()
     const countryTypeOptions = ref([
       { name: 'ایران', code: 'Iran' },
@@ -189,6 +231,27 @@ export default {
               console.log('error')
             })
         }
+=======
+      if (formData.value.firstname || formData.value.lastname || formData.value.phone || formData.value.country || isAcceptRuls.value) {
+
+        ISFirstnameValid.value = /^[\u0600-\u06FF\s]+$/.test(formData.value.firstname)
+        ISLastnameValid.value = /^[\u0600-\u06FF\s]+$/.test(formData.value.lastname)
+        ISPhoneValid.value =  /^\d{10}$/.test(formData.value.phone)
+        startValidation.value = true;
+        
+        loginDetails.sendUserNumber(formData.value)
+          .then(() => {
+            Swal.fire({
+              title: "تبریک",
+              text: "ثبت نام شما با موفقیت انجام شد",
+              icon: "success",
+              confirmButtonText: "بستن",
+            });
+            router.push('/otp');
+          }).catch(() => {
+            console.log('error')
+          })
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
       } else {
         console.log('error')
       }
@@ -202,6 +265,10 @@ export default {
       ISFirstnameValid,
       ISLastnameValid,
       ISPhoneValid,
+<<<<<<< HEAD
+=======
+      startValidation,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
       signUpUser,
     };
   },
@@ -210,6 +277,7 @@ export default {
 
 
 <style>
+<<<<<<< HEAD
 .p-dropdown-items {
   background-color: white;
   width: 100%;
@@ -218,6 +286,15 @@ export default {
 
 .p-dropdown {
   height: 48px !important;
+=======
+.p-dropdown-items{
+  background-color: white;
+  width: 100%;
+  padding: 0;
+}
+.p-dropdown{
+  height: 56px !important;
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
   /* display: flex;
   justify-content: center;
   align-items: center; */

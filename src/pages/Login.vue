@@ -66,20 +66,32 @@
               </h4>
               <div class="mt-4">
                 <div :class="{
+<<<<<<< HEAD
                   'border-secondary': ISUsernameValid,
+=======
+                  'border-success': ISUsernameValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                   'border-danger': !ISUsernameValid,
                 }"
                   class="rounded-4 bg-gray-transparent h-48 border d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1">
                   <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path :class="{
+<<<<<<< HEAD
                       'stroke-secondary': ISUsernameValid,
+=======
+                      'stroke-success': ISUsernameValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                       'stroke-danger': !ISUsernameValid,
                     }" class="stroke-lg-white"
                       d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
                       stroke="#232524" stroke-linecap="round" stroke-linejoin="round" />
                     <path :class="{
+<<<<<<< HEAD
                       'stroke-secondary': ISUsernameValid,
+=======
+                      'stroke-success': ISUsernameValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                       'stroke-danger': !ISUsernameValid,
                     }" class="stroke-lg-white"
                       d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
@@ -94,20 +106,32 @@
               <div class="mt-3">
                 <div>
                   <div :class="{
+<<<<<<< HEAD
                     'border-secondary': ISPasswordValid,
+=======
+                    'border-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     'border-danger': !ISPasswordValid,
                   }"
                     class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1">
                     <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path :class="{
+<<<<<<< HEAD
                         'stroke-secondary': ISPasswordValid,
+=======
+                        'stroke-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                         'stroke-danger': !ISPasswordValid,
                       }" class="stroke-lg-white"
                         d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z"
                         stroke="#232524" stroke-linecap="round" stroke-linejoin="round" />
                       <path :class="{
+<<<<<<< HEAD
                         'stroke-secondary': ISPasswordValid,
+=======
+                        'stroke-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                         'stroke-danger': !ISPasswordValid,
                       }" class="stroke-lg-white"
                         d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
@@ -135,13 +159,21 @@
                   <small class="text-danger fs-12 font-bold" v-if="!ISPasswordValid">رمز عبور باید دارای 6 تا 15 کاراکتر
                     که شامل حداقل یک حرف
                     کوچک، یک حرف بزرگ، یک رقم عددی و یک کاراکتر خاص باشد</small>
+<<<<<<< HEAD
+=======
+                  <!-- <small class="text-success fs-12 font-bold" v-else>رمز عبور صحیح است.</small> -->
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                 </div>
                 <a class="text-lg-white text-dark fs-14 mt-2 d-block">رمز عبور خود را فراموش کرده اید؟</a>
               </div>
               <div class="mt-3">
                 <div class="d-flex align-items-center gap-1 mb-1 position-relative">
                   <div :class="{
+<<<<<<< HEAD
                     'border-secondary': ISCaptchaValid,
+=======
+                    'border-success': ISCaptchaValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     'border-danger': !ISCaptchaValid,
                   }"
                     class="rounded-4 overflow-hidden bg-gray-transparent flex-shrink-0 w-100 h-48 border d-flex align-items-center gap-2 fs-14 fw-bold">
@@ -203,12 +235,19 @@ export default {
   setup() {
 
     const router = useRouter();
+<<<<<<< HEAD
     // const store = useStore();
+=======
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     const formData = ref({
       username: '',
       password: '',
       captchaVal: ''
     })
+<<<<<<< HEAD
+=======
+    const startValidation = ref(false);
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     const passwordFieldType = ref("password");
     const captchaCode = ref(generateCaptchaCode());
     const userInput = ref("");
@@ -224,6 +263,10 @@ export default {
     function generateNewCaptcha() {
       captchaCode.value = generateCaptchaCode();
       userInput.value = '';
+<<<<<<< HEAD
+=======
+      startValidation.value = false;
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     }
 
     const loginDetails = loginStore()
@@ -232,6 +275,7 @@ export default {
         if (formData.value.captchaVal == captchaCode.value) {
 
           ISUsernameValid.value = /^[a-zA-Z-]+$/.test(formData.value.username)
+<<<<<<< HEAD
           ISPasswordValid.value = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/.test(formData.value.password)
           if (formData.value.captchaVal === captchaCode.value) {
             ISCaptchaValid.value = true
@@ -252,6 +296,35 @@ export default {
                 console.log('error')
               })
           }
+=======
+          if(formData.value.username.length >= 4){
+            ISUsernameValid.value = true
+          }else{
+            ISUsernameValid.value = false
+          }
+
+          ISPasswordValid.value =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/.test(formData.value.password)
+
+          if (formData.value.captchaVal.toUpperCase() === captchaCode.value) {
+            ISCaptchaValid.value = true      
+          }else{
+            ISCaptchaValid.value = false
+          }
+      
+          startValidation.value = true;
+          loginDetails.sendLoginUserDetails(formData.value)
+            .then(() => {
+              Swal.fire({
+                title: "تبریک",
+                text: "ورود",
+                icon: "success",
+                confirmButtonText: "بستن",
+              });
+              router.push('/');
+            }).catch(() => {
+              console.log('error')
+            })
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
         } else {
           console.log('کد اشتباه')
         }
@@ -272,6 +345,10 @@ export default {
       passwordFieldType,
       ISUsernameValid,
       ISPasswordValid,
+<<<<<<< HEAD
+=======
+      startValidation,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
       loginUser,
       switchVisibility,
       captchaCode,

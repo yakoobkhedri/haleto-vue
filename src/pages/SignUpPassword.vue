@@ -76,26 +76,42 @@
               <div class="mt-5 text-lg-white">
                 <div class="mb-3">
                   <input v-model="formData.username"
+<<<<<<< HEAD
                     class="border-secondary h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
+=======
+                    class="border-success h-48 placeholder-lg-white outline-none bg-transparent w-100 rounded-4 border fw-bold fs-12 mb-1 px-3"
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                     placeholder="نام کاربری" />
                 </div>
                 <div class="mt-3">
                   <div>
                     <div :class="{
+<<<<<<< HEAD
                       'border-secondary': ISPasswordValid,
+=======
+                      'border-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                       'border-danger': !ISPasswordValid,
                     }"
                       class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1">
                       <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path :class="{
+<<<<<<< HEAD
                           'stroke-secondary': ISPasswordValid,
+=======
+                          'stroke-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                           'stroke-danger': !ISPasswordValid,
                         }" class="stroke-lg-white"
                           d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z"
                           stroke="#232524" stroke-linecap="round" stroke-linejoin="round" />
                         <path :class="{
+<<<<<<< HEAD
                           'stroke-secondary': ISPasswordValid,
+=======
+                          'stroke-success': ISPasswordValid,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                           'stroke-danger': !ISPasswordValid,
                         }" class="stroke-lg-white"
                           d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
@@ -129,20 +145,32 @@
                 <div class="mt-3">
                   <div>
                     <div :class="{
+<<<<<<< HEAD
                       'border-secondary': passwordsAreNotSame,
+=======
+                      'border-success': passwordsAreNotSame,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                       'border-danger': !passwordsAreNotSame,
                     }"
                       class="rounded-4 h-48 border bg-gray-transparent d-flex align-items-center gap-2 px-3 fs-14 fw-bold mb-1">
                       <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path :class="{
+<<<<<<< HEAD
                           'stroke-secondary': passwordsAreNotSame,
+=======
+                          'stroke-success': passwordsAreNotSame,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                           'stroke-danger': !passwordsAreNotSame,
                         }" class="stroke-lg-white"
                           d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z"
                           stroke="#232524" stroke-linecap="round" stroke-linejoin="round" />
                         <path :class="{
+<<<<<<< HEAD
                           'stroke-secondary': passwordsAreNotSame,
+=======
+                          'stroke-success': passwordsAreNotSame,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                           'stroke-danger': !passwordsAreNotSame,
                         }" class="stroke-lg-white"
                           d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
@@ -150,14 +178,22 @@
                       </svg>
                       <input v-model="formData.passwordConfirm" :type="passwordFieldType" placeholder="تکرار رمز عبور"
                         class="w-100 bg-transparent outline-none border-0 flex-grow-1 text-lg-white placeholder-lg-white" />
+<<<<<<< HEAD
                       <svg v-if="confirmPasswordFieldType == 'text'" @click="switchVisibility2"
+=======
+                      <svg v-if="passwordFieldType == 'text'" @click="switchVisibility"
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                         class="me-auto cursor-pointer flex-shrink-0" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="stroke-lg-white"
                           d="M13.9997 17.0479C14.6618 17.0479 15.2666 16.9736 15.8182 16.8453L14.5883 15.5782C14.3972 15.5934 14.2033 15.6056 13.9997 15.6056C10.254 15.6056 8.80297 12.8322 8.45158 12C8.71544 11.3934 9.0718 10.8342 9.50716 10.3436L8.52858 9.33543C7.452 10.5375 7.04391 11.7483 7.03621 11.7721C6.98793 11.9202 6.98793 12.0805 7.03621 12.2286C7.05091 12.2762 8.65668 17.0479 13.9997 17.0479ZM13.9997 6.9521C12.7138 6.9521 11.6575 7.23766 10.7769 7.65952L8.19469 5L7.20491 6.01968L19.8046 19L20.7944 17.9803L18.4711 15.5869C20.3009 14.18 20.954 12.2589 20.9638 12.2286C21.0121 12.0805 21.0121 11.9202 20.9638 11.7721C20.9484 11.7238 19.3426 6.9521 13.9997 6.9521ZM17.48 14.5658L15.884 12.9216C16.017 12.6404 16.0996 12.331 16.0996 12C16.0996 10.8166 15.1483 9.83661 13.9997 9.83661C13.6784 9.83661 13.3781 9.92171 13.1058 10.0594L11.8402 8.75564C12.5349 8.51003 13.2652 8.38786 13.9997 8.39435C17.7453 8.39435 19.1963 11.1678 19.5477 12C19.3363 12.499 18.7315 13.6889 17.48 14.5658Z"
                           fill="#8A8A8A" />
                       </svg>
+<<<<<<< HEAD
                       <svg v-if="confirmPasswordFieldType == 'password'" @click="switchVisibility2"
+=======
+                      <svg v-if="passwordFieldType == 'password'" @click="switchVisibility"
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-eye me-auto ms-1 cursor-pointer flex-shrink-0" viewBox="0 0 16 16">
                         <path
@@ -188,11 +224,20 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { loginStore } from "@/store/modules/login.js"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
 export default {
   name: "SignUpPassword-component",
 
   setup() {
     const router = useRouter();
+<<<<<<< HEAD
+=======
+    const startValidation = ref(false);
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     const formData = ref({
       username: "",
       password: "",
@@ -204,12 +249,15 @@ export default {
       passwordFieldType.value =
         passwordFieldType.value === "password" ? "text" : "password";
     }
+<<<<<<< HEAD
     const confirmPasswordFieldType = ref("password");
     function switchVisibility2() {
       confirmPasswordFieldType.value =
       confirmPasswordFieldType.value === "password" ? "text" : "password";
     }
 
+=======
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     const ISPasswordValid = ref(true)
     const passwordsAreNotSame = ref(true)
 
@@ -218,6 +266,7 @@ export default {
       if (formData.value.username || formData.value.password || formData.value.passwordConfirm) {
         if (formData.value.password == formData.value.passwordConfirm) {
           ISPasswordValid.value = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/.test(formData.value.password)
+<<<<<<< HEAD
           if (ISPasswordValid.value) {
             loginDetails.sendUserPassword(formData.value)
               .then(() => {
@@ -232,6 +281,20 @@ export default {
                 console.log('error')
               })
           }
+=======
+          loginDetails.sendUserPassword(formData.value)
+            .then(() => {
+              Swal.fire({
+                title: "تبریک",
+                text: "ثبت نام شما با موفقیت انجام شد",
+                icon: "success",
+                confirmButtonText: "بستن",
+              });
+              router.push('/login');
+            }).catch(() => {
+              console.log('error')
+            })
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
         } else {
           passwordsAreNotSame.value = false
           console.log('passwords are not same')
@@ -243,12 +306,20 @@ export default {
 
     return {
       switchVisibility,
+<<<<<<< HEAD
       switchVisibility2,
       passwordFieldType,
       confirmPasswordFieldType,
       passwordsAreNotSame,
       ISPasswordValid,
       formData,
+=======
+      passwordFieldType,
+      passwordsAreNotSame,
+      ISPasswordValid,
+      formData,
+      startValidation,
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
       signUpUser,
     };
   },

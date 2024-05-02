@@ -5,11 +5,19 @@ import AosVue from "aos-vue";
 import store from './store/index.js';
 import Vue3PersianDatetimePicker from 'vue3-persian-datetime-picker';
 import PrimeVue from "primevue/config"
+<<<<<<< HEAD
 import "primevue/resources/themes/mdc-light-indigo/theme.css";
 import "primevue/resources/primevue.min.css";
 
 import { createPinia } from 'pinia'
 // import './axios'
+=======
+import { createPinia } from 'pinia'
+import Dropdown from 'primevue/dropdown';
+import "primevue/resources/themes/mdc-light-indigo/theme.css";
+import "primevue/resources/primevue.min.css";
+
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -18,7 +26,10 @@ import InputNumber from 'primevue/inputnumber';
 import Dropdown from 'primevue/dropdown';
 
 const app=createApp(App)
+<<<<<<< HEAD
 app.component('InputNumber', InputNumber)
+=======
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
 app.component('simpleDropdown', Dropdown)
 
 app.use(PrimeVue)
@@ -36,9 +47,6 @@ app.use(Vue3PersianDatetimePicker, {
       altFormat: 'YYYY-MM-DD HH:mm',
       color: '#75bf7a',
       autoSubmit: true,
-      //...
-      //... And whatever you want to set as default.
-      //...
     }
   })
 app.use(store)

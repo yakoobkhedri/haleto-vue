@@ -12,6 +12,10 @@ export const loginStore = defineStore("useLoginStore", {
   },
   actions: {
     // for sign up page //
+<<<<<<< HEAD
+=======
+    
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
     // //first step
     sendUserNumber(data) {
       console.log(data);
@@ -128,7 +132,11 @@ export const loginStore = defineStore("useLoginStore", {
         this.loadings = true;
         axios(sentData)
           .then((res) => {
+<<<<<<< HEAD
             localStorage.clear();
+=======
+            localStorage.removeItem('token');
+>>>>>>> b3b14c8b830332fe9f9b47323e954e65079838ef
             resolve(res);
           })
           .catch((error) => {
