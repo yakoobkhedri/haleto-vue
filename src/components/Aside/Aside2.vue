@@ -33,7 +33,7 @@
             class="rounded-8 d-block mx-auto w-70 h-70"
           />
         </div>
-        <p class="text-dark2 font-bold my-2">دکتر احمدی</p>
+        <p class="text-dark2 font-bold my-2">{{ fullName }}</p>
         <p class="mb-0 fs-12 text-gray">www.drahmadi@gmail.com</p>
       </div>
     </div>
@@ -317,7 +317,8 @@
       </li>
       <li class="my-5 px-4">
         <router-link
-          to=""
+        @click="logoutFunc"
+          to="/login"
           class-active="router-link-active"
           class="d-flex align-items-center gap-2"
         >
@@ -594,6 +595,8 @@
 <script>
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+import { loginStore } from "@/store/modules/login.js"
 export default {
   name: "Aside2-component",
 
@@ -609,7 +612,15 @@ export default {
       store.commit("toggleMenu");
     }
 
-    return { isActive, isActive2, isActive3, isActive4, isOpen, toggleMenu };
+
+    const fullName = computed(() => localStorage ? localStorage.getItem('firstname') + localStorage.getItem('lastname') : '' )
+
+    const router = useRouter();
+    const loginDetails = loginStore()
+    function logoutFunc() {
+      loginDetails.logoutUser().then(() => router.push('/login'))
+    }
+    return { isActive, isActive2, isActive3, isActive4, isOpen, toggleMenu ,fullName, logoutFunc };
   },
 };
 </script>

@@ -6,6 +6,7 @@ import SingleBlog from '../pages/SingleBlog.vue';
 import Login from '../pages/Login.vue';
 import Otp from '../pages/Otp.vue';
 import SignUp from '../pages/SignUp.vue';
+import SignUpPassword from '../pages/SignUpPassword.vue';
 import Moshaveran from '../pages/Moshaveran.vue';
 import Wallet from '../pages/Wallet.vue';
 import Session from '../pages/Session.vue';
@@ -40,6 +41,7 @@ const routes=[
     {name:'login',path:'/login',component:Login},
     {name:'otp',path:'/otp',component:Otp},
     {name:'signUp',path:'/signUp',component:SignUp},
+    {name:'SignUpPassword',path:'/SignUpPassword',component:SignUpPassword},
     {name:'moshaveran',path:'/moshaveran',component:Moshaveran},
     {name:'wallet',path:'/wallet',component:Wallet},
     {name:'session',path:'/session',component:Session},

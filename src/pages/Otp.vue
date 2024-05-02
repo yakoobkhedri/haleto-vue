@@ -54,7 +54,7 @@
             <circle cx="-1.20454" cy="157.795" r="157.295" stroke="#232524" />
           </svg>
           <!--  -->
-          <form class="max-w-340 mx-auto my-5 py-5 position-relative">
+          <form @submit.prevent="checkCode" class="max-w-340 mx-auto my-5 py-5 position-relative">
             <div class="mb-5 pb-5 d-block d-lg-none text-white text-center">
               <h1 class="font-bold fs-20">
                 سلامت روان حق همه ماست
@@ -65,12 +65,12 @@
                 class="d-block mx-auto">
             <h4 class="font-bold fs-20 text-center mt-3 text-lg-white">verification</h4>
             <h5 class="fs-18 mt-4 text-center font-bold text-lg-white">لطفا کدی که به شماره موبایل شما ارسال شده است را وارد نمایید</h5>
-            <div class="mt-5 d-flex align-items-center justify-content-center gap-3">
-             <input type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" maxlength="1">
-             <input type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" maxlength="1">
-             <input type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" maxlength="1">
-             <input type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" maxlength="1">
-             <input type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" maxlength="1">
+            <div dir="ltr" ref="inputDiv" class="mt-5 d-flex align-items-center justify-content-center gap-3">
+             <input @input="focusNextInput($event, 1)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input @input="focusNextInput($event, 2)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input @input="focusNextInput($event, 3)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input @input="focusNextInput($event, 4)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
+             <input @input="focusNextInput($event, 5)" type="number" class="rounded-4 text-lg-white placeholder-lg-white font-bold border border-secondary bg-transparent outline-none text-center h-48 w-40 border-lg-white" min="0" max="9" maxlength="1">
             </div>
             <input type="submit" value="تایید"
             class="bg-main rounded-4 text-white fw-bold w-100 h-48 mt-4 border-0 mb-2">
@@ -85,9 +85,63 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { loginStore } from "@/store/modules/login.js"
+
 
 export default {
   name: "Otp-component",
+
+  setup() {
+    const router = useRouter();
+    const startValidation = ref(false);
+    const formDataCode = ref([]);
+
+    const inputDiv = ref(null)
+    function focusNextInput(event, index) {
+      event.target.value = event.target.value.replace(/\D/g, '')
+      if (event.target.value) {
+        formDataCode.value[index-1] = event.target.value 
+      }
+      if (event.data.length === 1 && index < 5) {
+        inputDiv.value.children[index].focus()
+      }
+    }
+
+    const loginDetails = loginStore()
+
+    function checkCode() {
+      if (formDataCode.value.length == 5 ) {
+        let finalCode = Number(formDataCode.value[0] + '' + formDataCode.value[1] + '' + formDataCode.value[2] + '' + formDataCode.value[3] + '' + formDataCode.value[4])
+        loginDetails.sendUserCode(finalCode)
+          .then(() => {
+            Swal.fire({
+              title: "تبریک",
+              text: "ثبت نام شما با موفقیت انجام شد",
+              icon: "success",
+              confirmButtonText: "بستن",
+            });
+            router.push({ path: "/SignUpPassword" });
+
+
+          }).catch(() => {
+            console.log('error')
+          })
+      } else {
+        console.log('empty')
+      }
+    }
+
+    return {
+      formDataCode,
+      startValidation,
+      checkCode,
+      focusNextInput,
+      inputDiv
+    };
+  },
 };
 </script>
 
